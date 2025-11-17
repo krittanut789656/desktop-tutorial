@@ -1,0 +1,6 @@
+# Configuration files with credentials
+config.ini
+*.ini
+
+# Test files with credentials
+test_connection.py
