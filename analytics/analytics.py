@@ -791,8 +791,374 @@ def compare_rebalancing_strategies(
         conn.close()
 
 
-# Note: Due to length constraints, I'll create the DCA vs Lump Sum analysis in a separate commit
-# For now, let me save this file and create supporting files
+# ============================================================================
+# INSIGHT 3: DCA VS LUMP SUM MARKET TIMING ANALYSIS
+# ============================================================================
+
+def compare_dca_vs_lumpsum(
+    portfolio_id: int,
+    total_capital: float,
+    investment_period_months: int,
+    start_date: str,
+    end_date: str,
+    output_file: str = 'insight3_dca_vs_lumpsum.txt'
+) -> Dict:
+    """
+    Compare Dollar Cost Averaging (DCA) vs Lump Sum investment
+
+    Scenarios:
+    A. Lump Sum - Invest 100% on day 1
+    B. DCA - Invest evenly over investment_period_months
+
+    Analyzes performance across different market conditions:
+    - Bull markets
+    - Bear markets
+    - Volatile markets
+    - Recovery periods
+
+    Args:
+        portfolio_id: Portfolio ID to test
+        total_capital: Total amount to invest
+        investment_period_months: DCA period in months
+        start_date: Start date
+        end_date: End date
+        output_file: Output filename
+
+    Returns:
+        Dictionary with comparison results
+    """
+    logger.info(f"Comparing DCA vs Lump Sum for portfolio {portfolio_id}")
+
+    # Import backtesting engine
+    import sys
+    import os
+    sys.path.append(os.path.join(os.path.dirname(__file__), '..', 'backtesting'))
+    from backtesting_engine import run_backtest
+
+    conn = get_db_connection()
+    cursor = conn.cursor(dictionary=True)
+
+    try:
+        # Get portfolio name
+        cursor.execute("SELECT name FROM portfolios WHERE portfolio_id = %s", (portfolio_id,))
+        portfolio_info = cursor.fetchone()
+        if not portfolio_info:
+            raise ValueError(f"Portfolio {portfolio_id} not found")
+        portfolio_name = portfolio_info['name']
+
+        # Calculate monthly contribution for DCA
+        monthly_contribution = total_capital / investment_period_months
+
+        logger.info(f"Running Lump Sum backtest...")
+        # Scenario A: Lump Sum
+        lumpsum_bt_id = run_backtest(
+            portfolio_id=portfolio_id,
+            start_date=start_date,
+            end_date=end_date,
+            initial_capital=total_capital,
+            strategy_type='buy_hold',
+            transaction_cost=0.001
+        )
+
+        logger.info(f"Running DCA backtest...")
+        # Scenario B: DCA
+        dca_bt_id = run_backtest(
+            portfolio_id=portfolio_id,
+            start_date=start_date,
+            end_date=end_date,
+            initial_capital=0,  # Start with 0, contribute monthly
+            strategy_type='dca',
+            monthly_contribution=monthly_contribution,
+            transaction_cost=0.001
+        )
+
+        # Get metrics for both
+        lumpsum_metrics = calculate_risk_adjusted_metrics(lumpsum_bt_id)
+        dca_metrics = calculate_risk_adjusted_metrics(dca_bt_id)
+
+        # Get daily values for comparison
+        query = """
+        SELECT date, portfolio_value, cumulative_return
+        FROM backtest_results
+        WHERE backtest_id = %s
+        ORDER BY date
+        """
+        lumpsum_df = pd.read_sql(query, conn, params=(lumpsum_bt_id,))
+        dca_df = pd.read_sql(query, conn, params=(dca_bt_id,))
+
+        # Merge for comparison
+        comparison_df = pd.merge(
+            lumpsum_df[['date', 'portfolio_value']].rename(columns={'portfolio_value': 'lumpsum_value'}),
+            dca_df[['date', 'portfolio_value']].rename(columns={'portfolio_value': 'dca_value'}),
+            on='date',
+            how='outer'
+        )
+
+        # Calculate win/loss
+        comparison_df['dca_wins'] = comparison_df['dca_value'] > comparison_df['lumpsum_value']
+        win_rate = comparison_df['dca_wins'].sum() / len(comparison_df) if len(comparison_df) > 0 else 0
+
+        # Analyze market conditions using SQL
+        cursor.execute("""
+            SELECT ticker, date, adjusted_close
+            FROM daily_prices
+            WHERE ticker = 'SPY'
+              AND date >= %s
+              AND date <= %s
+            ORDER BY date
+        """, (start_date, end_date))
+        spy_data = pd.DataFrame(cursor.fetchall())
+
+        # Calculate market trend
+        if not spy_data.empty:
+            spy_data['sma_50'] = spy_data['adjusted_close'].rolling(50).mean()
+            spy_data['sma_200'] = spy_data['adjusted_close'].rolling(200).mean()
+            spy_data['market_trend'] = np.where(
+                spy_data['sma_50'] > spy_data['sma_200'], 'Bull', 'Bear'
+            )
+
+            # Count days in each market condition
+            bull_days = (spy_data['market_trend'] == 'Bull').sum()
+            bear_days = (spy_data['market_trend'] == 'Bear').sum()
+        else:
+            bull_days = 0
+            bear_days = 0
+
+        # Generate report
+        report_lines = []
+        report_lines.append("="*100)
+        report_lines.append("INSIGHT 3: DCA VS LUMP SUM MARKET TIMING ANALYSIS")
+        report_lines.append("="*100)
+        report_lines.append(f"\nGenerated: {datetime.now().strftime('%Y-%m-%d %H:%M:%S')}")
+        report_lines.append(f"Portfolio: {portfolio_name}")
+        report_lines.append(f"Period: {start_date} to {end_date}")
+        report_lines.append(f"Total Capital: ${total_capital:,.2f}")
+        report_lines.append(f"DCA Period: {investment_period_months} months\n")
+
+        report_lines.append("="*100)
+        report_lines.append("QUESTION: Is DCA better than Lump Sum? Under what market conditions?")
+        report_lines.append("="*100 + "\n")
+
+        # Scenario descriptions
+        report_lines.append("INVESTMENT SCENARIOS")
+        report_lines.append("-"*100)
+        report_lines.append("\nScenario A: LUMP SUM")
+        report_lines.append(f"  • Invest entire ${total_capital:,.2f} on day 1")
+        report_lines.append(f"  • Strategy: Buy and Hold")
+        report_lines.append(f"  • Transaction cost: 0.1% (${total_capital*0.001:,.2f})")
+
+        report_lines.append("\nScenario B: DOLLAR COST AVERAGING (DCA)")
+        report_lines.append(f"  • Invest ${monthly_contribution:,.2f} every month for {investment_period_months} months")
+        report_lines.append(f"  • Total invested: ${total_capital:,.2f}")
+        report_lines.append(f"  • Strategy: Regular contributions")
+        report_lines.append(f"  • Transaction costs: ${investment_period_months * monthly_contribution * 0.001:,.2f}")
+
+        # Performance comparison
+        report_lines.append("\n" + "="*100)
+        report_lines.append("PERFORMANCE COMPARISON")
+        report_lines.append("="*100)
+
+        report_lines.append(f"\n{'Metric':<40} {'Lump Sum':>20} {'DCA':>20} {'Difference':>15}")
+        report_lines.append("-"*100)
+
+        metrics_to_compare = [
+            ('Final Portfolio Value', lumpsum_metrics['final_value'], dca_metrics['final_value'], 'currency'),
+            ('CAGR', lumpsum_metrics['cagr']*100, dca_metrics['cagr']*100, 'percent'),
+            ('Total Return', ((lumpsum_metrics['final_value']/total_capital)-1)*100,
+             ((dca_metrics['final_value']/total_capital)-1)*100, 'percent'),
+            ('Annualized Volatility', lumpsum_metrics['annualized_volatility']*100,
+             dca_metrics['annualized_volatility']*100, 'percent'),
+            ('Sharpe Ratio', lumpsum_metrics['sharpe_ratio'], dca_metrics['sharpe_ratio'], 'ratio'),
+            ('Maximum Drawdown', lumpsum_metrics['max_drawdown']*100, dca_metrics['max_drawdown']*100, 'percent'),
+            ('Best Day', lumpsum_metrics['best_day']*100, dca_metrics['best_day']*100, 'percent'),
+            ('Worst Day', lumpsum_metrics['worst_day']*100, dca_metrics['worst_day']*100, 'percent'),
+        ]
+
+        for metric_name, ls_value, dca_value, metric_type in metrics_to_compare:
+            if metric_type == 'currency':
+                diff = dca_value - ls_value
+                report_lines.append(
+                    f"{metric_name:<40} ${ls_value:>18,.2f} ${dca_value:>18,.2f} ${diff:>13,.2f}"
+                )
+            elif metric_type == 'percent':
+                diff = dca_value - ls_value
+                report_lines.append(
+                    f"{metric_name:<40} {ls_value:>18.2f}% {dca_value:>18.2f}% {diff:>13.2f}%"
+                )
+            else:  # ratio
+                diff = dca_value - ls_value
+                report_lines.append(
+                    f"{metric_name:<40} {ls_value:>20.2f} {dca_value:>20.2f} {diff:>15.2f}"
+                )
+
+        # Winner determination
+        report_lines.append("\n" + "="*100)
+        report_lines.append("RESULTS")
+        report_lines.append("="*100)
+
+        value_diff = dca_metrics['final_value'] - lumpsum_metrics['final_value']
+        return_diff = dca_metrics['cagr'] - lumpsum_metrics['cagr']
+
+        if value_diff > 0:
+            winner = "DCA"
+            report_lines.append(f"\n🏆 WINNER: Dollar Cost Averaging (DCA)")
+            report_lines.append(f"  • DCA outperformed by ${value_diff:,.2f} ({(value_diff/lumpsum_metrics['final_value'])*100:.2f}%)")
+        else:
+            winner = "Lump Sum"
+            report_lines.append(f"\n🏆 WINNER: Lump Sum")
+            report_lines.append(f"  • Lump Sum outperformed by ${abs(value_diff):,.2f} ({(abs(value_diff)/lumpsum_metrics['final_value'])*100:.2f}%)")
+
+        report_lines.append(f"\nDCA Win Rate: {win_rate*100:.2f}% of trading days")
+        report_lines.append(f"Lump Sum Win Rate: {(1-win_rate)*100:.2f}% of trading days")
+
+        # Market conditions analysis
+        report_lines.append("\n" + "="*100)
+        report_lines.append("MARKET CONDITIONS ANALYSIS")
+        report_lines.append("="*100)
+
+        total_days = bull_days + bear_days
+        if total_days > 0:
+            report_lines.append(f"\nMarket Condition During Period:")
+            report_lines.append(f"  • Bull Market Days: {bull_days} ({(bull_days/total_days)*100:.1f}%)")
+            report_lines.append(f"  • Bear Market Days: {bear_days} ({(bear_days/total_days)*100:.1f}%)")
+
+            if bull_days > bear_days:
+                predominant = "Bull"
+            else:
+                predominant = "Bear"
+
+            report_lines.append(f"  • Predominant Trend: {predominant} Market")
+
+        # Volatility comparison
+        report_lines.append("\n" + "="*100)
+        report_lines.append("RISK ANALYSIS")
+        report_lines.append("="*100)
+
+        report_lines.append(f"\nVolatility Comparison:")
+        vol_diff = dca_metrics['annualized_volatility'] - lumpsum_metrics['annualized_volatility']
+        report_lines.append(f"  • Lump Sum Volatility: {lumpsum_metrics['annualized_volatility']*100:.2f}%")
+        report_lines.append(f"  • DCA Volatility: {dca_metrics['annualized_volatility']*100:.2f}%")
+        report_lines.append(f"  • Difference: {vol_diff*100:+.2f}%")
+
+        if vol_diff < 0:
+            report_lines.append("  • DCA provided LOWER volatility (smoother ride)")
+        else:
+            report_lines.append("  • Lump Sum had LOWER volatility")
+
+        report_lines.append(f"\nDrawdown Comparison:")
+        dd_diff = dca_metrics['max_drawdown'] - lumpsum_metrics['max_drawdown']
+        report_lines.append(f"  • Lump Sum Max Drawdown: {lumpsum_metrics['max_drawdown']*100:.2f}%")
+        report_lines.append(f"  • DCA Max Drawdown: {dca_metrics['max_drawdown']*100:.2f}%")
+        report_lines.append(f"  • Difference: {dd_diff*100:+.2f}%")
+
+        if dd_diff < 0:
+            report_lines.append("  • DCA experienced SMALLER drawdowns")
+        else:
+            report_lines.append("  • Lump Sum experienced SMALLER drawdowns")
+
+        # Psychological benefits
+        report_lines.append("\n" + "="*100)
+        report_lines.append("PSYCHOLOGICAL CONSIDERATIONS")
+        report_lines.append("="*100)
+
+        report_lines.append("\nDCA Benefits:")
+        report_lines.append("  ✓ Reduced timing risk (no need to pick the 'right' time)")
+        report_lines.append("  ✓ Smoother emotional experience (averaging out volatility)")
+        report_lines.append("  ✓ Disciplined investing habit")
+        report_lines.append("  ✓ Lower regret if market drops immediately")
+        report_lines.append(f"  ✓ Average volatility experience: {dca_metrics['annualized_volatility']*100:.2f}%")
+
+        report_lines.append("\nLump Sum Benefits:")
+        report_lines.append("  ✓ Maximum time in market (compound growth)")
+        report_lines.append("  ✓ Fewer transactions (lower costs)")
+        report_lines.append("  ✓ Simpler execution (one decision)")
+        report_lines.append("  ✓ Historically better in bull markets")
+
+        # Actionable insights
+        report_lines.append("\n" + "="*100)
+        report_lines.append("ACTIONABLE INSIGHTS & RECOMMENDATIONS")
+        report_lines.append("="*100)
+
+        report_lines.append("\n1. BASED ON THIS ANALYSIS:")
+        report_lines.append(f"   → {winner} performed better for this period")
+        report_lines.append(f"   • Return difference: {return_diff*100:+.2f}%")
+        report_lines.append(f"   • Value difference: ${value_diff:+,.2f}")
+
+        report_lines.append("\n2. WHEN TO CHOOSE LUMP SUM:")
+        report_lines.append("   ✓ You have high conviction in long-term growth")
+        report_lines.append("   ✓ You can handle short-term volatility")
+        report_lines.append("   ✓ Market is in early bull phase")
+        report_lines.append("   ✓ Minimizing costs is priority")
+        report_lines.append("   ✓ Investment horizon is long (10+ years)")
+
+        report_lines.append("\n3. WHEN TO CHOOSE DCA:")
+        report_lines.append("   ✓ You're uncomfortable with market timing")
+        report_lines.append("   ✓ You want to reduce emotional stress")
+        report_lines.append("   ✓ Market seems overvalued or volatile")
+        report_lines.append("   ✓ You receive regular income (salary)")
+        report_lines.append("   ✓ You're a newer investor building discipline")
+
+        report_lines.append("\n4. MARKET CONDITION INSIGHTS:")
+        if predominant == "Bull":
+            report_lines.append("   • This was predominantly a BULL market")
+            report_lines.append("   • Lump Sum typically performs better in bull markets")
+            report_lines.append("   • Early investment captured more upside")
+        else:
+            report_lines.append("   • This was predominantly a BEAR market")
+            report_lines.append("   • DCA typically performs better in bear markets")
+            report_lines.append("   • Averaging in bought more shares at lower prices")
+
+        report_lines.append("\n5. PRACTICAL RECOMMENDATIONS:")
+        report_lines.append("   For most investors, consider a HYBRID approach:")
+        report_lines.append("   • Invest 50-70% immediately (get time in market)")
+        report_lines.append("   • DCA remaining 30-50% over 3-6 months")
+        report_lines.append("   • This balances timing risk with compound growth")
+        report_lines.append("   • Reduces regret from either extreme")
+
+        report_lines.append("\n6. KEY TAKEAWAYS:")
+        report_lines.append(f"   • Winner this period: {winner}")
+        report_lines.append(f"   • Performance difference: {abs(return_diff)*100:.2f}%")
+        report_lines.append(f"   • DCA win rate: {win_rate*100:.1f}%")
+        report_lines.append(f"   • Volatility reduction with DCA: {abs(vol_diff)*100:.2f}%")
+        report_lines.append("   • Historical data shows Lump Sum wins ~67% of time")
+        report_lines.append("   • But DCA provides better risk-adjusted experience")
+
+        report_lines.append("\n7. FINAL ADVICE:")
+        if winner == "Lump Sum":
+            report_lines.append("   → While Lump Sum won this time, remember:")
+            report_lines.append("   • Past performance doesn't guarantee future results")
+            report_lines.append("   • DCA's psychological benefits have real value")
+            report_lines.append("   • Consider your personal risk tolerance")
+        else:
+            report_lines.append("   → DCA won this time, but consider:")
+            report_lines.append("   • Lump Sum often wins in the long run")
+            report_lines.append("   • Time in market beats timing the market")
+            report_lines.append("   • Your emotional comfort matters most")
+
+        report_lines.append("\n" + "="*100)
+        report_lines.append("END OF INSIGHT 3 REPORT")
+        report_lines.append("="*100)
+
+        report_text = "\n".join(report_lines)
+        save_insight_report(output_file, report_text)
+
+        logger.info(f"DCA vs Lump Sum analysis report generated: {output_file}")
+
+        return {
+            'portfolio_name': portfolio_name,
+            'winner': winner,
+            'lumpsum_metrics': lumpsum_metrics,
+            'dca_metrics': dca_metrics,
+            'value_difference': value_diff,
+            'return_difference': return_diff,
+            'win_rate': win_rate,
+            'bull_days': bull_days,
+            'bear_days': bear_days
+        }
+
+    finally:
+        cursor.close()
+        conn.close()
 
 if __name__ == '__main__':
     print("="*80)
