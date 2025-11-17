@@ -1,0 +1,20 @@
+# ETF Data Collection - Python Dependencies
+# Install with: pip install -r requirements.txt
+
+# Core data libraries
+yfinance>=0.2.32          # Yahoo Finance API for downloading ETF data
+pandas>=2.0.0             # Data manipulation and analysis
+numpy>=1.24.0             # Numerical computing
+
+# Database connectivity
+mysql-connector-python>=8.2.0   # MySQL database connector
+
+# Progress and logging
+tqdm>=4.66.0              # Progress bar for loops
+
+# Date and time handling
+python-dateutil>=2.8.2    # Extended date/time utilities
+
+# Optional: For better performance
+# pyarrow>=14.0.0         # Faster pandas operations
+# openpyxl>=3.1.0         # Excel file support (if needed)
