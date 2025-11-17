@@ -237,6 +237,42 @@ python example_analytics.py
 
 ---
 
+## 📊 Using Jupyter Notebooks (Recommended for Beginners!)
+
+**เรียนรู้ง่าย - ใช้งานได้ทันที!**
+
+### 🎯 แนะนำ: `Simple_Run_All.ipynb`
+
+Notebook ที่ง่ายที่สุด - ไม่มีปัญหา import errors!
+
+```bash
+jupyter notebook Simple_Run_All.ipynb
+```
+
+**ทำอะไรได้:**
+- ✅ ดู Portfolios และ ETFs
+- ✅ ดูข้อมูลราคา
+- ✅ วิเคราะห์ด้วย Pandas
+- ✅ สร้าง Charts
+- ✅ ไม่ต้อง import external files
+
+### 📚 Notebooks อื่นๆ:
+
+- **`Complete_Setup_and_Run.ipynb`** - สำหรับ setup ครั้งแรก
+- **`ETF_Backtesting_Notebook.ipynb`** - Advanced features
+- **`jupyter_interface.py`** - Python module สำหรับ custom notebooks
+
+### 🤔 ควรใช้ Notebook ไหน?
+
+**อ่านคู่มือฉบับเต็ม:** [`WHICH_NOTEBOOK_TO_USE.md`](WHICH_NOTEBOOK_TO_USE.md)
+
+**สรุปสั้นๆ:**
+- 🆕 **ครั้งแรก**: ใช้ `Complete_Setup_and_Run.ipynb` (setup database)
+- 📊 **ใช้งานทั่วไป**: ใช้ `Simple_Run_All.ipynb` (ง่ายที่สุด!)
+- 🔬 **Advanced**: ใช้ `jupyter_interface.py` + custom notebook
+
+---
+
 ## 📂 Project Structure
 
 ```
