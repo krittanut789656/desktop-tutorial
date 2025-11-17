@@ -29,10 +29,17 @@ from colorama import Fore, Back, Style, init as colorama_init
 # Initialize colorama for cross-platform color support
 colorama_init(autoreset=True)
 
-# Add module paths
-sys.path.append(os.path.join(os.path.dirname(__file__), 'crud_operations'))
-sys.path.append(os.path.join(os.path.dirname(__file__), 'backtesting'))
-sys.path.append(os.path.join(os.path.dirname(__file__), 'analytics'))
+# Add module paths (handle both script and interactive mode)
+try:
+    # When run as script
+    script_dir = os.path.dirname(os.path.abspath(__file__))
+except NameError:
+    # When run in interactive mode (Jupyter, IPython, etc.)
+    script_dir = os.getcwd()
+
+sys.path.append(os.path.join(script_dir, 'crud_operations'))
+sys.path.append(os.path.join(script_dir, 'backtesting'))
+sys.path.append(os.path.join(script_dir, 'analytics'))
 
 # Import modules
 try:
