@@ -1,0 +1,15 @@
+# CRUD Operations - Python Dependencies
+# Install with: pip install -r requirements.txt
+
+# Database connectivity
+mysql-connector-python>=8.2.0   # MySQL database connector
+
+# Data handling
+yfinance>=0.2.32                # Yahoo Finance API (for update_etf_prices function)
+pandas>=2.0.0                   # Data manipulation
+
+# Already included in Python standard library:
+# - logging
+# - datetime
+# - typing
+# - json
