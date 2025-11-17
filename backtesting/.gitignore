@@ -1,0 +1,25 @@
+# Python
+__pycache__/
+*.py[cod]
+*$py.class
+*.so
+
+# Logs
+*.log
+backtest.log
+
+# Backtest output files
+backtest_summary_*.txt
+backtest_results_*.txt
+
+# IDE
+.vscode/
+.idea/
+*.swp
+
+# OS
+.DS_Store
+
+# Virtual environment
+venv/
+env/

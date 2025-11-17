@@ -1,0 +1,18 @@
+# Backtesting Engine - Python Dependencies
+# Install with: pip install -r requirements.txt
+
+# Database connectivity
+mysql-connector-python>=8.2.0   # MySQL database connector
+
+# Data handling and analysis
+pandas>=2.0.0                    # Data manipulation
+numpy>=1.24.0                    # Numerical computing
+
+# Progress bar
+tqdm>=4.66.0                     # Progress bar for loops
+
+# Already included in Python standard library:
+# - logging
+# - datetime
+# - typing
+# - json
