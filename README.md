@@ -6,6 +6,32 @@ A complete end-to-end system for managing ETF portfolios, running backtests with
 
 ---
 
+## 🎯 **NEW: Integrated System Available!**
+
+The system now features a **complete integrated architecture** with two easy-to-use options:
+
+### ⭐ **Option 1: Jupyter Notebook (Recommended for Beginners)**
+```bash
+jupyter notebook Integrated_System_All_In_One.ipynb
+```
+- ✅ **Run once, do everything** - Single cell starts interactive menu loop
+- ✅ **No import errors** - Everything embedded
+- ✅ **Loop until exit** - Continuous operation with menu navigation
+- ✅ **Perfect for learning and analysis**
+
+### ⭐ **Option 2: Python Script (Production Ready)**
+```bash
+python main_integrated.py
+```
+- ✅ **Terminal-based** - Professional command-line interface
+- ✅ **Automation ready** - Can be scripted and scheduled
+- ✅ **Server deployment** - Production-grade
+- ✅ **Same features** - Identical functionality to Jupyter version
+
+📖 **[Read FINAL_GUIDE.md for complete documentation](FINAL_GUIDE.md)**
+
+---
+
 ## 📋 Table of Contents
 
 - [Overview](#overview)
@@ -204,7 +230,29 @@ python data_collection.py
 
 ## 🚀 Quick Start
 
-### Launch Main Application
+### ⭐ New Way: Integrated System (Recommended!)
+
+**For Jupyter Users:**
+```bash
+cd desktop-tutorial
+jupyter notebook Integrated_System_All_In_One.ipynb
+```
+Then:
+1. Edit password in Cell 1 → Run Cell 1 (Setup)
+2. Run Cell 2 (Main Controller) → Interactive menu starts
+3. Use menu options to navigate (1-7, 0 to Exit)
+4. Loop continues until you choose Exit!
+
+**For Terminal Users:**
+```bash
+cd desktop-tutorial
+python main_integrated.py
+```
+Enter your MySQL password when prompted, then use the interactive menu system.
+
+📖 **[Complete Guide: FINAL_GUIDE.md](FINAL_GUIDE.md)**
+
+### Classic Way: Original Application
 
 ```bash
 python main.py
@@ -213,12 +261,12 @@ python main.py
 ### Quick Example Workflow
 
 ```
-1. Launch application: python main.py
-2. Go to menu 1.2 (View Portfolios)
+1. Launch application: python main_integrated.py (or main.py)
+2. Go to Portfolio Management (View Portfolios)
 3. Select a portfolio to view details
-4. Go to menu 4.1 (Risk-Adjusted Performance Analysis)
+4. Go to Run Backtests or Run Analytics
 5. Follow instructions to analyze portfolio
-6. View generated reports in analytics/ folder
+6. View results directly in console or check analytics/ folder for reports
 ```
 
 ### Run Analytics Examples
