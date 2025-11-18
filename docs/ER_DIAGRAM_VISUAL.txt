@@ -1,0 +1,306 @@
+================================================================================
+    PORTFOLIO BACKTESTING SYSTEM - ER DIAGRAM (Visual)
+================================================================================
+
+Legend:
+  [TABLE_NAME]     = Table
+  PK              = Primary Key
+  FK              = Foreign Key
+  ──────          = One-to-Many Relationship
+  ══════          = One-to-One Relationship
+
+
+================================================================================
+CORE DATA LAYER (Master Data & Historical Prices)
+================================================================================
+
+┌──────────────────────────────┐
+│      etf_master              │
+├──────────────────────────────┤
+│ PK  etf_id                   │
+│ UK  ticker_symbol            │
+│     etf_name                 │
+│     asset_class              │
+│     region                   │
+│     sector                   │
+│     expense_ratio            │
+│     inception_date           │
+└──────────────────────────────┘
+         │
+         │ 1:N
+         ├─────────────────────────────────────────────┐
+         │                                              │
+         ▼                                              ▼
+┌──────────────────────────────┐            ┌──────────────────────────────┐
+│    price_history             │            │   benchmark_holdings         │
+├──────────────────────────────┤            ├──────────────────────────────┤
+│ PK  price_id                 │            │ PK  holding_id               │
+│ FK  etf_id ──────────────────┤            │ FK  benchmark_id ────────┐   │
+│     date                     │            │ FK  etf_id ──────────────┼───┤
+│     open, high, low, close   │            │     target_weight        │   │
+│     adj_close, volume        │            └──────────────────────────┼───┘
+└──────────────────────────────┘                                       │
+                                                                       │
+         ┌─────────────────────────────────────────────────────────────┘
+         │
+         ▼
+┌──────────────────────────────┐
+│   benchmark_portfolios       │
+├──────────────────────────────┤
+│ PK  benchmark_id             │
+│ UK  benchmark_name           │
+│     description              │
+│     risk_level               │
+│     target_return            │
+│     asset_allocation         │
+└──────────────────────────────┘
+         │
+         │ 1:N (Optional Comparison)
+         │
+         ▼
+================================================================================
+USER SCENARIO LAYER (User-Created Backtests)
+================================================================================
+
+┌──────────────────────────────┐
+│   backtest_scenarios         │
+├──────────────────────────────┤
+│ PK  scenario_id              │
+│ FK  benchmark_id (optional)  │
+│     created_by               │
+│     scenario_name            │
+│     initial_capital          │
+│     start_date, end_date     │
+│     strategy_type            │
+│     rebalance_freq           │
+│     monthly_contribution     │
+└──────────────────────────────┘
+         │
+         │ 1:N
+         ├─────────────────────────────────────────────┐
+         │                                              │
+         ▼                                              ▼
+┌──────────────────────────────┐            ┌──────────────────────────────┐
+│   scenario_holdings          │            │   backtest_results           │
+├──────────────────────────────┤            ├──────────────────────────────┤
+│ PK  holding_id               │            │ PK  result_id                │
+│ FK  scenario_id ─────────────┤            │ FK  scenario_id ═════════════╡
+│ FK  etf_id ──────────────┐   │            │     total_return             │
+│     target_weight        │   │            │     annualized_return        │
+└──────────────────────────┼───┘            │     volatility               │
+                           │                │     max_drawdown             │
+         ┌─────────────────┘                │     sharpe_ratio             │
+         │                                  │     final_value              │
+         │                                  │     vs_benchmark_alpha       │
+         │                                  └──────────────────────────────┘
+         │                                              │
+         │                                              │ 1:1
+         │                                              │
+         │              ┌───────────────────────────────┘
+         │              │
+         ▼              ▼
+================================================================================
+CALCULATED RESULTS LAYER (Generated Data)
+================================================================================
+
+┌──────────────────────────────┐            ┌──────────────────────────────┐
+│   portfolio_snapshots        │            │   transaction_log            │
+├──────────────────────────────┤            ├──────────────────────────────┤
+│ PK  snapshot_id              │            │ PK  transaction_id           │
+│ FK  scenario_id ─────────────┤            │ FK  scenario_id ─────────────┤
+│ FK  etf_id ──────────────┐   │            │ FK  etf_id ──────────────┐   │
+│     snapshot_date        │   │            │     trans_date           │   │
+│     shares_held          │   │            │     trans_type (BUY/SELL)│   │
+│     market_value         │   │            │     shares, price        │   │
+│     portfolio_weight     │   │            │     amount, reason       │   │
+│     unrealized_gain      │   │            └──────────────────────────┼───┘
+└──────────────────────────┼───┘                                       │
+                           │                                           │
+                           └───────────────┬───────────────────────────┘
+                                          │
+                                          ▼
+                                  [etf_master]
+                               (Referenced by FK)
+
+
+================================================================================
+RELATIONSHIP CARDINALITIES
+================================================================================
+
+etf_master (1) ──────── (N) price_history
+    One ETF has many daily price records
+
+etf_master (1) ──────── (N) benchmark_holdings
+    One ETF can be in many benchmark portfolios
+
+etf_master (1) ──────── (N) scenario_holdings
+    One ETF can be in many user scenarios
+
+etf_master (1) ──────── (N) portfolio_snapshots
+    One ETF tracked in many portfolio snapshots
+
+etf_master (1) ──────── (N) transaction_log
+    One ETF traded many times
+
+benchmark_portfolios (1) ──────── (N) benchmark_holdings
+    One benchmark contains many ETFs
+
+benchmark_portfolios (1) ──────── (N) backtest_scenarios
+    One benchmark compared by many scenarios (optional)
+
+backtest_scenarios (1) ──────── (N) scenario_holdings
+    One scenario allocates to many ETFs
+
+backtest_scenarios (1) ══════ (1) backtest_results
+    One scenario produces one result set
+
+backtest_scenarios (1) ──────── (N) portfolio_snapshots
+    One scenario generates many snapshots over time
+
+backtest_scenarios (1) ──────── (N) transaction_log
+    One scenario records many transactions
+
+
+================================================================================
+DATA FLOW: Creating a Backtest Scenario
+================================================================================
+
+Step 1: User Creates Scenario
+    ↓
+    INSERT INTO backtest_scenarios
+    (scenario_name, initial_capital, start_date, end_date, strategy_type, ...)
+
+Step 2: User Defines Portfolio Allocation
+    ↓
+    INSERT INTO scenario_holdings
+    (scenario_id, etf_id, target_weight)
+    -- Example: 60% SPY, 40% AGG
+
+Step 3: Run Backtest Engine (Python + SQL)
+    ↓
+    FOR each day in date_range:
+        - Calculate portfolio value using price_history
+        - Generate portfolio_snapshots
+        - Log rebalancing in transaction_log
+
+Step 4: Calculate Performance Metrics
+    ↓
+    INSERT INTO backtest_results
+    (scenario_id, total_return, annualized_return, volatility,
+     max_drawdown, sharpe_ratio, vs_benchmark_alpha)
+
+Step 5: Compare with Benchmark (Optional)
+    ↓
+    IF benchmark_id IS NOT NULL:
+        - Get benchmark allocations from benchmark_holdings
+        - Calculate benchmark performance
+        - Compute alpha = scenario_return - benchmark_return
+        - UPDATE backtest_results SET vs_benchmark_alpha
+
+
+================================================================================
+TABLE STATISTICS (After Import)
+================================================================================
+
+Table Name                    Rows        Growth Type
+────────────────────────────────────────────────────────────────
+etf_master                    50          Static
+price_history                 208,700     Daily updates (~13K/year)
+benchmark_portfolios          35          Static
+benchmark_holdings            117         Static
+────────────────────────────────────────────────────────────────
+backtest_scenarios            0 → ∞       User-driven
+scenario_holdings             0 → ∞       User-driven (3-10 per scenario)
+backtest_results              0 → ∞       1 per scenario
+portfolio_snapshots           0 → ∞       Large (1 per scenario per date)
+transaction_log               0 → ∞       Variable (depends on strategy)
+────────────────────────────────────────────────────────────────
+TOTAL (Initial)               ~209,000 rows
+TOTAL (After 100 scenarios)   ~350,000+ rows
+
+
+================================================================================
+INDEXES FOR PERFORMANCE
+================================================================================
+
+Table: etf_master
+  - PRIMARY KEY (etf_id)
+  - UNIQUE INDEX (ticker_symbol)
+  - INDEX (asset_class)
+  - INDEX (sector)
+
+Table: price_history
+  - PRIMARY KEY (price_id)
+  - UNIQUE INDEX (etf_id, date)  ← Prevents duplicate prices
+  - INDEX (date)                 ← Fast date range queries
+  - INDEX (etf_id, date)         ← Fast time-series queries
+
+Table: benchmark_portfolios
+  - PRIMARY KEY (benchmark_id)
+  - UNIQUE INDEX (benchmark_name)
+  - INDEX (risk_level)
+
+Table: benchmark_holdings
+  - PRIMARY KEY (holding_id)
+  - UNIQUE INDEX (benchmark_id, etf_id)  ← Prevents duplicates
+  - INDEX (benchmark_id)
+  - FOREIGN KEY (benchmark_id, etf_id)
+
+Table: backtest_scenarios
+  - PRIMARY KEY (scenario_id)
+  - INDEX (created_by)
+  - INDEX (strategy_type)
+  - INDEX (start_date, end_date)
+  - FOREIGN KEY (benchmark_id)
+
+Table: scenario_holdings
+  - PRIMARY KEY (holding_id)
+  - UNIQUE INDEX (scenario_id, etf_id)  ← Prevents duplicates
+  - INDEX (scenario_id)
+  - FOREIGN KEY (scenario_id, etf_id)
+
+Table: backtest_results
+  - PRIMARY KEY (result_id)
+  - UNIQUE INDEX (scenario_id)  ← One result per scenario
+  - INDEX (execution_date)
+  - FOREIGN KEY (scenario_id)
+
+Table: portfolio_snapshots
+  - PRIMARY KEY (snapshot_id)
+  - INDEX (scenario_id, snapshot_date)
+  - INDEX (snapshot_date)
+  - FOREIGN KEY (scenario_id, etf_id)
+
+Table: transaction_log
+  - PRIMARY KEY (transaction_id)
+  - INDEX (scenario_id)
+  - INDEX (trans_date)
+  - INDEX (trans_type)
+  - FOREIGN KEY (scenario_id, etf_id)
+
+
+================================================================================
+REFERENTIAL INTEGRITY RULES
+================================================================================
+
+ON DELETE CASCADE:
+  - etf_master → price_history, benchmark_holdings, scenario_holdings,
+                 portfolio_snapshots, transaction_log
+  - benchmark_portfolios → benchmark_holdings
+  - backtest_scenarios → scenario_holdings, backtest_results,
+                         portfolio_snapshots, transaction_log
+
+ON DELETE SET NULL:
+  - benchmark_portfolios → backtest_scenarios.benchmark_id
+    (Scenario can exist without benchmark comparison)
+
+UNIQUE CONSTRAINTS:
+  - etf_master.ticker_symbol
+  - benchmark_portfolios.benchmark_name
+  - price_history(etf_id, date)
+  - benchmark_holdings(benchmark_id, etf_id)
+  - scenario_holdings(scenario_id, etf_id)
+  - backtest_results(scenario_id)
+
+
+================================================================================
