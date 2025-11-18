@@ -263,3 +263,124 @@ DELETE FROM etf_master;
 3. ผลลัพธ์จาก `SELECT COUNT(*)` ได้เท่าไหร่?
 
 ผมจะช่วยแก้ให้ทันที!
+
+---
+
+## ❓ คำถามที่พบบ่อย (FAQ)
+
+### Q1: Excel ไม่มี column `created_at` แต่ตาราง MySQL มี จะ import ได้ไหม?
+
+**A: ได้!** ไม่มีปัญหา
+
+ทุกตารางมี:
+```sql
+created_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP
+```
+
+**ความหมาย:**
+- MySQL จะสร้าง `created_at` ให้อัตโนมัติ ตอน import
+- คุณ **ไม่ต้อง** ใส่ column `created_at` ใน Excel
+- Import ปกติได้เลย ไม่ error
+
+**ตัวอย่าง:**
+
+Excel มี:
+```
+etf_id, ticker_symbol, etf_name, ...
+1, SPY, SPDR S&P 500, ...
+```
+
+MySQL จะได้:
+```
+etf_id, ticker_symbol, etf_name, ..., created_at
+1, SPY, SPDR S&P 500, ..., 2024-11-18 10:30:00
+```
+
+MySQL สร้าง timestamp ให้เองตอน insert!
+
+### Q2: ถ้า import ไฟล์เดิมซ้ำ จะเกิดอะไร?
+
+**A: Error 1062 - Duplicate entry**
+
+เพราะ `etf_id` เป็น PRIMARY KEY ห้ามซ้ำ
+
+**วิธีแก้:**
+```sql
+DELETE FROM price_history;
+DELETE FROM benchmark_holdings;
+DELETE FROM benchmark_portfolios;
+DELETE FROM etf_master;
+```
+
+จากนั้น import ใหม่
+
+### Q3: ทำไม price_history ต้องแบ่ง 3 ไฟล์?
+
+**A: Excel มีขอบเขต 1,048,576 rows**
+
+ข้อมูล price_history มี 208,700 rows ดังนั้น:
+- Part 1: 70,000 rows
+- Part 2: 70,000 rows  
+- Part 3: 68,700 rows
+
+Import ทีละไฟล์เข้า table เดียวกัน
+
+### Q4: Column mapping ไม่ตรง ทำยังไง?
+
+**A: แก้ด้วยมือ**
+
+ใน Table Data Import Wizard:
+1. ที่หน้า **Configure Import Settings**
+2. คลิกที่ dropdown ของแต่ละ column
+3. เลือก column ที่ตรง
+
+**ตัวอย่าง:**
+```
+Source Column    →  Destination Column
+─────────────────────────────────────
+etf_id           →  etf_id
+ticker_symbol    →  ticker_symbol
+etf_name         →  etf_name
+(ignore)         →  created_at  ← ปล่อยว่างไว้
+```
+
+### Q5: เช็คว่า import สำเร็จยังไง?
+
+**A: รัน SQL นี้:**
+```sql
+-- เช็คจำนวน
+SELECT 
+    'etf_master' AS table_name, 
+    COUNT(*) AS rows 
+FROM etf_master
+UNION ALL
+SELECT 'benchmark_portfolios', COUNT(*) FROM benchmark_portfolios
+UNION ALL  
+SELECT 'benchmark_holdings', COUNT(*) FROM benchmark_holdings
+UNION ALL
+SELECT 'price_history', COUNT(*) FROM price_history;
+
+-- เช็คข้อมูล sample
+SELECT * FROM etf_master LIMIT 5;
+SELECT * FROM price_history LIMIT 5;
+```
+
+**ผลลัพธ์ที่ถูกต้อง:**
+```
+etf_master           : 50
+benchmark_portfolios : 35
+benchmark_holdings   : 114-116
+price_history        : 208,700
+```
+
+---
+
+## 📝 สรุปสั้นๆ
+
+1. **Excel ไม่ต้องมี created_at** ✅
+2. **Import ทีละตาราง** (1 → 2 → 3 → 4)
+3. **Save as CSV ก่อน** import
+4. **ตรวจสอบด้วย SELECT COUNT(*)**
+5. **ใช้เวลา 15-20 นาที** รวมทั้งหมด
+
+**ถ้ายังติดปัญหา บอกผมได้เลย!** 💪
