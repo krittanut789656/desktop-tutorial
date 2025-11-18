@@ -1,0 +1,51 @@
+ticker_symbol,etf_name,asset_class,region,sector,expense_ratio,inception_date
+SPY,SPDR S&P 500 ETF Trust,Equity,US,Broad Market,0.0945,1993-01-22
+VOO,Vanguard S&P 500 ETF,Equity,US,Broad Market,0.03,2010-09-07
+VTI,Vanguard Total Stock Market ETF,Equity,US,Broad Market,0.03,2001-05-24
+QQQ,Invesco QQQ Trust,Equity,US,Technology,0.20,1999-03-10
+IWM,iShares Russell 2000 ETF,Equity,US,Small Cap,0.19,2000-05-22
+DIA,SPDR Dow Jones Industrial Average ETF,Equity,US,Broad Market,0.16,1998-01-14
+VUG,Vanguard Growth ETF,Equity,US,Growth,0.04,2004-01-26
+VTV,Vanguard Value ETF,Equity,US,Value,0.04,2004-01-26
+IVV,iShares Core S&P 500 ETF,Equity,US,Broad Market,0.03,2000-05-15
+VEA,Vanguard FTSE Developed Markets ETF,Equity,International,Developed Markets,0.05,2007-07-20
+VWO,Vanguard FTSE Emerging Markets ETF,Equity,International,Emerging Markets,0.08,2005-03-04
+EFA,iShares MSCI EAFE ETF,Equity,International,Developed Markets,0.32,2001-08-14
+IEMG,iShares Core MSCI Emerging Markets ETF,Equity,International,Emerging Markets,0.09,2012-10-18
+EEM,iShares MSCI Emerging Markets ETF,Equity,International,Emerging Markets,0.68,2003-04-07
+IXUS,iShares Core MSCI Total International Stock ETF,Equity,International,Total International,0.07,2012-10-18
+AGG,iShares Core U.S. Aggregate Bond ETF,Bond,US,Aggregate Bond,0.03,2003-09-22
+BND,Vanguard Total Bond Market ETF,Bond,US,Aggregate Bond,0.03,2007-04-03
+TLT,iShares 20+ Year Treasury Bond ETF,Bond,US,Long-Term Treasury,0.15,2002-07-22
+IEF,iShares 7-10 Year Treasury Bond ETF,Bond,US,Intermediate Treasury,0.15,2002-07-22
+SHY,iShares 1-3 Year Treasury Bond ETF,Bond,US,Short-Term Treasury,0.15,2002-07-22
+LQD,iShares iBoxx $ Investment Grade Corporate Bond ETF,Bond,US,Corporate Bond,0.14,2002-07-22
+TIP,iShares TIPS Bond ETF,Bond,US,Inflation-Protected,0.19,2003-12-04
+HYG,iShares iBoxx $ High Yield Corporate Bond ETF,Bond,US,High Yield,0.49,2007-04-04
+MUB,iShares National Muni Bond ETF,Bond,US,Municipal Bond,0.05,2007-09-07
+BNDX,Vanguard Total International Bond ETF,Bond,International,International Bond,0.07,2013-05-31
+GLD,SPDR Gold Shares,Commodity,Global,Gold,0.40,2004-11-18
+SLV,iShares Silver Trust,Commodity,Global,Silver,0.50,2006-04-28
+DBC,Invesco DB Commodity Index Tracking Fund,Commodity,Global,Broad Commodity,0.85,2006-02-03
+USO,United States Oil Fund,Commodity,Global,Oil,0.79,2006-04-10
+UNG,United States Natural Gas Fund,Commodity,Global,Natural Gas,1.06,2007-04-18
+VNQ,Vanguard Real Estate ETF,REIT,US,Real Estate,0.12,2004-09-23
+IYR,iShares U.S. Real Estate ETF,REIT,US,Real Estate,0.41,2000-06-12
+VNQI,Vanguard Global ex-U.S. Real Estate ETF,REIT,International,Real Estate,0.12,2010-11-01
+XLK,Technology Select Sector SPDR Fund,Equity,US,Technology,0.10,1998-12-16
+XLF,Financial Select Sector SPDR Fund,Equity,US,Financials,0.10,1998-12-16
+XLV,Health Care Select Sector SPDR Fund,Equity,US,Healthcare,0.10,1998-12-16
+XLE,Energy Select Sector SPDR Fund,Equity,US,Energy,0.10,1998-12-16
+XLI,Industrial Select Sector SPDR Fund,Equity,US,Industrials,0.10,1998-12-16
+XLP,Consumer Staples Select Sector SPDR Fund,Equity,US,Consumer Staples,0.10,1998-12-16
+XLY,Consumer Discretionary Select Sector SPDR Fund,Equity,US,Consumer Discretionary,0.10,1998-12-16
+XLU,Utilities Select Sector SPDR Fund,Equity,US,Utilities,0.10,1998-12-16
+XLRE,Real Estate Select Sector SPDR Fund,REIT,US,Real Estate,0.10,2015-10-07
+XLB,Materials Select Sector SPDR Fund,Equity,US,Materials,0.10,1998-12-16
+VGT,Vanguard Information Technology ETF,Equity,US,Technology,0.10,2004-01-26
+VHT,Vanguard Health Care ETF,Equity,US,Healthcare,0.10,2004-01-26
+VFH,Vanguard Financials ETF,Equity,US,Financials,0.10,2004-01-26
+VDE,Vanguard Energy ETF,Equity,US,Energy,0.10,2004-09-23
+VIS,Vanguard Industrials ETF,Equity,US,Industrials,0.10,2004-09-23
+VDC,Vanguard Consumer Staples ETF,Equity,US,Consumer Staples,0.10,2004-01-26
+VAW,Vanguard Materials ETF,Equity,US,Materials,0.10,2004-01-26
