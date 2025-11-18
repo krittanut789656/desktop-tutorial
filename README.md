@@ -27,7 +27,9 @@ desktop-tutorial/
 ├── analytics.py                        # 11 SQL-based insights
 ├── main.py                             # Main CLI application
 ├── setup_database.py                   # Automated database setup
+├── import_data.py                      # 🆕 Simple data import script
 ├── setup_database.ipynb                # 📓 Jupyter: Database setup
+├── import_data.ipynb                   # 📓 Jupyter: Data import (recommended)
 ├── config.ipynb                        # 📓 Jupyter: Configuration
 ├── database.ipynb                      # 📓 Jupyter: Database operations
 ├── analytics.ipynb                     # 📓 Jupyter: 11 insights + charts
