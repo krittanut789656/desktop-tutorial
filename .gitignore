@@ -28,4 +28,7 @@ data/individual_etfs/
 Thumbs.db
 
 # MySQL
-*.sql
+# *.sql  # Commented out to allow database/*.sql
+# But ignore dump files
+backup*.sql
+dump*.sql
