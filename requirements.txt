@@ -1,0 +1,14 @@
+# MySQL to Excel Exporter - Dependencies
+# Portfolio Backtesting System
+
+# MySQL Database Connector
+mysql-connector-python==8.2.0
+
+# Data manipulation and analysis
+pandas==2.1.4
+
+# Excel file support
+openpyxl==3.1.2
+
+# Optional: Environment variable management
+python-dotenv==1.0.0
