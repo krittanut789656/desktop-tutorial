@@ -9,11 +9,20 @@ import mysql.connector
 import pandas as pd
 from datetime import datetime
 import sys
+import os
+from pathlib import Path
+
+# ========================================
+# หา path ของ script และเปลี่ยน working directory
+# ========================================
+SCRIPT_DIR = Path(__file__).parent.absolute()
+os.chdir(SCRIPT_DIR)
 
 print("=" * 70)
 print("📥 Import Price History (208,700 rows)".center(70))
 print("=" * 70)
-print()
+print(f"\n📁 Script directory: {SCRIPT_DIR}")
+print(f"📁 Working directory: {Path.cwd()}\n")
 
 # ========================================
 # ตั้งค่า MySQL
@@ -104,8 +113,15 @@ print("=" * 70)
 try:
     # อ่านไฟล์
     print("\n📁 อ่านไฟล์ CSV...")
-    df_price = pd.read_csv('data/etf_price_history.csv')
-    print(f"   ✅ อ่านได้ {len(df_price):,} rows")
+    csv_path = SCRIPT_DIR / 'data' / 'etf_price_history.csv'
+
+    if not csv_path.exists():
+        print(f"\n❌ Error: ไม่พบไฟล์ {csv_path}")
+        print(f"\n💡 ตรวจสอบว่าไฟล์อยู่ที่: {SCRIPT_DIR / 'data' / 'etf_price_history.csv'}")
+        sys.exit(1)
+
+    df_price = pd.read_csv(csv_path)
+    print(f"   ✅ อ่านได้ {len(df_price):,} rows จาก {csv_path.name}")
 
     # แปลง ticker → etf_id
     print("🔄 แปลง ticker → etf_id...")
