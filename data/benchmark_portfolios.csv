@@ -1,0 +1,36 @@
+benchmark_name,description,risk_level,target_return,asset_allocation
+Traditional 60/40,60% Stocks 40% Bonds - Classic balanced portfolio,Moderate,8.0,60% SPY / 40% AGG
+Aggressive 80/20,80% Stocks 20% Bonds - Growth focused,Aggressive,10.0,80% SPY / 20% AGG
+Conservative 40/60,40% Stocks 60% Bonds - Income focused,Conservative,6.0,40% SPY / 60% AGG
+All Weather Portfolio,Ray Dalio's diversified strategy,Moderate,8.5,30% SPY / 40% TLT / 15% IEF / 7.5% GLD / 7.5% DBC
+Permanent Portfolio,Harry Browne's four-quadrant approach,Conservative,7.0,25% SPY / 25% TLT / 25% GLD / 25% Cash
+Golden Butterfly,Modified permanent portfolio,Moderate,7.5,20% SPY / 20% SCV / 20% TLT / 20% SHY / 20% GLD
+Bogleheads Three-Fund,Simple total market approach,Moderate,9.0,40% VTI / 20% VXUS / 40% BND
+Ivy Portfolio,Tactical asset allocation,Moderate,9.5,20% SPY / 20% EFA / 20% IEF / 20% DBC / 20% VNQ
+100% Stock Portfolio,All equity - maximum growth,Aggressive,12.0,100% SPY
+100% Bond Portfolio,All bonds - capital preservation,Conservative,4.0,100% AGG
+70/30 Portfolio,Moderate growth strategy,Moderate,8.5,70% SPY / 30% AGG
+50/50 Portfolio,Balanced approach,Moderate,7.5,50% SPY / 50% AGG
+90/10 Portfolio,Aggressive growth,Aggressive,11.0,90% SPY / 10% AGG
+Tech Heavy Portfolio,Technology sector focused,Aggressive,14.0,60% QQQ / 20% XLK / 20% VGT
+Dividend Growth Portfolio,Income focused equities,Moderate,8.0,50% VTV / 30% VNQ / 20% AGG
+Global Diversified,International exposure,Moderate,9.0,40% SPY / 30% VEA / 20% VWO / 10% AGG
+Bond Ladder,Multiple bond maturities,Conservative,4.5,40% SHY / 30% IEF / 30% TLT
+Inflation Protected,TIPS and commodities,Conservative,6.0,40% TIP / 30% GLD / 30% DBC
+Risk Parity,Equal risk contribution,Moderate,8.0,25% SPY / 25% TLT / 25% GLD / 25% DBC
+Core-Satellite,Index core with satellite positions,Moderate,9.5,60% VTI / 20% QQQ / 10% VWO / 10% GLD
+Lazy Three-Fund,Simplified Bogleheads,Moderate,8.5,60% VTI / 30% BND / 10% VEA
+No-Brainer Portfolio,Four equal parts,Moderate,8.0,25% SPY / 25% VEA / 25% VNQ / 25% AGG
+Simple Ivy,Simplified tactical allocation,Moderate,9.0,33% SPY / 33% EFA / 34% AGG
+Two-Fund Portfolio,Minimal complexity,Moderate,8.0,60% VTI / 40% BND
+Sector Rotation,Equal weight sectors,Aggressive,11.0,11% XLK / 11% XLF / 11% XLV / 11% XLE / 11% XLI / 11% XLP / 11% XLY / 11% XLU / 12% XLB
+Value Tilt,Value stock emphasis,Moderate,9.0,60% VTV / 30% VEA / 10% AGG
+Small Cap Tilt,Small cap emphasis,Aggressive,10.5,40% IWM / 40% SPY / 20% AGG
+International Heavy,Global diversification,Moderate,8.5,30% SPY / 40% VEA / 20% VWO / 10% AGG
+Commodity Enhanced,Commodity allocation,Moderate,8.0,50% SPY / 30% AGG / 20% DBC
+REIT Enhanced,Real estate allocation,Moderate,9.0,50% SPY / 30% VNQ / 20% AGG
+Balanced Growth,Diversified moderate portfolio,Moderate,8.5,35% SPY / 25% VEA / 20% AGG / 10% VNQ / 10% GLD
+Conservative Income,High quality bonds,Conservative,5.0,20% SPY / 60% AGG / 20% TIP
+Emerging Markets Tilt,EM exposure,Aggressive,10.0,40% SPY / 30% VWO / 20% EEM / 10% AGG
+Barbell Strategy,Short and long bonds,Conservative,5.5,40% SPY / 30% SHY / 30% TLT
+Core Four,Classic four-fund,Moderate,8.5,42% VTI / 18% VXUS / 28% BND / 12% BNDX

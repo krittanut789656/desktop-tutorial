@@ -1,0 +1,117 @@
+benchmark_name,ticker_symbol,target_weight
+Traditional 60/40,SPY,0.6000
+Traditional 60/40,AGG,0.4000
+Aggressive 80/20,SPY,0.8000
+Aggressive 80/20,AGG,0.2000
+Conservative 40/60,SPY,0.4000
+Conservative 40/60,AGG,0.6000
+All Weather Portfolio,SPY,0.3000
+All Weather Portfolio,TLT,0.4000
+All Weather Portfolio,IEF,0.1500
+All Weather Portfolio,GLD,0.0750
+All Weather Portfolio,DBC,0.0750
+Permanent Portfolio,SPY,0.2500
+Permanent Portfolio,TLT,0.2500
+Permanent Portfolio,GLD,0.2500
+Permanent Portfolio,SHY,0.2500
+Golden Butterfly,SPY,0.2000
+Golden Butterfly,VTV,0.2000
+Golden Butterfly,TLT,0.2000
+Golden Butterfly,SHY,0.2000
+Golden Butterfly,GLD,0.2000
+Bogleheads Three-Fund,VTI,0.4000
+Bogleheads Three-Fund,VXUS,0.2000
+Bogleheads Three-Fund,BND,0.4000
+Ivy Portfolio,SPY,0.2000
+Ivy Portfolio,EFA,0.2000
+Ivy Portfolio,IEF,0.2000
+Ivy Portfolio,DBC,0.2000
+Ivy Portfolio,VNQ,0.2000
+100% Stock Portfolio,SPY,1.0000
+100% Bond Portfolio,AGG,1.0000
+70/30 Portfolio,SPY,0.7000
+70/30 Portfolio,AGG,0.3000
+50/50 Portfolio,SPY,0.5000
+50/50 Portfolio,AGG,0.5000
+90/10 Portfolio,SPY,0.9000
+90/10 Portfolio,AGG,0.1000
+Tech Heavy Portfolio,QQQ,0.6000
+Tech Heavy Portfolio,XLK,0.2000
+Tech Heavy Portfolio,VGT,0.2000
+Dividend Growth Portfolio,VTV,0.5000
+Dividend Growth Portfolio,VNQ,0.3000
+Dividend Growth Portfolio,AGG,0.2000
+Global Diversified,SPY,0.4000
+Global Diversified,VEA,0.3000
+Global Diversified,VWO,0.2000
+Global Diversified,AGG,0.1000
+Bond Ladder,SHY,0.4000
+Bond Ladder,IEF,0.3000
+Bond Ladder,TLT,0.3000
+Inflation Protected,TIP,0.4000
+Inflation Protected,GLD,0.3000
+Inflation Protected,DBC,0.3000
+Risk Parity,SPY,0.2500
+Risk Parity,TLT,0.2500
+Risk Parity,GLD,0.2500
+Risk Parity,DBC,0.2500
+Core-Satellite,VTI,0.6000
+Core-Satellite,QQQ,0.2000
+Core-Satellite,VWO,0.1000
+Core-Satellite,GLD,0.1000
+Lazy Three-Fund,VTI,0.6000
+Lazy Three-Fund,BND,0.3000
+Lazy Three-Fund,VEA,0.1000
+No-Brainer Portfolio,SPY,0.2500
+No-Brainer Portfolio,VEA,0.2500
+No-Brainer Portfolio,VNQ,0.2500
+No-Brainer Portfolio,AGG,0.2500
+Simple Ivy,SPY,0.3300
+Simple Ivy,EFA,0.3300
+Simple Ivy,AGG,0.3400
+Two-Fund Portfolio,VTI,0.6000
+Two-Fund Portfolio,BND,0.4000
+Sector Rotation,XLK,0.1100
+Sector Rotation,XLF,0.1100
+Sector Rotation,XLV,0.1100
+Sector Rotation,XLE,0.1100
+Sector Rotation,XLI,0.1100
+Sector Rotation,XLP,0.1100
+Sector Rotation,XLY,0.1100
+Sector Rotation,XLU,0.1100
+Sector Rotation,XLB,0.1200
+Value Tilt,VTV,0.6000
+Value Tilt,VEA,0.3000
+Value Tilt,AGG,0.1000
+Small Cap Tilt,IWM,0.4000
+Small Cap Tilt,SPY,0.4000
+Small Cap Tilt,AGG,0.2000
+International Heavy,SPY,0.3000
+International Heavy,VEA,0.4000
+International Heavy,VWO,0.2000
+International Heavy,AGG,0.1000
+Commodity Enhanced,SPY,0.5000
+Commodity Enhanced,AGG,0.3000
+Commodity Enhanced,DBC,0.2000
+REIT Enhanced,SPY,0.5000
+REIT Enhanced,VNQ,0.3000
+REIT Enhanced,AGG,0.2000
+Balanced Growth,SPY,0.3500
+Balanced Growth,VEA,0.2500
+Balanced Growth,AGG,0.2000
+Balanced Growth,VNQ,0.1000
+Balanced Growth,GLD,0.1000
+Conservative Income,SPY,0.2000
+Conservative Income,AGG,0.6000
+Conservative Income,TIP,0.2000
+Emerging Markets Tilt,SPY,0.4000
+Emerging Markets Tilt,VWO,0.3000
+Emerging Markets Tilt,EEM,0.2000
+Emerging Markets Tilt,AGG,0.1000
+Barbell Strategy,SPY,0.4000
+Barbell Strategy,SHY,0.3000
+Barbell Strategy,TLT,0.3000
+Core Four,VTI,0.4200
+Core Four,VXUS,0.1800
+Core Four,BND,0.2800
+Core Four,BNDX,0.1200
