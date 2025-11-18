@@ -25,7 +25,13 @@ desktop-tutorial/
 ├── config.py                           # Configuration settings
 ├── database.py                         # Database operations (SQL-focused)
 ├── analytics.py                        # 11 SQL-based insights
-├── main.py                             # Main application
+├── main.py                             # Main CLI application
+├── setup_database.py                   # Automated database setup
+├── setup_database.ipynb                # 📓 Jupyter: Database setup
+├── config.ipynb                        # 📓 Jupyter: Configuration
+├── database.ipynb                      # 📓 Jupyter: Database operations
+├── analytics.ipynb                     # 📓 Jupyter: 11 insights + charts
+├── main.ipynb                          # 📓 Jupyter: Interactive app
 ├── requirements.txt                    # Python dependencies
 ├── README.md                           # This file
 └── IMPORT_GUIDE.md                     # Database import guide
@@ -144,13 +150,27 @@ This will:
 
 ## 🚀 Running the Application
 
-After importing data, run the main application:
+### Option 1: Jupyter Notebook (Recommended)
+
+Open Jupyter and run the notebooks:
+
+```bash
+jupyter notebook
+```
+
+Then open:
+- **setup_database.ipynb** - First time setup
+- **main.ipynb** - Interactive application with charts
+- **analytics.ipynb** - All 11 insights with visualizations
+- **database.ipynb** - CRUD operations demos
+
+### Option 2: Command Line
 
 ```bash
 python main.py
 ```
 
-This will launch an interactive menu with:
+This will launch a CLI menu with:
 - **Analytics** - 7 SQL-based insights
 - **Scenario Management** - Full CRUD operations
 - **Benchmark Comparison** - Compare your portfolios
@@ -158,28 +178,25 @@ This will launch an interactive menu with:
 
 ### Main Modules
 
-#### `config.py`
-- Configuration settings and constants
-- Database credentials
-- Application defaults
+#### Python Files (.py)
+- **config.py** - Configuration settings and constants
+- **database.py** - SQL-focused database operations with CRUD
+- **analytics.py** - 11 SQL-based insights
+- **main.py** - Interactive CLI menu application
+- **setup_database.py** - Automated database setup script
 
-#### `database.py`
-- SQL-focused database operations
-- CRUD operations for scenarios
-- Query execution wrapper
-- Minimal pandas usage
+#### Jupyter Notebooks (.ipynb)
+- **setup_database.ipynb** - Interactive database setup with progress tracking
+- **config.ipynb** - Configuration reference
+- **database.ipynb** - Database operations with 10 demo cells
+- **analytics.ipynb** - All 11 insights with matplotlib/seaborn charts
+- **main.ipynb** - Complete interactive app with visualizations
 
-#### `analytics.py`
-- 11 SQL-based insights
-- Uses window functions, CTEs, subqueries
-- Benchmark comparison analytics
-- Portfolio performance metrics
-
-#### `main.py`
-- Interactive menu-driven interface
-- User-friendly CLI
-- Text file export/backup
-- Complete application flow
+**Features of Jupyter Notebooks:**
+- ✅ Step-by-step execution
+- ✅ Interactive visualizations (bar charts, pie charts, scatter plots)
+- ✅ Export-ready for presentations
+- ✅ Perfect for demos and exploration
 
 ## 📝 Notes
 
