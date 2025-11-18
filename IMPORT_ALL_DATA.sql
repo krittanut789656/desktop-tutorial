@@ -683,7 +683,7 @@ WHERE b.benchmark_name = 'Core Four' AND e.ticker_symbol = 'BNDX';
 -- ===============================================
 -- ตรวจสอบผลลัพธ์
 -- ===============================================
-SELECT 'etf_master' AS table_name, COUNT(*) AS rows FROM etf_master
+SELECT 'etf_master' AS table_name, COUNT(*) AS row_count FROM etf_master
 UNION ALL
 SELECT 'benchmark_portfolios', COUNT(*) FROM benchmark_portfolios
 UNION ALL
