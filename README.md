@@ -12,13 +12,23 @@ desktop-tutorial/
 │   ├── benchmark_portfolios.csv        # 35 benchmark portfolios
 │   └── benchmark_holdings.csv          # 117 holdings (weights)
 ├── database/
-│   └── schema.sql                      # MySQL schema (9 tables)
+│   ├── schema.sql                      # MySQL schema (9 tables)
+│   └── complete_setup.sql              # Complete setup script
+├── docs/
+│   ├── ER_DIAGRAM.md                   # ER diagram (Mermaid)
+│   └── ER_DIAGRAM_VISUAL.txt           # ER diagram (ASCII)
 ├── scripts/
 │   ├── download_etf_data.py            # Download real data (yfinance)
 │   ├── download_etf_data_simple.py     # Download using requests
 │   ├── generate_sample_data.py         # Generate simulated data
 │   └── import_to_mysql.py              # Import all data to MySQL
-└── requirements.txt                    # Python dependencies
+├── config.py                           # Configuration settings
+├── database.py                         # Database operations (SQL-focused)
+├── analytics.py                        # 11 SQL-based insights
+├── main.py                             # Main application
+├── requirements.txt                    # Python dependencies
+├── README.md                           # This file
+└── IMPORT_GUIDE.md                     # Database import guide
 ```
 
 ## 🚀 Setup Instructions
@@ -132,16 +142,44 @@ This will:
 ### Benchmark Holdings (`data/benchmark_holdings.csv`)
 117 allocation weights (which ETFs in which portfolio)
 
-## 🔧 Next Steps
+## 🚀 Running the Application
 
-After importing data:
+After importing data, run the main application:
 
-1. Create Python modules (main.py, analytics.py)
-2. Implement 11 SQL insights
-3. Build CRUD operations
-4. Add text file operations
-5. Create ER Diagram
-6. Test and demo
+```bash
+python main.py
+```
+
+This will launch an interactive menu with:
+- **Analytics** - 7 SQL-based insights
+- **Scenario Management** - Full CRUD operations
+- **Benchmark Comparison** - Compare your portfolios
+- **Data Export** - Text file operations
+
+### Main Modules
+
+#### `config.py`
+- Configuration settings and constants
+- Database credentials
+- Application defaults
+
+#### `database.py`
+- SQL-focused database operations
+- CRUD operations for scenarios
+- Query execution wrapper
+- Minimal pandas usage
+
+#### `analytics.py`
+- 11 SQL-based insights
+- Uses window functions, CTEs, subqueries
+- Benchmark comparison analytics
+- Portfolio performance metrics
+
+#### `main.py`
+- Interactive menu-driven interface
+- User-friendly CLI
+- Text file export/backup
+- Complete application flow
 
 ## 📝 Notes
 
