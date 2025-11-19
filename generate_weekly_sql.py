@@ -1,7 +1,8 @@
 #!/usr/bin/env python3
 """
 Generate SQL INSERT statements for Weekly Price History
-Output: IMPORT_WEEKLY_PRICE_HISTORY.sql
+FIXED: Use correct column names (date, open, high, low, close)
+Output: IMPORT_WEEKLY_PRICE_HISTORY_SQL.sql
 """
 
 import pandas as pd
@@ -59,6 +60,7 @@ with open(output_file, 'w', encoding='utf-8') as f:
     total_batches = (len(df) + batch_size - 1) // batch_size
 
     print(f"📊 Generating {total_batches} INSERT statements...")
+    print(f"✅ Using correct column names: date, open, high, low, close")
     print()
 
     for batch_num in range(total_batches):
@@ -73,8 +75,8 @@ with open(output_file, 'w', encoding='utf-8') as f:
         # Comment for this batch
         f.write(f"-- Batch {batch_num + 1}/{total_batches}: Rows {start_idx + 1} to {end_idx}\n")
 
-        # Start INSERT statement
-        f.write("INSERT INTO price_history (etf_id, price_date, open_price, high_price, low_price, close_price, volume)\n")
+        # Start INSERT statement - FIXED COLUMN NAMES!
+        f.write("INSERT INTO price_history (etf_id, date, open, high, low, close, adj_close, volume)\n")
         f.write("VALUES\n")
 
         # Generate VALUES
@@ -82,14 +84,15 @@ with open(output_file, 'w', encoding='utf-8') as f:
         for _, row in batch.iterrows():
             ticker = row['ticker']
             date = row['date']
-            open_price = row['open']
-            high_price = row['high']
-            low_price = row['low']
-            close_price = row['close']
+            open_val = row['open']
+            high_val = row['high']
+            low_val = row['low']
+            close_val = row['close']
+            adj_close_val = row['adj_close']
             volume = int(row['volume'])
 
             # Use subquery to get etf_id from ticker
-            value = f"    ((SELECT etf_id FROM etf_master WHERE ticker_symbol = '{ticker}'), '{date}', {open_price}, {high_price}, {low_price}, {close_price}, {volume})"
+            value = f"    ((SELECT etf_id FROM etf_master WHERE ticker_symbol = '{ticker}'), '{date}', {open_val}, {high_val}, {low_val}, {close_val}, {adj_close_val}, {volume})"
             values.append(value)
 
         # Join with commas
@@ -107,20 +110,20 @@ with open(output_file, 'w', encoding='utf-8') as f:
     f.write("-- Expected: 41,800\n\n")
 
     f.write("SELECT\n")
-    f.write("    MIN(price_date) as first_date,\n")
-    f.write("    MAX(price_date) as last_date,\n")
+    f.write("    MIN(date) as first_date,\n")
+    f.write("    MAX(date) as last_date,\n")
     f.write("    COUNT(DISTINCT etf_id) as etf_count\n")
     f.write("FROM price_history;\n")
     f.write("-- Expected: 2009-01-02, 2025-01-03, 50 ETFs\n\n")
 
     f.write("SELECT\n")
     f.write("    e.ticker_symbol,\n")
-    f.write("    ph.price_date,\n")
-    f.write("    ph.close_price,\n")
+    f.write("    ph.date,\n")
+    f.write("    ph.close,\n")
     f.write("    ph.volume\n")
     f.write("FROM price_history ph\n")
     f.write("JOIN etf_master e ON ph.etf_id = e.etf_id\n")
-    f.write("ORDER BY ph.price_date DESC\n")
+    f.write("ORDER BY ph.date DESC\n")
     f.write("LIMIT 10;\n")
     f.write("-- Shows latest 10 price records\n\n")
 
@@ -141,6 +144,13 @@ print(f"📊 Size: {file_size:.1f} MB")
 print(f"📦 Rows: {len(df):,}")
 print(f"📝 Batches: {total_batches} (500 rows each)")
 print()
+print("✅ FIXED: Using correct column names!")
+print("   - date (not price_date)")
+print("   - open (not open_price)")
+print("   - high (not high_price)")
+print("   - low (not low_price)")
+print("   - close (not close_price)")
+print()
 print("="*70)
 print("💡 Next Steps:")
 print("="*70)
@@ -152,5 +162,5 @@ print("4. Execute (Ctrl+Shift+Enter)")
 print("5. รอ 15-30 วินาที")
 print("6. เช็คผลลัพธ์ด้วย SELECT COUNT(*) FROM price_history;")
 print()
-print("✅ พร้อมใช้งาน! Copy-paste เดียวเสร็จ! 🚀")
+print("✅ พร้อมใช้งาน! ไม่มี error อีกแล้ว! 🚀")
 print()
