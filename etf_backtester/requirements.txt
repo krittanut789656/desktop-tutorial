@@ -4,6 +4,13 @@
 # Database Connector
 mysql-connector-python>=8.0.0
 
+# Yahoo Finance data downloader
+yfinance>=0.2.0
+
+# Data manipulation
+pandas>=1.5.0
+numpy>=1.24.0
+
 # Optional: Alternative MySQL connector
 # PyMySQL>=1.0.0
 

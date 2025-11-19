@@ -27,7 +27,7 @@ CREATE TABLE ETF_Master (
 
 -- =====================================================
 -- Table 2: Price_Data
--- Historical daily price data for all ETFs
+-- Historical weekly price data for all ETFs (from Yahoo Finance)
 -- =====================================================
 CREATE TABLE Price_Data (
     Price_ID BIGINT PRIMARY KEY AUTO_INCREMENT,

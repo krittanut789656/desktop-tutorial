@@ -128,14 +128,16 @@ class ETFBacktesterCLI:
             print("\n✗ Database initialization failed.")
 
     def run_menu_1_2(self):
-        """Load Sample ETF Data"""
+        """Load Real ETF Data from Yahoo Finance"""
         print("\n" + "=" * 80)
-        print("1.2 - LOAD SAMPLE ETF DATA")
+        print("1.2 - LOAD REAL ETF DATA FROM YAHOO FINANCE")
         print("=" * 80)
 
-        print("\nThis will load:")
+        print("\nThis will download:")
         print("  - 50 ETFs across different asset types")
-        print("  - 2 years (730 days) of historical price data")
+        print("  - 10 years of WEEKLY historical price data")
+        print("  - Real data from Yahoo Finance")
+        print("\n⚠ Note: This may take several minutes depending on your internet connection.")
 
         confirm = input("\nContinue? (yes/no): ").strip().lower()
 
@@ -149,8 +151,8 @@ class ETFBacktesterCLI:
         # Load ETF master data
         etf_count = loader.load_etf_master()
 
-        # Load price data
-        price_count = loader.load_price_data(days=730)
+        # Load price data from Yahoo Finance (10 years, weekly)
+        price_count = loader.load_price_data_from_yahoo(years=10)
 
         # Verify
         loader.verify_data_load()

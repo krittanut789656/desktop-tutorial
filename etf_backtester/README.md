@@ -10,10 +10,12 @@ Simple 50-ETF Momentum Strategy Backtesting System
 This project implements a **Simple 50-ETF Portfolio Strategy Backtester** using:
 - **Database**: MySQL (Relational Database)
 - **Interface**: Python Command Line Interface (CLI)
+- **Data Source**: Real market data from Yahoo Finance
+- **Data Frequency**: Weekly price data (10 years historical)
 - **Strategy**: Momentum-based ETF selection
 - **Focus**: SQL-focused analytics and actionable insights
 
-The system allows users to backtest momentum-based trading strategies on a portfolio of 50 ETFs across different asset classes (Equity, Bond, Commodity, Mixed) and generate actionable insights using complex SQL queries.
+The system allows users to backtest momentum-based trading strategies on a portfolio of 50 real ETFs across different asset classes (Equity, Bond, Commodity, Mixed) using actual historical data from Yahoo Finance, and generate actionable insights using complex SQL queries.
 
 ---
 
@@ -33,7 +35,7 @@ The system allows users to backtest momentum-based trading strategies on a portf
   - `Price_Data`: Historical price data
   - `Strategy_Log`: Backtest execution logs
 - [x] **Keys**: Primary Key (PK) and Foreign Key (FK) constraints implemented
-- [x] **Data Volume**: 30+ rows per table (Price_Data has 36,500+ rows)
+- [x] **Data Volume**: 30+ rows per table (Price_Data has 26,000+ weekly records from 10 years of real market data)
 
 ### C. Functional Features (CRUD & Analytics)
 
@@ -69,8 +71,14 @@ The system allows users to backtest momentum-based trading strategies on a portf
 
 3. **Python Dependencies**
    ```bash
-   pip install mysql-connector-python
+   pip install -r requirements.txt
    ```
+
+   This will install:
+   - `mysql-connector-python`: Database connectivity
+   - `yfinance`: Yahoo Finance data downloader
+   - `pandas`: Data manipulation
+   - `numpy`: Numerical operations
 
 ### Database Setup
 
@@ -140,9 +148,10 @@ The system allows users to backtest momentum-based trading strategies on a portf
    - Creates all tables with proper schema
    - Sets up views and constraints
 
-3. **Load sample data** (Menu 1.2):
-   - Loads 50 ETFs across 4 asset types
-   - Generates 730 days (2 years) of price data
+3. **Download real market data** (Menu 1.2):
+   - Loads 50 real ETFs across 4 asset types
+   - Downloads 10 years of weekly price data from Yahoo Finance
+   - Takes 2-5 minutes depending on internet connection
 
 4. **Run a backtest** (Menu 2.1):
    - Executes standard momentum strategy
@@ -156,7 +165,7 @@ The system allows users to backtest momentum-based trading strategies on a portf
 ```
 [1] Setup & Data Management
   1.1 - Initialize Database (Run SQL Schema)
-  1.2 - Load Sample ETF Data
+  1.2 - Download Real ETF Data from Yahoo Finance
   1.3 - View Database Status
 
 [2] Run Backtest
@@ -190,9 +199,12 @@ The system allows users to backtest momentum-based trading strategies on a portf
 
 ### Momentum Strategy
 
-The backtester implements a **momentum-based portfolio selection strategy**:
+The backtester implements a **momentum-based portfolio selection strategy** using **real weekly market data from Yahoo Finance**:
 
 1. **Lookback Period**: Analyze ETF performance over the past N days (e.g., 90 or 180 days)
+   - Works with weekly data: system finds closest weekly price to target date
+   - 90 days ≈ 13 weeks (3 months)
+   - 180 days ≈ 26 weeks (6 months)
 
 2. **Selection**: Calculate momentum score for each ETF:
    ```
@@ -203,9 +215,9 @@ The backtester implements a **momentum-based portfolio selection strategy**:
    - Select top 3-5 ETFs with highest momentum scores
    - Equal-weight allocation
 
-4. **Rebalancing**: Re-evaluate and rebalance portfolio every N days (e.g., 30 days)
+4. **Rebalancing**: Re-evaluate and rebalance portfolio every N days (e.g., 30 days ≈ 4 weeks)
 
-5. **Performance Tracking**: Calculate returns for each holding period
+5. **Performance Tracking**: Calculate returns for each holding period using real market prices
 
 ### SQL-Focused Implementation
 
@@ -449,8 +461,9 @@ This project is created for educational purposes as part of the DADS 4002 course
 - ✅ Text file logging for record-keeping
 - ✅ Clean, modular architecture
 - ✅ Comprehensive CLI interface
-- ✅ 50 ETFs across 4 asset types
-- ✅ 730 days of historical data
+- ✅ 50 real ETFs across 4 asset types
+- ✅ 10 years of weekly historical data from Yahoo Finance
+- ✅ Real market data (not synthetic)
 - ✅ Multiple backtest configurations
 - ✅ Actionable insights generation
 

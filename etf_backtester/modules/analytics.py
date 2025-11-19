@@ -61,8 +61,8 @@ class PortfolioAnalytics:
             params = [start_date, end_date]
 
         query = f"""
-        WITH DailyReturns AS (
-            -- Calculate daily returns for each ETF
+        WITH WeeklyReturns AS (
+            -- Calculate weekly returns for each ETF
             SELECT
                 em.Asset_Type,
                 em.ETF_ID,
@@ -70,13 +70,13 @@ class PortfolioAnalytics:
                 pd1.Price_Date,
                 pd1.Close_Price as Current_Price,
                 pd2.Close_Price as Previous_Price,
-                -- Daily Return = (Current - Previous) / Previous
-                ((pd1.Close_Price - pd2.Close_Price) / pd2.Close_Price) as Daily_Return
+                -- Weekly Return = (Current - Previous) / Previous
+                ((pd1.Close_Price - pd2.Close_Price) / pd2.Close_Price) as Weekly_Return
             FROM Price_Data pd1
             INNER JOIN ETF_Master em ON pd1.ETF_ID = em.ETF_ID
             INNER JOIN Price_Data pd2 ON pd1.ETF_ID = pd2.ETF_ID
                 AND pd2.Price_Date = (
-                    -- Get previous trading day
+                    -- Get previous week
                     SELECT MAX(Price_Date)
                     FROM Price_Data
                     WHERE ETF_ID = pd1.ETF_ID
@@ -90,26 +90,26 @@ class PortfolioAnalytics:
                 Asset_Type,
                 COUNT(DISTINCT ETF_ID) as Num_ETFs,
                 COUNT(*) as Num_Observations,
-                AVG(Daily_Return) as Avg_Daily_Return,
-                STDDEV_POP(Daily_Return) as Daily_Volatility,
-                MIN(Daily_Return) as Min_Daily_Return,
-                MAX(Daily_Return) as Max_Daily_Return,
-                -- Annualized volatility (assuming 252 trading days)
-                STDDEV_POP(Daily_Return) * SQRT(252) as Annualized_Volatility
-            FROM DailyReturns
+                AVG(Weekly_Return) as Avg_Weekly_Return,
+                STDDEV_POP(Weekly_Return) as Weekly_Volatility,
+                MIN(Weekly_Return) as Min_Weekly_Return,
+                MAX(Weekly_Return) as Max_Weekly_Return,
+                -- Annualized volatility (assuming 52 weeks per year)
+                STDDEV_POP(Weekly_Return) * SQRT(52) as Annualized_Volatility
+            FROM WeeklyReturns
             GROUP BY Asset_Type
         )
         SELECT
             Asset_Type,
             Num_ETFs,
             Num_Observations,
-            ROUND(Avg_Daily_Return * 100, 4) as Avg_Daily_Return_Pct,
-            ROUND(Daily_Volatility * 100, 4) as Daily_Volatility_Pct,
+            ROUND(Avg_Weekly_Return * 100, 4) as Avg_Weekly_Return_Pct,
+            ROUND(Weekly_Volatility * 100, 4) as Weekly_Volatility_Pct,
             ROUND(Annualized_Volatility * 100, 2) as Annualized_Volatility_Pct,
-            ROUND(Min_Daily_Return * 100, 2) as Min_Daily_Return_Pct,
-            ROUND(Max_Daily_Return * 100, 2) as Max_Daily_Return_Pct,
+            ROUND(Min_Weekly_Return * 100, 2) as Min_Weekly_Return_Pct,
+            ROUND(Max_Weekly_Return * 100, 2) as Max_Weekly_Return_Pct,
             -- Risk-adjusted return (Sharpe-like ratio)
-            ROUND((Avg_Daily_Return / NULLIF(Daily_Volatility, 0)) * SQRT(252), 2) as Risk_Adjusted_Return
+            ROUND((Avg_Weekly_Return / NULLIF(Weekly_Volatility, 0)) * SQRT(52), 2) as Risk_Adjusted_Return
         FROM VolatilityMetrics
         ORDER BY Annualized_Volatility DESC
         """
@@ -137,15 +137,15 @@ class PortfolioAnalytics:
 
         print("\n" + "-" * 80)
         print(f"{'Asset Type':<15} {'# ETFs':<8} {'Obs':<8} "
-              f"{'Avg Daily %':<12} {'Daily Vol %':<12} {'Annual Vol %':<15}")
+              f"{'Avg Weekly %':<12} {'Weekly Vol %':<12} {'Annual Vol %':<15}")
         print("-" * 80)
 
         for row in results:
             print(f"{row['Asset_Type']:<15} "
                   f"{row['Num_ETFs']:<8} "
                   f"{row['Num_Observations']:<8} "
-                  f"{row['Avg_Daily_Return_Pct']:>11.4f} "
-                  f"{row['Daily_Volatility_Pct']:>11.4f} "
+                  f"{row['Avg_Weekly_Return_Pct']:>11.4f} "
+                  f"{row['Weekly_Volatility_Pct']:>11.4f} "
                   f"{row['Annualized_Volatility_Pct']:>14.2f}")
 
         print("-" * 80)
