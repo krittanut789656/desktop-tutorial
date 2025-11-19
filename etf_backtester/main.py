@@ -41,17 +41,13 @@ class ETFBacktesterCLI:
     def initialize_connection(self):
         """Initialize database connection and components"""
         try:
-            print("\n" + "=" * 80)
-            print("Initializing Database Connection...")
-            print("=" * 80)
-
             # Initialize database connector
             self.db = DatabaseConnector()
 
             if not self.db.test_connection():
-                print("\n✗ Cannot connect to database.")
-                print("  Please check your database configuration.")
-                print("  Default settings: host=localhost, user=root, db=etf_backtester_db")
+                print("\n✗ Cannot connect to MySQL database.")
+                print("  Please check your MySQL server and configuration.")
+                print("  Default: host=localhost, user=root, db=etf_backtester_db")
                 return False
 
             # Initialize all components
@@ -61,44 +57,116 @@ class ETFBacktesterCLI:
             self.logger = TextLogger(log_directory="logs")
 
             self.connected = True
-            print("\n✓ All components initialized successfully!")
             return True
 
         except Exception as e:
             print(f"\n✗ Error initializing connection: {e}")
             return False
 
+    def auto_initialize_system(self):
+        """
+        Auto-initialize database and load data if needed
+        This runs automatically when program starts
+        """
+        print("\n" + "=" * 80)
+        print("ETF PORTFOLIO BACKTESTER - SYSTEM INITIALIZATION")
+        print("=" * 80)
+
+        # Check if database exists and has data
+        try:
+            # Check if tables exist
+            tables = self.db.get_all_tables()
+
+            if not tables or len(tables) < 3:
+                print("\n⚠ Database not initialized. Setting up automatically...")
+                self._setup_database()
+            else:
+                print("\n✓ Database found")
+
+                # Check if data exists
+                etf_count = self.db.get_table_count('ETF_Master')
+                price_count = self.db.get_table_count('Price_Data')
+
+                print(f"  - ETF_Master: {etf_count} records")
+                print(f"  - Price_Data: {price_count:,} records")
+
+                if etf_count == 0 or price_count == 0:
+                    print("\n⚠ No data found. Loading data automatically...")
+                    self._load_data()
+                else:
+                    print("\n✓ System ready with existing data")
+
+        except Exception as e:
+            print(f"\n⚠ Error checking database: {e}")
+            print("Setting up from scratch...")
+            self._setup_database()
+
+    def _setup_database(self):
+        """Internal method to setup database"""
+        print("\nStep 1/2: Initializing database schema...")
+
+        sql_file = "sql/database.sql"
+
+        if not os.path.exists(sql_file):
+            print(f"✗ SQL file not found: {sql_file}")
+            return False
+
+        success = self.db.execute_script(sql_file)
+
+        if success:
+            print("✓ Database schema created (3 tables with PK/FK)")
+            self._load_data()
+        else:
+            print("✗ Failed to initialize database")
+            return False
+
+    def _load_data(self):
+        """Internal method to load data"""
+        print("\nStep 2/2: Loading real market data from Yahoo Finance...")
+        print("(This takes 2-5 minutes - downloading 10 years of data for 50 ETFs)")
+
+        loader = DataLoader(self.db)
+
+        # Load ETF master
+        etf_count = loader.load_etf_master()
+
+        # Load price data from Yahoo Finance
+        price_count = loader.load_price_data_from_yahoo(years=10)
+
+        if price_count > 0:
+            print(f"\n✓ System setup complete!")
+            print(f"  - {etf_count} ETFs loaded")
+            print(f"  - {price_count:,} weekly price records loaded")
+            print(f"  - Data span: 10 years from Yahoo Finance")
+        else:
+            print("\n⚠ Data loading incomplete. You may need to run menu option to reload.")
+
     def display_main_menu(self):
         """Display the main menu"""
         print("\n" + "=" * 80)
         print("ETF PORTFOLIO BACKTESTER - MAIN MENU")
         print("=" * 80)
-        print("\n[1] Setup & Data Management")
-        print("  1.1 - Initialize Database (Run SQL Schema)")
-        print("  1.2 - Load Sample ETF Data")
-        print("  1.3 - View Database Status")
-        print("\n[2] Run Backtest")
-        print("  2.1 - Run Standard Backtest (90-day lookback)")
-        print("  2.2 - Run Custom Backtest (specify parameters)")
-        print("  2.3 - Run Comparative Backtest (3M vs 6M)")
-        print("\n[3] Analytics & Insights")
-        print("  3.1 - Generate All Insights")
-        print("  3.2 - Insight #1: Volatility Analysis")
-        print("  3.3 - Insight #2: Lookback Period Comparison")
-        print("  3.4 - Insight #3: Drawdown Analysis")
-        print("\n[4] CRUD Operations")
-        print("  4.1 - Read: View Backtest Results")
-        print("  4.2 - Read: View All Backtest Runs")
-        print("  4.3 - Read: View ETF Information")
-        print("  4.4 - Update: Modify Price Data")
-        print("  4.5 - Delete: Remove Old Backtest Logs")
-        print("\n[5] Reports & Logs")
-        print("  5.1 - View Text Logs")
-        print("  5.2 - Export Latest Results to Text")
-        print("\n[6] Excel Export")
-        print("  6.1 - Export ETF_Master to Excel")
-        print("  6.2 - Export Price_Data to Excel")
-        print("  6.3 - Export All Tables to Excel")
+        print("\n[1] Run Backtest")
+        print("  1.1 - Run Standard Backtest (90-day lookback)")
+        print("  1.2 - Run Custom Backtest (specify parameters)")
+        print("  1.3 - Run Comparative Backtest (3M vs 6M)")
+        print("\n[2] Analytics & Insights")
+        print("  2.1 - Generate All Insights")
+        print("  2.2 - Insight #1: Volatility Analysis")
+        print("  2.3 - Insight #2: Lookback Period Comparison")
+        print("  2.4 - Insight #3: Drawdown Analysis")
+        print("\n[3] CRUD Operations")
+        print("  3.1 - Read: View Backtest Results")
+        print("  3.2 - Read: View All Backtest Runs")
+        print("  3.3 - Read: View ETF Information")
+        print("  3.4 - Update: Modify Price Data")
+        print("  3.5 - Delete: Remove Old Backtest Logs")
+        print("\n[4] Reports & Export")
+        print("  4.1 - View Text Logs")
+        print("  4.2 - Export Latest Results to Text")
+        print("  4.3 - Export ETF_Master to Excel")
+        print("  4.4 - Export Price_Data to Excel")
+        print("  4.5 - Export All Tables to Excel")
         print("\n[0] Exit")
         print("=" * 80)
 
@@ -632,7 +700,11 @@ class ETFBacktesterCLI:
         # Initialize connection
         if not self.initialize_connection():
             print("\nExiting due to connection failure.")
+            print("Hint: Make sure MySQL is running (sudo service mysql start)")
             return
+
+        # Auto-initialize database and data
+        self.auto_initialize_system()
 
         # Main menu loop
         while True:
@@ -644,28 +716,29 @@ class ETFBacktesterCLI:
                 print("\nExiting ETF Backtester. Goodbye!")
                 break
 
-            # Handle menu choices
+            # Handle menu choices (Renumbered after removing Setup section)
             menu_handlers = {
-                '1.1': self.run_menu_1_1,
-                '1.2': self.run_menu_1_2,
-                '1.3': self.run_menu_1_3,
-                '2.1': self.run_menu_2_1,
-                '2.2': self.run_menu_2_2,
-                '2.3': self.run_menu_2_3,
-                '3.1': self.run_menu_3_1,
-                '3.2': self.run_menu_3_2,
-                '3.3': self.run_menu_3_3,
-                '3.4': self.run_menu_3_4,
-                '4.1': self.run_menu_4_1,
-                '4.2': self.run_menu_4_2,
-                '4.3': self.run_menu_4_3,
-                '4.4': self.run_menu_4_4,
-                '4.5': self.run_menu_4_5,
-                '5.1': self.run_menu_5_1,
-                '5.2': self.run_menu_5_2,
-                '6.1': self.run_menu_6_1,
-                '6.2': self.run_menu_6_2,
-                '6.3': self.run_menu_6_3,
+                # [1] Run Backtest (previously 2.x)
+                '1.1': self.run_menu_2_1,  # Standard backtest
+                '1.2': self.run_menu_2_2,  # Custom backtest
+                '1.3': self.run_menu_2_3,  # Comparative backtest
+                # [2] Analytics & Insights (previously 3.x)
+                '2.1': self.run_menu_3_1,  # All insights
+                '2.2': self.run_menu_3_2,  # Volatility
+                '2.3': self.run_menu_3_3,  # Lookback
+                '2.4': self.run_menu_3_4,  # Drawdown
+                # [3] CRUD Operations (previously 4.x)
+                '3.1': self.run_menu_4_1,  # Read results
+                '3.2': self.run_menu_4_2,  # Read all runs
+                '3.3': self.run_menu_4_3,  # Read ETF info
+                '3.4': self.run_menu_4_4,  # Update price
+                '3.5': self.run_menu_4_5,  # Delete logs
+                # [4] Reports & Export (previously 5.x and 6.x)
+                '4.1': self.run_menu_5_1,  # View text logs
+                '4.2': self.run_menu_5_2,  # Export to text
+                '4.3': self.run_menu_6_1,  # Export ETF_Master Excel
+                '4.4': self.run_menu_6_2,  # Export Price_Data Excel
+                '4.5': self.run_menu_6_3,  # Export all Excel
             }
 
             handler = menu_handlers.get(choice)
