@@ -339,22 +339,428 @@ def search_etf(db):
     log_transaction("ETF_SEARCH", f"Searched for: {keyword}, found {len(results) if results else 0}")
     pause()
 
-# [ต่อในส่วนถัดไป - Portfolio Management, Analytics, etc.]
-# ไฟล์ยาวมาก ผมจะแบ่งส่งในข้อความถัดไป
+# ============================================================
+# Module 2: Portfolio Management (CRUD)
+# ============================================================
+
+def manage_portfolio_menu(db):
+    """จัดการ Benchmark Portfolios"""
+    while True:
+        clear_screen()
+        print_header("📂 จัดการ Benchmark Portfolios")
+        print("1. ดูรายการ Portfolios")
+        print("2. ดูรายละเอียด Portfolio (SQL Stored Procedure)")
+        print("3. แก้ไข Portfolio (Update)")
+        print("4. ลบ Portfolio (Delete)")
+        print("0. ← กลับเมนูหลัก")
+        print("="*70)
+
+        choice = input("เลือกเมนู: ").strip()
+
+        if choice == "1":
+            view_all_portfolios(db)
+        elif choice == "2":
+            view_portfolio_detail(db)
+        elif choice == "3":
+            update_portfolio(db)
+        elif choice == "4":
+            delete_portfolio(db)
+        elif choice == "0":
+            break
+        else:
+            print("❌ ตัวเลือกไม่ถูกต้อง")
+            pause()
+
+def view_all_portfolios(db):
+    """ดูรายการ Portfolios ทั้งหมด (ใช้ SQL View)"""
+    clear_screen()
+    print_header("📂 รายการ Benchmark Portfolios")
+
+    query = "SELECT * FROM vw_portfolio_summary ORDER BY benchmark_name"
+    results = db.execute_query(query)
+
+    if results:
+        print(f"{'ID':<5} {'Name':<30} {'Risk':<15} {'Holdings':<10}")
+        print("-"*70)
+        for row in results:
+            print(f"{row['benchmark_id']:<5} {row['benchmark_name']:<30} "
+                  f"{row['risk_level']:<15} {row['num_holdings']:<10}")
+        print(f"\n✅ Total: {len(results)} Portfolios")
+    else:
+        print("❌ ไม่พบข้อมูล")
+
+    log_transaction("PORTFOLIO_VIEW", f"Viewed {len(results) if results else 0} portfolios")
+    pause()
+
+def view_portfolio_detail(db):
+    """ดูรายละเอียด Portfolio (SQL Stored Procedure)"""
+    clear_screen()
+    print_header("📊 รายละเอียด Portfolio")
+
+    portfolio_id = input("ใส่ Portfolio ID: ").strip()
+
+    if not portfolio_id.isdigit():
+        print("❌ ID ต้องเป็นตัวเลข")
+        pause()
+        return
+
+    try:
+        db.cursor.callproc('sp_get_portfolio_weights', [int(portfolio_id)])
+
+        print(f"\n{'Ticker':<10} {'Name':<35} {'Class':<15} {'Weight %':<10}")
+        print("-"*70)
+
+        for result in db.cursor.stored_results():
+            rows = result.fetchall()
+            if rows:
+                for row in rows:
+                    print(f"{row[0]:<10} {row[1]:<35} {row[2]:<15} {row[4]:<10.2f}%")
+                print(f"\n✅ พบ {len(rows)} holdings")
+            else:
+                print("❌ ไม่พบข้อมูล")
+
+        log_transaction("PORTFOLIO_DETAIL", f"Viewed portfolio ID: {portfolio_id}")
+    except Exception as e:
+        print(f"❌ Error: {e}")
+
+    pause()
+
+def update_portfolio(db):
+    """Update - แก้ไข Portfolio"""
+    clear_screen()
+    print_header("✏️ แก้ไข Benchmark Portfolio")
+
+    portfolio_id = input("ใส่ Portfolio ID ที่ต้องการแก้ไข: ").strip()
+
+    if not portfolio_id.isdigit():
+        print("❌ ID ต้องเป็นตัวเลข")
+        pause()
+        return
+
+    check_query = "SELECT * FROM benchmark_portfolios WHERE benchmark_id = %s"
+    result = db.execute_query(check_query, (portfolio_id,))
+
+    if not result:
+        print(f"❌ ไม่พบ Portfolio ID: {portfolio_id}")
+        pause()
+        return
+
+    portfolio = result[0]
+    print(f"\n📊 ข้อมูลปัจจุบัน:")
+    print(f"Name: {portfolio['benchmark_name']}")
+    print(f"Risk Level: {portfolio['risk_level']}")
+
+    print("\n✏️ ใส่ข้อมูลใหม่ (เว้นว่างถ้าไม่เปลี่ยน):")
+    new_name = input(f"Portfolio Name [{portfolio['benchmark_name']}]: ").strip()
+    new_risk = input(f"Risk Level [{portfolio['risk_level']}]: ").strip()
+
+    update_query = """
+        UPDATE benchmark_portfolios
+        SET benchmark_name = %s, risk_level = %s
+        WHERE benchmark_id = %s
+    """
+
+    params = (
+        new_name if new_name else portfolio['benchmark_name'],
+        new_risk if new_risk else portfolio['risk_level'],
+        portfolio_id
+    )
+
+    result = db.execute_update(update_query, params)
+
+    if result > 0:
+        print(f"\n✅ แก้ไข Portfolio ID {portfolio_id} สำเร็จ!")
+        log_transaction("PORTFOLIO_UPDATE", f"Updated portfolio ID: {portfolio_id}")
+    else:
+        print("\n❌ แก้ไขไม่สำเร็จ")
+
+    pause()
+
+def delete_portfolio(db):
+    """Delete - ลบ Portfolio"""
+    clear_screen()
+    print_header("🗑️ ลบ Benchmark Portfolio")
+
+    portfolio_id = input("ใส่ Portfolio ID ที่ต้องการลบ: ").strip()
+
+    if not portfolio_id.isdigit():
+        print("❌ ID ต้องเป็นตัวเลข")
+        pause()
+        return
+
+    check_query = "SELECT * FROM benchmark_portfolios WHERE benchmark_id = %s"
+    result = db.execute_query(check_query, (portfolio_id,))
+
+    if not result:
+        print(f"❌ ไม่พบ Portfolio ID: {portfolio_id}")
+        pause()
+        return
+
+    portfolio = result[0]
+    print(f"\n⚠️ ต้องการลบ Portfolio นี้หรือไม่?")
+    print(f"ID: {portfolio['benchmark_id']}")
+    print(f"Name: {portfolio['benchmark_name']}")
+
+    confirm = input("\nพิมพ์ 'YES' เพื่อยืนยันการลบ: ").strip()
+
+    if confirm == "YES":
+        delete_query = "DELETE FROM benchmark_portfolios WHERE benchmark_id = %s"
+        result = db.execute_update(delete_query, (portfolio_id,))
+
+        if result > 0:
+            print(f"\n✅ ลบ Portfolio ID {portfolio_id} สำเร็จ!")
+            log_transaction("PORTFOLIO_DELETE", f"Deleted portfolio ID: {portfolio_id}")
+        else:
+            print("\n❌ ลบไม่สำเร็จ")
+    else:
+        print("\n❌ ยกเลิกการลบ")
+
+    pause()
 
 # ============================================================
-# Main Menu (Simplified version)
+# Module 3: Analytics (SQL-based)
+# ============================================================
+
+def analytics_menu(db):
+    """เมนู Data Analytics - ใช้ SQL เป็นหลัก"""
+    while True:
+        clear_screen()
+        print_header("📊 Data Analytics (SQL-based)")
+        print("1. 🏆 Top Performers (Sharpe Ratio)")
+        print("2. 📊 Portfolio Comparison")
+        print("3. 💾 Export Analytics Report")
+        print("0. ← กลับเมนูหลัก")
+        print("="*70)
+
+        choice = input("เลือกเมนู: ").strip()
+
+        if choice == "1":
+            top_performers(db)
+        elif choice == "2":
+            portfolio_comparison(db)
+        elif choice == "3":
+            export_analytics_report(db)
+        elif choice == "0":
+            break
+        else:
+            print("❌ ตัวเลือกไม่ถูกต้อง")
+            pause()
+
+def top_performers(db):
+    """Top Performers using SQL Stored Procedure"""
+    clear_screen()
+    print_header("🏆 Top Performers by Sharpe Ratio")
+
+    n = input("Top กี่อันดับ? (default: 10): ").strip()
+    n = int(n) if n.isdigit() else 10
+
+    try:
+        db.cursor.callproc('sp_get_top_performers', ['sharpe', n, '2009-01-01', '2025-01-01'])
+
+        print(f"\n{'Rank':<6} {'Ticker':<10} {'Return %':<12} {'Sharpe':<10}")
+        print("-"*50)
+
+        rank = 1
+        for result in db.cursor.stored_results():
+            rows = result.fetchall()
+            if rows:
+                for row in rows:
+                    print(f"{rank:<6} {row[0]:<10} {row[2]:<12.2f} {row[4]:<10.2f}")
+                    rank += 1
+
+                print(f"\n💡 Insight: {rows[0][0]} มี Sharpe Ratio สูงสุด ({rows[0][4]:.2f})")
+        log_transaction("ANALYTICS_TOP", f"Top {n} performers")
+    except Exception as e:
+        print(f"❌ Error: {e}")
+
+    pause()
+
+def portfolio_comparison(db):
+    """Portfolio Comparison using SQL"""
+    clear_screen()
+    print_header("📊 Portfolio Comparison")
+
+    try:
+        db.cursor.callproc('sp_compare_portfolios', ['2020-01-01', '2025-01-01'])
+
+        print(f"\n{'Portfolio':<30} {'Return %':<12} {'Sharpe':<10}")
+        print("-"*60)
+
+        for result in db.cursor.stored_results():
+            rows = result.fetchall()
+            if rows:
+                for row in rows:
+                    print(f"{row[0]:<30} {row[3]:<12.2f} {row[5]:<10.2f}")
+        log_transaction("ANALYTICS_COMPARE", "Compared portfolios")
+    except Exception as e:
+        print(f"❌ Error: {e}")
+
+    pause()
+
+def export_analytics_report(db):
+    """Export to Text File"""
+    clear_screen()
+    print_header("💾 Export Analytics Report")
+
+    os.makedirs(BACKUP_DIR, exist_ok=True)
+    timestamp = datetime.now().strftime('%Y%m%d_%H%M%S')
+    filename = f"{BACKUP_DIR}/report_{timestamp}.txt"
+
+    try:
+        with open(filename, 'w', encoding='utf-8') as f:
+            f.write("Portfolio Backtesting System - Analytics Report\n")
+            f.write(f"Generated: {datetime.now()}\n")
+            f.write("="*70 + "\n\n")
+
+            db.cursor.callproc('sp_get_top_performers', ['sharpe', 10, '2009-01-01', '2025-01-01'])
+            for result in db.cursor.stored_results():
+                rows = result.fetchall()
+                if rows:
+                    f.write("TOP 10 PERFORMERS\n")
+                    for row in rows:
+                        f.write(f"{row[0]:<10} Sharpe: {row[4]:.2f}\n")
+
+        print(f"✅ Exported: {filename}")
+        log_transaction("EXPORT_REPORT", filename)
+    except Exception as e:
+        print(f"❌ Error: {e}")
+
+    pause()
+
+# ============================================================
+# Module 4: System Utilities
+# ============================================================
+
+def system_menu(db):
+    """System Utilities"""
+    while True:
+        clear_screen()
+        print_header("⚙️ System Utilities")
+        print("1. 📋 View Transaction Logs")
+        print("2. 💾 Backup Database")
+        print("3. 📊 Database Statistics")
+        print("0. ← กลับเมนูหลัก")
+        print("="*70)
+
+        choice = input("เลือกเมนู: ").strip()
+
+        if choice == "1":
+            view_logs()
+        elif choice == "2":
+            backup_database(db)
+        elif choice == "3":
+            database_statistics(db)
+        elif choice == "0":
+            break
+        else:
+            print("❌ ตัวเลือกไม่ถูกต้อง")
+            pause()
+
+def view_logs():
+    """View Transaction Logs"""
+    clear_screen()
+    print_header("📋 Transaction Logs")
+
+    if not os.path.exists(LOG_FILE):
+        print("❌ ไม่พบไฟล์ log")
+        pause()
+        return
+
+    try:
+        with open(LOG_FILE, 'r', encoding='utf-8') as f:
+            lines = f.readlines()
+
+        print(f"\n📋 แสดง 20 รายการล่าสุด:")
+        print("-"*70)
+        for line in lines[-20:]:
+            print(line.rstrip())
+        print(f"\nTotal: {len(lines)} entries")
+    except Exception as e:
+        print(f"❌ Error: {e}")
+
+    pause()
+
+def backup_database(db):
+    """Backup Database"""
+    clear_screen()
+    print_header("💾 Database Backup")
+
+    os.makedirs(BACKUP_DIR, exist_ok=True)
+    timestamp = datetime.now().strftime('%Y%m%d_%H%M%S')
+    filename = f"{BACKUP_DIR}/backup_{timestamp}.txt"
+
+    try:
+        with open(filename, 'w', encoding='utf-8') as f:
+            f.write(f"Database Backup - {datetime.now()}\n\n")
+
+            query = "SELECT COUNT(*) as count FROM etf_master"
+            result = db.execute_query(query)
+            f.write(f"ETFs: {result[0]['count']}\n")
+
+            query = "SELECT COUNT(*) as count FROM price_history"
+            result = db.execute_query(query)
+            f.write(f"Price Records: {result[0]['count']}\n")
+
+        print(f"✅ Backup created: {filename}")
+        log_transaction("BACKUP", filename)
+    except Exception as e:
+        print(f"❌ Error: {e}")
+
+    pause()
+
+def database_statistics(db):
+    """Database Statistics"""
+    clear_screen()
+    print_header("📊 Database Statistics")
+
+    stats = [
+        ("ETF Master", "SELECT COUNT(*) as count FROM etf_master"),
+        ("Portfolios", "SELECT COUNT(*) as count FROM benchmark_portfolios"),
+        ("Price History", "SELECT COUNT(*) as count FROM price_history"),
+    ]
+
+    print(f"\n{'Table':<20} {'Rows':<15}")
+    print("-"*40)
+
+    for table_name, query in stats:
+        result = db.execute_query(query)
+        if result:
+            print(f"{table_name:<20} {result[0]['count']:>15,}")
+
+    log_transaction("STATS", "Viewed stats")
+    pause()
+
+def about_system():
+    """About System"""
+    clear_screen()
+    print_header("ℹ️ About System")
+
+    print("""
+📚 DADS 4002 Programming Project
+Portfolio Backtesting System
+
+✅ Python Integrated System
+✅ SQL-Based Analytics (Stored Procedures)
+✅ CRUD Operations (ETF + Portfolio)
+✅ Text File Logging & Backup
+✅ Real Yahoo Finance Data (41,800+ records)
+    """)
+
+    pause()
+
+# ============================================================
+# Main Menu (Complete)
 # ============================================================
 
 def main_menu(db):
     """เมนูหลักของระบบ"""
     while True:
         clear_screen()
-        print_header("🏦 Portfolio Backtesting System - Main Menu")
+        print_header("🏦 Portfolio Backtesting System")
         print("1. 📊 จัดการข้อมูล ETF (CRUD)")
-        print("2. 📂 จัดการ Benchmark Portfolios")
+        print("2. 📂 จัดการ Benchmark Portfolios (CRUD)")
         print("3. 📈 Data Analytics (SQL-based)")
-        print("4. ⚙️  System Utilities (Logs, Backup)")
+        print("4. ⚙️  System Utilities")
         print("5. ℹ️  About System")
         print("0. 🚪 ออกจากระบบ")
         print("="*70)
@@ -363,14 +769,22 @@ def main_menu(db):
 
         if choice == "1":
             manage_etf_menu(db)
+        elif choice == "2":
+            manage_portfolio_menu(db)
+        elif choice == "3":
+            analytics_menu(db)
+        elif choice == "4":
+            system_menu(db)
+        elif choice == "5":
+            about_system()
         elif choice == "0":
             confirm = input("\n⚠️ ต้องการออกจากระบบ? (y/n): ").strip().lower()
             if confirm == 'y':
-                print("\n👋 ขอบคุณที่ใช้งานระบบ Portfolio Backtesting!")
-                log_transaction("SYSTEM_EXIT", "User exited system")
+                print("\n👋 ขอบคุณที่ใช้งานระบบ!")
+                log_transaction("SYSTEM_EXIT", "User exited")
                 break
         else:
-            print("❌ ตัวเลือกไม่ถูกต้อง (ระบบกำลังพัฒนา)")
+            print("❌ ตัวเลือกไม่ถูกต้อง")
             pause()
 
 # ============================================================
