@@ -42,7 +42,7 @@ SOURCE sql/etf_master_data.sql;
 
 ---
 
-### 2. `sql/price_data_*.sql` - **GENERATE WITH EXPORT TOOL**
+### 2. `sql/price_data_*.sql` - **GENERATE WITH SCRIPT**
 
 **What it contains:**
 - Real weekly price data from Yahoo Finance
@@ -51,6 +51,21 @@ SOURCE sql/etf_master_data.sql;
 - OHLC prices (Open, High, Low, Close, Adjusted Close, Volume)
 
 **How to generate:**
+
+**Option A: Using generator script (Direct from Yahoo Finance):**
+```bash
+# Install requirements (one time)
+pip install yfinance pandas numpy
+
+# Run generator script
+cd etf_backtester
+python generate_price_data_sql.py
+# Type 'yes' when prompted
+# Takes 2-5 minutes to download from Yahoo Finance
+# Creates: sql/price_data_YYYYMMDD_HHMMSS.sql (~10-15 MB)
+```
+
+**Option B: Export from existing database:**
 ```bash
 # First, run the system to download Yahoo Finance data:
 python main.py
@@ -61,12 +76,16 @@ python export_to_sql.py
 # Choose option 1 or 3
 ```
 
-**File size:** ~5-15 MB for complete dataset
-
 **How to load:**
 ```bash
+# Load ETF_Master first (if not already loaded)
+mysql -u root -p etf_backtester_db < sql/etf_master_data.sql
+
+# Then load Price_Data
 mysql -u root -p etf_backtester_db < sql/price_data_20250119_120000.sql
 ```
+
+**File size:** ~10-15 MB for complete dataset (~26,000 records)
 
 ---
 

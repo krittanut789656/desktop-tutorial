@@ -50,6 +50,8 @@ The system allows users to backtest momentum-based trading strategies on a portf
 ### D. Supporting Features
 
 - [x] **Text File Integration**: Log backtest summaries to .txt files
+- [x] **Excel Export**: Export database tables to Excel for analysis
+- [x] **SQL Data Files**: Real Yahoo Finance data available as SQL INSERT statements
 - [x] **SQL-Focused**: Core momentum calculation uses SQL queries
 - [x] **Modular Design**: Clean separation of concerns
 
@@ -163,6 +165,30 @@ The system allows users to backtest momentum-based trading strategies on a portf
    - Generate insights (Menu 2.1)
    - Perform CRUD operations (Menu 3.x)
    - Export to Excel (Menu 4.5)
+
+### Alternative: Load Data from SQL Files
+
+**For faster setup, team collaboration, or offline work:**
+
+1. **Load ETF Master data** (instant):
+   ```bash
+   mysql -u root -p etf_backtester_db < sql/etf_master_data.sql
+   ```
+
+2. **Generate Price Data SQL** (one time):
+   ```bash
+   python generate_price_data_sql.py
+   # Downloads from Yahoo Finance and creates SQL file
+   ```
+
+3. **Load Price Data** (30-60 seconds):
+   ```bash
+   mysql -u root -p etf_backtester_db < sql/price_data_YYYYMMDD_HHMMSS.sql
+   ```
+
+**Benefits:** Share exact same dataset with team, work offline, faster reset
+
+**See:** `sql/README_SQL_DATA.md` for complete SQL data guide
 
 ### Main Menu Options
 
@@ -462,6 +488,7 @@ This project is created for educational purposes as part of the DADS 4002 course
 ## ✨ Features Summary
 
 - ✅ **Auto-initialization**: Intelligent setup on first run (no manual configuration!)
+- ✅ **SQL Data Files**: Load real Yahoo Finance data via SQL INSERT statements
 - ✅ Fully integrated Python + MySQL system
 - ✅ SQL-focused momentum calculation
 - ✅ 3 complex SQL analytics queries
@@ -476,6 +503,7 @@ This project is created for educational purposes as part of the DADS 4002 course
 - ✅ Multiple backtest configurations
 - ✅ Actionable insights generation
 - ✅ Production-ready user experience
+- ✅ Team collaboration support (share identical datasets)
 
 ---
 
