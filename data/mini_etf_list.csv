@@ -1,0 +1,4 @@
+ticker_symbol,etf_name,asset_class,expense_ratio,inception_date
+SPY,SPDR S&P 500 ETF Trust,US Equity,0.0945,1993-01-22
+AGG,iShares Core U.S. Aggregate Bond ETF,US Bonds,0.03,2003-09-22
+GLD,SPDR Gold Trust,Commodities,0.4,2004-11-18

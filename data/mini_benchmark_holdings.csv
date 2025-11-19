@@ -1,0 +1,6 @@
+benchmark_name,ticker_symbol,target_weight
+Traditional 60/40,SPY,0.6000
+Traditional 60/40,AGG,0.4000
+All Weather,SPY,0.3000
+All Weather,AGG,0.4000
+All Weather,GLD,0.3000
