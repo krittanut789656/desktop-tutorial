@@ -95,6 +95,10 @@ class ETFBacktesterCLI:
         print("\n[5] Reports & Logs")
         print("  5.1 - View Text Logs")
         print("  5.2 - Export Latest Results to Text")
+        print("\n[6] Excel Export")
+        print("  6.1 - Export ETF_Master to Excel")
+        print("  6.2 - Export Price_Data to Excel")
+        print("  6.3 - Export All Tables to Excel")
         print("\n[0] Exit")
         print("=" * 80)
 
@@ -572,6 +576,52 @@ class ETFBacktesterCLI:
 
         print(f"\n✓ Results exported to: {log_file}")
 
+    def run_menu_6_1(self):
+        """Export ETF_Master to Excel"""
+        try:
+            # Import here to avoid dependency issues if pandas not installed
+            sys.path.insert(0, os.path.dirname(__file__))
+            from export_to_excel import ExcelExporter
+
+            exporter = ExcelExporter(self.db)
+            exporter.export_etf_master()
+
+        except ImportError as e:
+            print(f"\n✗ Error: {e}")
+            print("  Please install required packages: pip install pandas openpyxl")
+
+    def run_menu_6_2(self):
+        """Export Price_Data to Excel"""
+        try:
+            # Import here to avoid dependency issues if pandas not installed
+            sys.path.insert(0, os.path.dirname(__file__))
+            from export_to_excel import ExcelExporter
+
+            print("\n⚠ Note: Price_Data may contain 26,000+ rows")
+            limit_input = input("Limit rows? (Enter number or press Enter for all): ").strip()
+            limit = int(limit_input) if limit_input else None
+
+            exporter = ExcelExporter(self.db)
+            exporter.export_price_data(limit=limit)
+
+        except ImportError as e:
+            print(f"\n✗ Error: {e}")
+            print("  Please install required packages: pip install pandas openpyxl")
+
+    def run_menu_6_3(self):
+        """Export All Tables to Excel"""
+        try:
+            # Import here to avoid dependency issues if pandas not installed
+            sys.path.insert(0, os.path.dirname(__file__))
+            from export_to_excel import ExcelExporter
+
+            exporter = ExcelExporter(self.db)
+            exporter.export_all_tables()
+
+        except ImportError as e:
+            print(f"\n✗ Error: {e}")
+            print("  Please install required packages: pip install pandas openpyxl")
+
     def run(self):
         """Main run loop"""
         print("\n" + "=" * 80)
@@ -613,6 +663,9 @@ class ETFBacktesterCLI:
                 '4.5': self.run_menu_4_5,
                 '5.1': self.run_menu_5_1,
                 '5.2': self.run_menu_5_2,
+                '6.1': self.run_menu_6_1,
+                '6.2': self.run_menu_6_2,
+                '6.3': self.run_menu_6_3,
             }
 
             handler = menu_handlers.get(choice)
