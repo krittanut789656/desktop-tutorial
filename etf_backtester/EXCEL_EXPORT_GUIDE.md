@@ -24,11 +24,11 @@ Run the main application:
 python main.py
 ```
 
-Navigate to **[6] Excel Export** section:
+Navigate to **[4] Reports & Export** section:
 
-- **6.1** - Export ETF_Master to Excel
-- **6.2** - Export Price_Data to Excel
-- **6.3** - Export All Tables to Excel
+- **4.3** - Export ETF_Master to Excel
+- **4.4** - Export Price_Data to Excel
+- **4.5** - Export All Tables to Excel
 
 ### Option 2: Using the Standalone Script
 
@@ -108,22 +108,23 @@ The Price_Data table can contain **26,000+ records**. When exporting:
 
 ```bash
 python main.py
-# Choose option 6.3 to export all tables
+# Choose option 4.5 to export all tables
 ```
 
 This creates:
 - `data/ETF_Master_20250119_120000.xlsx` (50 rows)
 - `data/Price_Data_20250119_120000.xlsx` (26,000+ rows)
 
-### Export Limited Price Data
+### Export Individual Tables
 
 ```bash
 python main.py
-# Choose option 6.2
-# When prompted, enter: 5000
+# Choose option 4.3 for ETF_Master only
+# OR
+# Choose option 4.4 for Price_Data only
 ```
 
-This exports only the 5,000 most recent price records.
+This exports only the selected table to Excel.
 
 ## Data Analysis in Excel
 

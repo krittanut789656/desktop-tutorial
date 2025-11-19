@@ -137,61 +137,65 @@ The system allows users to backtest momentum-based trading strategies on a portf
 
 ## 🚀 Usage Guide
 
-### Quick Start (First Time Setup)
+### Quick Start with Auto-Initialization
+
+**The system automatically sets up everything on first run!**
 
 1. **Run the main program**:
    ```bash
    python main.py
    ```
 
-2. **Initialize the database** (Menu 1.1):
-   - Creates all tables with proper schema
-   - Sets up views and constraints
+2. **First Time Run** (2-5 minutes):
+   - System auto-detects no database exists
+   - Automatically creates database schema (3 tables with PK/FK)
+   - Automatically downloads 50 ETFs from Yahoo Finance
+   - Loads 26,000+ weekly price records (10 years of data)
+   - Ready to use immediately after setup!
 
-3. **Download real market data** (Menu 1.2):
-   - Loads 50 real ETFs across 4 asset types
-   - Downloads 10 years of weekly price data from Yahoo Finance
-   - Takes 2-5 minutes depending on internet connection
+3. **Subsequent Runs** (instant):
+   - System detects existing database and data
+   - Starts in ~2 seconds
+   - Ready to use immediately!
 
-4. **Run a backtest** (Menu 2.1):
-   - Executes standard momentum strategy
-   - Logs results to database and text file
-
-5. **Generate insights** (Menu 3.1):
-   - Produces all three analytical insights
+4. **Start Using**:
+   - Run a backtest (Menu 1.1)
+   - Generate insights (Menu 2.1)
+   - Perform CRUD operations (Menu 3.x)
+   - Export to Excel (Menu 4.5)
 
 ### Main Menu Options
 
 ```
-[1] Setup & Data Management
-  1.1 - Initialize Database (Run SQL Schema)
-  1.2 - Download Real ETF Data from Yahoo Finance
-  1.3 - View Database Status
+[1] Run Backtest
+  1.1 - Run Standard Backtest (90-day lookback)
+  1.2 - Run Custom Backtest (specify parameters)
+  1.3 - Run Comparative Backtest (3M vs 6M)
 
-[2] Run Backtest
-  2.1 - Run Standard Backtest (90-day lookback)
-  2.2 - Run Custom Backtest (specify parameters)
-  2.3 - Run Comparative Backtest (3M vs 6M)
+[2] Analytics & Insights
+  2.1 - Generate All Insights
+  2.2 - Insight #1: Volatility Analysis
+  2.3 - Insight #2: Lookback Period Comparison
+  2.4 - Insight #3: Drawdown Analysis
 
-[3] Analytics & Insights
-  3.1 - Generate All Insights
-  3.2 - Insight #1: Volatility Analysis
-  3.3 - Insight #2: Lookback Period Comparison
-  3.4 - Insight #3: Drawdown Analysis
+[3] CRUD Operations
+  3.1 - Read: View Backtest Results
+  3.2 - Read: View All Backtest Runs
+  3.3 - Read: View ETF Information
+  3.4 - Update: Modify Price Data
+  3.5 - Delete: Remove Old Backtest Logs
 
-[4] CRUD Operations
-  4.1 - Read: View Backtest Results
-  4.2 - Read: View All Backtest Runs
-  4.3 - Read: View ETF Information
-  4.4 - Update: Modify Price Data
-  4.5 - Delete: Remove Old Backtest Logs
-
-[5] Reports & Logs
-  5.1 - View Text Logs
-  5.2 - Export Latest Results to Text
+[4] Reports & Export
+  4.1 - View Text Logs
+  4.2 - Export Latest Results to Text
+  4.3 - Export ETF_Master to Excel
+  4.4 - Export Price_Data to Excel
+  4.5 - Export All Tables to Excel
 
 [0] Exit
 ```
+
+**Note**: No manual setup required! Database and data are auto-initialized on first run.
 
 ---
 
@@ -342,34 +346,36 @@ LIMIT 5;
 
 ### Manual Testing Steps
 
-1. **Database Connectivity**:
+1. **Auto-Initialization** (First Run):
    ```bash
    python main.py
-   # Select menu 1.3 to view database status
+   # System automatically creates database and loads data
+   # Verify: See "✓ System setup complete!" message
    ```
 
-2. **Data Loading**:
+2. **Backtesting**:
    ```bash
-   # Menu 1.2 - Should load 50 ETFs and 36,500+ price records
-   ```
-
-3. **Backtesting**:
-   ```bash
-   # Menu 2.1 - Run standard backtest
+   # Menu 1.1 - Run standard backtest
    # Verify: Results logged to Strategy_Log table
+   ```
+
+3. **Analytics**:
+   ```bash
+   # Menu 2.1 - Generate all insights
+   # Verify: Three complex SQL queries execute successfully
    ```
 
 4. **CRUD Operations**:
    ```bash
-   # Menu 4.1 - Read results
-   # Menu 4.4 - Update a price
-   # Menu 4.5 - Delete old logs
+   # Menu 3.1 - Read results
+   # Menu 3.4 - Update a price
+   # Menu 3.5 - Delete old logs
    ```
 
-5. **Analytics**:
+5. **Excel Export**:
    ```bash
-   # Menu 3.1 - Generate all insights
-   # Verify: Three complex SQL queries execute successfully
+   # Menu 4.5 - Export all tables to Excel
+   # Verify: Excel files created in data/ folder
    ```
 
 ---
@@ -433,8 +439,9 @@ pip install mysql-connector-python
 **Error**: `No price data available`
 
 **Solution**:
-- Run Menu 1.2 to load sample data
-- Verify: Menu 1.3 should show row counts
+- Drop the database and re-run: `DROP DATABASE etf_backtester_db;`
+- Restart the program: `python main.py`
+- System will auto-initialize and reload all data
 
 ---
 
@@ -454,11 +461,13 @@ This project is created for educational purposes as part of the DADS 4002 course
 
 ## ✨ Features Summary
 
+- ✅ **Auto-initialization**: Intelligent setup on first run (no manual configuration!)
 - ✅ Fully integrated Python + MySQL system
 - ✅ SQL-focused momentum calculation
 - ✅ 3 complex SQL analytics queries
 - ✅ CRUD operations for data management
 - ✅ Text file logging for record-keeping
+- ✅ Excel export functionality for data sharing
 - ✅ Clean, modular architecture
 - ✅ Comprehensive CLI interface
 - ✅ 50 real ETFs across 4 asset types
@@ -466,6 +475,7 @@ This project is created for educational purposes as part of the DADS 4002 course
 - ✅ Real market data (not synthetic)
 - ✅ Multiple backtest configurations
 - ✅ Actionable insights generation
+- ✅ Production-ready user experience
 
 ---
 
