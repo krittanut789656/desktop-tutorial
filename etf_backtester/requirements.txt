@@ -1,0 +1,11 @@
+# ETF Portfolio Backtester - Python Dependencies
+# DADS 4002 Course Project
+
+# Database Connector
+mysql-connector-python>=8.0.0
+
+# Optional: Alternative MySQL connector
+# PyMySQL>=1.0.0
+
+# For better CLI experience (optional)
+# colorama>=0.4.0
