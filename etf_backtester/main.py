@@ -6,6 +6,34 @@ DADS 4002 Course Project
 This is the single entry point for the ETF backtesting system.
 All operations are performed through this Python CLI interface.
 
+IMPORTANT: Database Configuration
+---------------------------------
+This program uses the same concepts and fixed code as the Jupyter Notebook.
+To configure MySQL connection, you have two options:
+
+Option 1: Edit modules/db_connector.py
+  - Open modules/db_connector.py
+  - Find the DatabaseConfig class (around line 28)
+  - Update the default values:
+    * self.host = 'localhost'        # or '127.0.0.1'
+    * self.password = 'your_password'  # ← Update this!
+    * self.database = 'etf_backtester_db'
+
+Option 2: Use Environment Variables
+  - Set environment variables before running:
+    export DB_HOST=127.0.0.1
+    export DB_USER=root
+    export DB_PASSWORD=your_password
+    export DB_NAME=etf_backtester_db
+
+All Fixes Applied (20 Nov 2025):
+---------------------------------
+✅ Fixed import statements (MomentumBacktester, PortfolioAnalytics)
+✅ Fixed method names (analyze_volatility_by_asset_type, compare_lookback_periods, analyze_drawdown_exposure)
+✅ Fixed backtest parameters (start_date/end_date, holding_period_days)
+✅ Fixed Decimal/float conversion in backtest_engine.py
+✅ Fixed SQL query in analytics.py (ONLY_FULL_GROUP_BY compatibility)
+
 Author: DADS 4002 Project Team
 """
 
@@ -41,13 +69,23 @@ class ETFBacktesterCLI:
     def initialize_connection(self):
         """Initialize database connection and components"""
         try:
-            # Initialize database connector
+            # Try to initialize database connector with default config
+            # Users can modify credentials in modules/db_connector.py (DatabaseConfig class)
+            # Or set environment variables: DB_HOST, DB_PORT, DB_USER, DB_PASSWORD, DB_NAME
             self.db = DatabaseConnector()
 
             if not self.db.test_connection():
                 print("\n✗ Cannot connect to MySQL database.")
                 print("  Please check your MySQL server and configuration.")
-                print("  Default: host=localhost, user=root, db=etf_backtester_db")
+                print("\n  Default settings:")
+                print("    - Host: localhost (or 127.0.0.1)")
+                print("    - Port: 3306")
+                print("    - User: root")
+                print("    - Password: (check your MySQL password)")
+                print("    - Database: etf_backtester_db")
+                print("\n  To change settings:")
+                print("    1. Edit modules/db_connector.py (DatabaseConfig class)")
+                print("    2. Or set environment variables (DB_HOST, DB_USER, DB_PASSWORD, etc.)")
                 return False
 
             # Initialize all components
