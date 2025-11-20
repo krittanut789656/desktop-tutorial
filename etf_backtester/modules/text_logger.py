@@ -156,36 +156,40 @@ class TextLogger:
                 for item in insights['volatility']:
                     f.write(f"\nAsset Type: {item['Asset_Type']}\n")
                     f.write(f"  Number of ETFs:            {item['Num_ETFs']}\n")
+                    f.write(f"  Number of Observations:    {item.get('Num_Observations', 'N/A')}\n")
+                    f.write(f"  Avg Weekly Return:         {item.get('Avg_Weekly_Return_Pct', 0):.4f}%\n")
+                    f.write(f"  Weekly Volatility:         {item.get('Weekly_Volatility_Pct', 0):.4f}%\n")
                     f.write(f"  Annualized Volatility:     {item['Annualized_Volatility_Pct']:.2f}%\n")
-                    f.write(f"  Average Daily Return:      {item['Avg_Daily_Return_Pct']:.4f}%\n")
-                    f.write(f"  Risk-Adjusted Return:      {item.get('Risk_Adjusted_Return', 'N/A')}\n")
 
                 f.write("\n")
 
             # Insight 2: Lookback Period Optimization
-            if 'lookback' in insights:
+            lookback_data = insights.get('lookback_comparison') or insights.get('lookback')
+            if lookback_data:
                 f.write("INSIGHT #2: LOOKBACK PERIOD OPTIMIZATION\n")
                 f.write("-" * 80 + "\n")
 
-                for item in insights['lookback']:
+                for item in lookback_data:
                     f.write(f"\nLookback Period: {item['Lookback_Period_Days']} days\n")
                     f.write(f"  Number of Runs:            {item['Num_Runs']}\n")
-                    f.write(f"  Cumulative Return:         {item['Cumulative_Return_Pct']:.2f}%\n")
+                    f.write(f"  Cumulative Return:         {item.get('Cumulative_Return_Pct', 0):.2f}%\n")
                     f.write(f"  CAGR:                      {item['CAGR_Pct']:.2f}%\n")
-                    f.write(f"  Average Rebalances:        {item['Avg_Rebalances']:.1f}\n")
+                    f.write(f"  Average Rebalances:        {item.get('Avg_Rebalances', 0):.1f}\n")
 
                 f.write("\n")
 
             # Insight 3: Drawdown Analysis
-            if 'drawdown' in insights:
+            drawdown_data = insights.get('drawdown_analysis') or insights.get('drawdown')
+            if drawdown_data:
                 f.write("INSIGHT #3: ASSET TYPE EXPOSURE DURING DRAWDOWNS\n")
                 f.write("-" * 80 + "\n")
 
-                for item in insights['drawdown']:
-                    f.write(f"\nAsset Type: {item['Asset_Type']}\n")
-                    f.write(f"  Times Held During Drawdown: {item['Num_Occurrences']}\n")
-                    f.write(f"  Average Weight:             {item['Avg_Weight_Pct']:.2f}%\n")
-                    f.write(f"  Contribution to Drawdown:   {item['Avg_Weighted_Contribution_Pct']:.4f}%\n")
+                for item in drawdown_data:
+                    f.write(f"\nAsset Type: {item.get('Asset_Type', 'N/A')}\n")
+                    f.write(f"  Times Held During Drawdown: {item.get('Num_Occurrences', 0)}\n")
+                    f.write(f"  Average Weight:             {item.get('Avg_Weight_Pct', 0):.2f}%\n")
+                    if 'Avg_Weighted_Contribution_Pct' in item:
+                        f.write(f"  Contribution to Drawdown:   {item['Avg_Weighted_Contribution_Pct']:.4f}%\n")
 
                 f.write("\n")
 
