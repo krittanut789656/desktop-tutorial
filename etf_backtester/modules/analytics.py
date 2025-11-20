@@ -330,7 +330,7 @@ class PortfolioAnalytics:
             GROUP BY sl.Backtest_Run_ID, sl.Selection_Date, sl.Lookback_Period_Days
         ),
         CumulativeReturns AS (
-            -- Calculate cumulative returns and identify drawdowns
+            -- Calculate cumulative returns
             SELECT
                 pr.Backtest_Run_ID,
                 pr.Selection_Date,
@@ -339,14 +339,22 @@ class PortfolioAnalytics:
                 SUM(pr.Period_Return) OVER (
                     PARTITION BY pr.Backtest_Run_ID
                     ORDER BY pr.Selection_Date
-                ) as Cumulative_Return,
+                ) as Cumulative_Return
+            FROM PortfolioReturns pr
+        ),
+        CumulativeWithPeak AS (
+            -- Calculate running maximum (peak) from cumulative returns
+            SELECT
+                Backtest_Run_ID,
+                Selection_Date,
+                Cumulative_Return,
                 -- Running maximum return (peak)
-                MAX(SUM(pr.Period_Return)) OVER (
-                    PARTITION BY pr.Backtest_Run_ID
-                    ORDER BY pr.Selection_Date
+                MAX(Cumulative_Return) OVER (
+                    PARTITION BY Backtest_Run_ID
+                    ORDER BY Selection_Date
                     ROWS BETWEEN UNBOUNDED PRECEDING AND CURRENT ROW
                 ) as Running_Max_Return
-            FROM PortfolioReturns pr
+            FROM CumulativeReturns
         ),
         DrawdownPeriods AS (
             -- Calculate drawdown as difference from peak
@@ -356,7 +364,7 @@ class PortfolioAnalytics:
                 Cumulative_Return,
                 Running_Max_Return,
                 (Cumulative_Return - Running_Max_Return) as Drawdown
-            FROM CumulativeReturns
+            FROM CumulativeWithPeak
         ),
         MaxDrawdown AS (
             -- Identify the date of maximum drawdown for each run
