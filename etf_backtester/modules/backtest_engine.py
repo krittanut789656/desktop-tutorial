@@ -269,10 +269,10 @@ class MomentumBacktester:
 
         self.db.execute_many(update_query, update_data)
 
-        # Calculate portfolio metrics
-        total_return = sum(row['Weighted_Return'] for row in results)
+        # Calculate portfolio metrics (convert Decimal to float)
+        total_return = float(sum(row['Weighted_Return'] for row in results))
         num_positions = len(results)
-        avg_return = sum(row['ETF_Return'] for row in results) / num_positions if num_positions > 0 else 0
+        avg_return = float(sum(row['ETF_Return'] for row in results)) / num_positions if num_positions > 0 else 0
 
         return {
             'total_return': total_return,
@@ -376,10 +376,10 @@ class MomentumBacktester:
         print("=" * 60)
 
         total_rebalances = len(all_returns)
-        cumulative_return = sum(all_returns)
+        cumulative_return = float(sum(all_returns))
         avg_return_per_period = cumulative_return / total_rebalances if total_rebalances > 0 else 0
 
-        # Calculate CAGR (approximate)
+        # Calculate CAGR (approximate) - convert to float for power operation
         days_elapsed = (end_dt - datetime.strptime(start_date, '%Y-%m-%d')).days
         years = days_elapsed / 365.25
         cagr = ((1 + cumulative_return) ** (1 / years) - 1) if years > 0 else 0
