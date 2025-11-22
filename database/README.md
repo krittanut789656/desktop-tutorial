@@ -24,7 +24,13 @@ database/
 │   └── 01_create_schema.sql    # Database and table creation
 ├── data/
 │   └── 02_load_etf_master.sql  # ETF master data (50 ETFs)
-├── setup.sh                     # Helper script to run all SQL files
+├── setup.sh                     # Automated setup script
+├── fix_schema.sh                # Troubleshooting and fix script
+├── diagnose.sql                 # Diagnostic queries
+├── verify.sql                   # Verification tests
+├── example_connection.py        # Python connection example
+├── QUICK_FIX.md                 # Quick troubleshooting guide
+├── TROUBLESHOOTING.md           # Detailed troubleshooting guide
 └── README.md                    # This file
 ```
 
@@ -144,23 +150,57 @@ After loading the ETF master data, you'll need to:
 
 ## Troubleshooting
 
+### ⚡ Quick Fix
+
+If you encounter errors like "Unknown column 'Ticker_Symbol'":
+
+```bash
+# Automated fix (recommended)
+./database/fix_schema.sh
+
+# Or see quick reference
+cat database/QUICK_FIX.md
+```
+
+### 🔍 Diagnostic Tools
+
+Run diagnostic queries to check database state:
+```bash
+mysql -u root -p < database/diagnose.sql
+```
+
+Verify complete setup:
+```bash
+mysql -u root -p < database/verify.sql
+```
+
 ### Common Issues
 
-1. **"Access denied" error**
+1. **"Unknown column 'Ticker_Symbol'" error**
+   - **Cause:** Schema not created before loading data
+   - **Fix:** Run `./database/fix_schema.sh` or see `QUICK_FIX.md`
+
+2. **"Access denied" error**
    - Ensure your MySQL user has CREATE DATABASE privileges
    - Check username and password
 
-2. **"Database exists" error**
+3. **"Database exists" error**
    - The schema script drops and recreates the database
    - Ensure you have backup if you have existing data
 
-3. **Character encoding issues**
+4. **Character encoding issues**
    - Ensure your MySQL server supports utf8mb4
    - Check client connection charset settings
 
-4. **Trigger creation fails**
+5. **Trigger creation fails**
    - Ensure DELIMITER is supported in your MySQL client
    - Some GUI tools may require manual delimiter handling
+
+### Detailed Troubleshooting
+
+For comprehensive troubleshooting steps, see:
+- **QUICK_FIX.md** - Fast solutions for common errors
+- **TROUBLESHOOTING.md** - Detailed diagnostic procedures
 
 ## Support
 
