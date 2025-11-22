@@ -1,0 +1,29 @@
+# ETF Backtester Configuration Template
+# Copy this file to config.ini and update with your settings
+# DO NOT commit config.ini to version control
+
+[database]
+host = localhost
+port = 3306
+user = root
+password = your_password_here
+database = etf_backtester_db
+
+[data]
+# Yahoo Finance settings
+start_date = 2010-01-01
+end_date = 2024-12-31
+interval = 1wk
+
+[backtest]
+# Strategy parameters
+lookback_period_days = 90
+rebalance_frequency_days = 30
+top_n_etfs = 5
+initial_capital = 100000
+
+[output]
+# Results and logging
+results_dir = ./results
+log_dir = ./logs
+log_level = INFO

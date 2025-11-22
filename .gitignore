@@ -1,0 +1,78 @@
+# Python
+__pycache__/
+*.py[cod]
+*$py.class
+*.so
+.Python
+build/
+develop-eggs/
+dist/
+downloads/
+eggs/
+.eggs/
+lib/
+lib64/
+parts/
+sdist/
+var/
+wheels/
+*.egg-info/
+.installed.cfg
+*.egg
+
+# Virtual Environment
+venv/
+env/
+ENV/
+.venv
+
+# IDE
+.vscode/
+.idea/
+*.swp
+*.swo
+*~
+.DS_Store
+
+# Database
+*.sql.backup
+*.db
+*.sqlite
+*.sqlite3
+
+# Configuration (contains passwords)
+config.ini
+.env
+*.env
+database_credentials.py
+
+# Jupyter Notebook
+.ipynb_checkpoints
+*.ipynb
+
+# Data files (can be large)
+data/*.csv
+data/*.parquet
+data/*.pickle
+*.h5
+*.hdf5
+
+# Logs
+*.log
+logs/
+
+# Temporary files
+tmp/
+temp/
+*.tmp
+
+# OS files
+Thumbs.db
+.DS_Store
+
+# Project specific
+backtest_results/
+plots/
+reports/
+*.xlsx
+*.xls

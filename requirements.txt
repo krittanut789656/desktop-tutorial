@@ -1,0 +1,30 @@
+# ETF Backtester - Python Dependencies
+# DADS 4002 Course Project
+
+# Database connectivity
+mysql-connector-python>=8.0.33
+pymysql>=1.1.0
+
+# Data manipulation and analysis
+pandas>=2.0.0
+numpy>=1.24.0
+
+# Data visualization
+matplotlib>=3.7.0
+seaborn>=0.12.0
+
+# Yahoo Finance API for ETF data
+yfinance>=0.2.0
+
+# Progress bars
+tqdm>=4.65.0
+
+# Configuration management
+python-decouple>=3.8
+
+# Date/time handling
+python-dateutil>=2.8.2
+
+# Optional: Jupyter notebook support
+# jupyter>=1.0.0
+# ipykernel>=6.22.0
