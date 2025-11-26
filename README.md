@@ -95,11 +95,17 @@ A comprehensive Python-based backtesting system for ETF portfolio strategies usi
    python etf_backtester_integrated.py
    ```
 
-   **Option B: Jupyter Notebook** (Recommended for interactive use)
+   **Option B: Jupyter Notebook - Multi-Cell** (Recommended for learning)
    ```bash
    jupyter notebook ETF_Backtester_Integrated.ipynb
    ```
    Then run all cells in sequence.
+
+   **Option C: Jupyter Notebook - One-Cell** ⭐ (Easiest - กด Shift+Enter ครั้งเดียว!)
+   ```bash
+   jupyter notebook ETF_Backtester_OneCell.ipynb
+   ```
+   แก้ไข password แล้วกด Shift+Enter ครั้งเดียว ระบบจะ loop ไปเรื่อยๆ!
 
 6. **Load sample data**
    - Select menu option `5.1`
@@ -147,18 +153,20 @@ The Jupyter Notebook version (`ETF_Backtester_Integrated.ipynb`) provides an enh
 desktop-tutorial/
 ├── modules/
 │   ├── __init__.py
-│   ├── db_connector.py          # Database connection pooling
-│   ├── backtest_engine.py       # Momentum backtesting logic
-│   ├── analytics.py             # Portfolio analytics
-│   ├── crud_operations.py       # CRUD operations (includes UPDATE feature)
-│   └── data_loader.py           # Data loading utilities
-├── ETF_Backtester_Integrated.ipynb  # Jupyter Notebook version ⭐
+│   ├── db_connector.py              # Database connection pooling
+│   ├── backtest_engine.py           # Momentum backtesting logic
+│   ├── analytics.py                 # Portfolio analytics
+│   ├── crud_operations.py           # CRUD operations (includes UPDATE feature)
+│   └── data_loader.py               # Data loading utilities
+├── ETF_Backtester_OneCell.ipynb     # One-Cell Notebook ⭐ NEW! (แนะนำ)
+├── ETF_Backtester_Integrated.ipynb  # Multi-Cell Notebook
 ├── etf_backtester_integrated.py     # Python script version
-├── database_schema.sql          # MySQL database schema
-├── requirements.txt             # Python dependencies
-├── INSTALLATION.md              # Installation guide
-├── README_UPDATE_FEATURE.md     # Documentation for menu 3.4
-└── README.md                    # This file
+├── database_schema.sql              # MySQL database schema
+├── requirements.txt                 # Python dependencies
+├── INSTALLATION.md                  # Installation guide
+├── README_UPDATE_FEATURE.md         # Documentation for menu 3.4
+├── JUPYTER_NOTEBOOK_GUIDE.md        # Jupyter Notebook guide
+└── README.md                        # This file
 ```
 
 ## 💻 Usage Examples
