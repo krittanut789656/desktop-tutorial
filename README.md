@@ -89,13 +89,57 @@ A comprehensive Python-based backtesting system for ETF portfolio strategies usi
    ```
 
 5. **Run the system**
+
+   **Option A: Python Script**
    ```bash
    python etf_backtester_integrated.py
    ```
 
+   **Option B: Jupyter Notebook** (Recommended for interactive use)
+   ```bash
+   jupyter notebook ETF_Backtester_Integrated.ipynb
+   ```
+   Then run all cells in sequence.
+
 6. **Load sample data**
    - Select menu option `5.1`
    - Confirm with `yes`
+
+## 📓 Using Jupyter Notebook (Recommended)
+
+The Jupyter Notebook version (`ETF_Backtester_Integrated.ipynb`) provides an enhanced interactive experience with:
+
+- ✅ **Better Visualization** - Charts and graphs display inline
+- ✅ **Cell-by-Cell Execution** - Run code step by step
+- ✅ **Rich Documentation** - Markdown cells with instructions
+- ✅ **Easy Restart** - Restart kernel to reset system
+- ✅ **Output History** - Keep track of all operations
+
+### How to Use:
+
+1. **Launch Jupyter Notebook**
+   ```bash
+   jupyter notebook ETF_Backtester_Integrated.ipynb
+   ```
+
+2. **Run All Cells**
+   - Click: `Cell → Run All`
+   - Or press `Shift + Enter` on each cell
+
+3. **Update Database Password**
+   - Find the cell with `system.initialize_system()`
+   - Update the `password` parameter
+   - Re-run that cell
+
+4. **Start Using the Menu**
+   - The last cell contains the interactive menu loop
+   - Enter menu options like `3.4` for UPDATE feature
+
+### Notebook Structure:
+- **Cell 1**: Imports and configuration
+- **Cell 2**: Main controller class definition
+- **Cell 3**: System initialization
+- **Cell 4**: Interactive menu loop
 
 ## 📁 Project Structure
 
@@ -108,7 +152,8 @@ desktop-tutorial/
 │   ├── analytics.py             # Portfolio analytics
 │   ├── crud_operations.py       # CRUD operations (includes UPDATE feature)
 │   └── data_loader.py           # Data loading utilities
-├── etf_backtester_integrated.py # Main integrated system
+├── ETF_Backtester_Integrated.ipynb  # Jupyter Notebook version ⭐
+├── etf_backtester_integrated.py     # Python script version
 ├── database_schema.sql          # MySQL database schema
 ├── requirements.txt             # Python dependencies
 ├── INSTALLATION.md              # Installation guide
