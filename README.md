@@ -42,7 +42,7 @@ energy_macro_analysis.ipynb  →  Executive summary & compliance checklist
 ## How to Run
 
 ```bash
-pip install yfinance openpyxl matplotlib seaborn scipy xlsxwriter nbformat
+pip install yfinance openpyxl matplotlib seaborn scipy nbformat
 ```
 
 Run each notebook in order:
