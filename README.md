@@ -12,7 +12,7 @@ End-to-End data pipeline analyzing 10 energy stocks (5 US + 5 Thai) across 26 ye
 | Source | Data | Frequency |
 |--------|------|-----------|
 | Yahoo Finance | XOM, CVX, COP, SHEL, TTE, PTT.BK, PTTEP.BK, PTG.BK, BCP.BK, PTTGC.BK, BZ=F, CL=F | Weekly |
-| FRED API | CPIENG, DGS10, DTWEXBGS, VIXCLS, INDPRO | Weekly (resampled) |
+| FRED API | CPIENGNS, CPIAUCSL, DGS10, DTWEXBGS, VIXCLS, INDPRO | Weekly (resampled) |
 
 ### Pipeline
 ```
