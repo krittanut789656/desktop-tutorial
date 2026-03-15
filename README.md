@@ -12,14 +12,14 @@ End-to-End data pipeline analyzing 10 energy stocks (5 US + 5 Thai) across 26 ye
 | Source | Data | Frequency |
 |--------|------|-----------|
 | Yahoo Finance | XOM, CVX, COP, SHEL, TTE, PTT.BK, PTTEP.BK, PTG.BK, BCP.BK, PTTGC.BK, BZ=F, CL=F | Weekly |
-| FRED | CPIENG, DGS10, DTWEXBGS, VIXCLS, INDPRO | Weekly (resampled) |
+| FRED API | CPIENG, DGS10, DTWEXBGS, VIXCLS, INDPRO | Weekly (resampled) |
 
 ### Pipeline
 ```
-01_data_collection.py  →  data/raw/energy_macro_raw.xlsx
-02_data_cleaning.py    →  data/cleaned/energy_macro_cleaned.xlsx
-03_eda_analysis.py     →  outputs/figures/ (20 PNG charts)
-energy_macro_analysis.ipynb  →  Full notebook with results
+01_data_collection.ipynb  →  data/raw/energy_macro_raw.xlsx
+02_data_cleaning.ipynb    →  data/cleaned/energy_macro_cleaned.xlsx
+03_eda_analysis.ipynb     →  outputs/figures/ (20 PNG charts)
+energy_macro_analysis.ipynb  →  Executive summary & compliance checklist
 ```
 
 ## 20 Insights (4-ACT Structure)
@@ -42,14 +42,17 @@ energy_macro_analysis.ipynb  →  Full notebook with results
 ## How to Run
 
 ```bash
-pip install yfinance pandas-datareader openpyxl matplotlib seaborn scipy xlsxwriter nbformat
-
-python 01_data_collection.py   # Phase 1: Collect data
-python 02_data_cleaning.py     # Phase 2: Clean & engineer features
-python 03_eda_analysis.py      # Phase 3: Generate 20 insight charts
+pip install yfinance openpyxl matplotlib seaborn scipy xlsxwriter nbformat
 ```
 
-Or run the complete notebook:
+Run each notebook in order:
+```
+1. 01_data_collection.ipynb   # Phase 1: Collect real data from Yahoo Finance + FRED
+2. 02_data_cleaning.ipynb     # Phase 2: Clean & engineer features
+3. 03_eda_analysis.ipynb      # Phase 3: Generate 20 insight charts
+```
+
+Or open the summary notebook:
 ```bash
 jupyter notebook energy_macro_analysis.ipynb
 ```
@@ -57,11 +60,10 @@ jupyter notebook energy_macro_analysis.ipynb
 ## Project Structure
 ```
 .
-├── 01_data_collection.py          # Phase 1: Multi-source data collection
-├── 02_data_cleaning.py            # Phase 2: Cleaning & feature engineering
-├── 03_eda_analysis.py             # Phase 3: 20 Insights EDA
-├── create_notebook.py             # Notebook generator
-├── energy_macro_analysis.ipynb    # Complete Jupyter Notebook
+├── 01_data_collection.ipynb       # Phase 1: Real API data collection
+├── 02_data_cleaning.ipynb         # Phase 2: Cleaning & feature engineering
+├── 03_eda_analysis.ipynb          # Phase 3: 20 Insights EDA
+├── energy_macro_analysis.ipynb    # Executive summary & compliance checklist
 ├── data/
 │   ├── raw/                       # Raw data (Excel)
 │   └── cleaned/                   # Cleaned data with engineered features
@@ -75,9 +77,3 @@ jupyter notebook energy_macro_analysis.ipynb
 - Labeled: Figure number, title (So What), subtitle (units/timeframe), source
 - Color-coded: Red = crisis, Green = beneficiary, Blue = US, Orange = Thai
 - No transparency: all PNGs saved with `transparent=False` for dark mode compatibility
-
-## Data Summary
-- **17,771** total data points (16,404 stock + 1,367 FRED)
-- **1,367** weeks of weekly data (Jan 2000 — Mar 2026)
-- **12** tickers (5 US + 5 Thai + 2 oil benchmarks)
-- **5** macro indicators from FRED
