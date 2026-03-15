@@ -1,0 +1,152 @@
+THAILAND TRADE DATA — DATA QUALITY REPORT
+Generated: 2026-03-15 06:50:46
+======================================================================
+
+──────────────────────────────────────────────────
+Dataset: trade_overview  |  Shape: (5046, 10)
+──────────────────────────────────────────────────
+  Missing values: None
+  Duplicates: 0
+  Column dtypes:
+    country_eng                     str
+    import_value_usd                float64
+    import_value_baht               float64
+    export_value_usd                float64
+    export_value_baht               float64
+    trade_value_usd                 float64
+    trade_balance_usd               float64
+    year                            int64
+    month                           int64
+    data_type                       str
+  Numeric summary (min / max):
+    import_value_usd                min=  16,090,460.49  max=5,759,496,220.62
+    import_value_baht               min= 543,383,102.29  max=191,013,993,009.28
+    export_value_usd                min=   3,439,627.50  max=3,705,141,729.30
+    export_value_baht               min= 116,157,984.67  max=125,470,899,685.23
+    trade_value_usd                 min=  19,530,087.99  max=8,865,826,486.43
+    trade_balance_usd               min=-2,705,118,819.15  max=2,534,103,725.49
+    year                            min=       2,019.00  max=       2,026.00
+    month                           min=           1.00  max=          12.00
+
+──────────────────────────────────────────────────
+Dataset: energy_imports  |  Shape: (1479, 10)
+──────────────────────────────────────────────────
+  Missing values: None
+  Duplicates: 0
+  Column dtypes:
+    country_eng                     str
+    value_usd                       float64
+    value_baht                      float64
+    quantity                        float64
+    quantity_unit                   str
+    year                            int64
+    month                           int64
+    hs_code                         int64
+    hs_description                  str
+    data_type                       str
+  Numeric summary (min / max):
+    value_usd                       min=  11,588,339.21  max=1,265,299,001.45
+    value_baht                      min= 376,785,525.00  max=43,225,149,405.91
+    quantity                        min=       9,268.92  max=   1,082,922.19
+    year                            min=       2,019.00  max=       2,026.00
+    month                           min=           1.00  max=          12.00
+    hs_code                         min=          27.00  max=          27.00
+
+──────────────────────────────────────────────────
+Dataset: fertilizer_imports  |  Shape: (1479, 10)
+──────────────────────────────────────────────────
+  Missing values: None
+  Duplicates: 0
+  Column dtypes:
+    country_eng                     str
+    value_usd                       float64
+    value_baht                      float64
+    quantity                        float64
+    quantity_unit                   str
+    year                            int64
+    month                           int64
+    hs_code                         int64
+    hs_description                  str
+    data_type                       str
+  Numeric summary (min / max):
+    value_usd                       min=   3,481,387.31  max= 130,608,539.06
+    value_baht                      min= 106,091,307.53  max=4,129,172,840.35
+    quantity                        min=       3,581.36  max=      93,336.18
+    year                            min=       2,019.00  max=       2,026.00
+    month                           min=           1.00  max=          12.00
+    hs_code                         min=          31.00  max=          31.00
+
+──────────────────────────────────────────────────
+Dataset: petrochemical_imports  |  Shape: (1479, 10)
+──────────────────────────────────────────────────
+  Missing values: None
+  Duplicates: 0
+  Column dtypes:
+    country_eng                     str
+    value_usd                       float64
+    value_baht                      float64
+    quantity                        float64
+    quantity_unit                   str
+    year                            int64
+    month                           int64
+    hs_code                         int64
+    hs_description                  str
+    data_type                       str
+  Numeric summary (min / max):
+    value_usd                       min=   2,170,214.74  max= 238,808,051.19
+    value_baht                      min=  65,746,219.97  max=8,012,089,046.58
+    quantity                        min=       1,769.34  max=     204,152.40
+    year                            min=       2,019.00  max=       2,026.00
+    month                           min=           1.00  max=          12.00
+    hs_code                         min=          29.00  max=          29.00
+
+──────────────────────────────────────────────────
+Dataset: agrifood_exports  |  Shape: (5394, 10)
+──────────────────────────────────────────────────
+  Missing values: None
+  Duplicates: 0
+  Column dtypes:
+    country_eng                     str
+    value_usd                       float64
+    value_baht                      float64
+    quantity                        float64
+    quantity_unit                   str
+    year                            int64
+    month                           int64
+    hs_code                         int64
+    hs_description                  str
+    data_type                       str
+  Numeric summary (min / max):
+    value_usd                       min=   1,732,847.16  max= 450,129,187.70
+    value_baht                      min=  56,388,444.89  max=14,034,750,192.17
+    quantity                        min=       1,250.62  max=     351,186.54
+    year                            min=       2,019.00  max=       2,026.00
+    month                           min=           1.00  max=          12.00
+    hs_code                         min=          10.00  max=          40.00
+
+──────────────────────────────────────────────────
+Dataset: industrial_exports  |  Shape: (4089, 10)
+──────────────────────────────────────────────────
+  Missing values: None
+  Duplicates: 0
+  Column dtypes:
+    country_eng                     str
+    value_usd                       float64
+    value_baht                      float64
+    quantity                        float64
+    quantity_unit                   str
+    year                            int64
+    month                           int64
+    hs_code                         int64
+    hs_description                  str
+    data_type                       str
+  Numeric summary (min / max):
+    value_usd                       min=  10,124,737.69  max= 690,114,366.44
+    value_baht                      min= 335,727,681.85  max=22,928,014,739.64
+    quantity                        min=       6,946.15  max=     562,696.85
+    year                            min=       2,019.00  max=       2,026.00
+    month                           min=           1.00  max=          12.00
+    hs_code                         min=          39.00  max=          87.00
+
+======================================================================
+END OF DATA QUALITY REPORT
