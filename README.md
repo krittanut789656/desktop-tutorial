@@ -1,5 +1,4 @@
-# Energy Sector Analysis & Macro Crisis (2000-2026) #Test
-
+# Energy Sector Analysis & Macro Crisis (2000-2026)
 **DADS 5001: Data Analytics and Data Science Tools and Programming — Mini-Project**
 
 วิเคราะห์พลวัตหุ้นกลุ่มพลังงานสหรัฐฯ และไทย ท่ามกลางวิกฤตภูมิรัฐศาสตร์และเศรษฐกิจมหภาค (2000-2026)
