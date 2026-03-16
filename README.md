@@ -290,8 +290,8 @@ Key Findings:
 ---
 
 # สรุปผลการศึกษาและกรอบกลยุทธ์การลงทุน (Conclusion & Framework)
-## ข้อค้นพบหลักจากการวิเคราะห์ 18 มิติ
-### กรอบการตัดสินใจ (Decision Framework)
+### ข้อค้นพบหลักจากการวิเคราะห์ 18 มิติ
+#### กรอบการตัดสินใจ (Decision Framework)
 | สภาพแวดล้อม | สัญญาณจากข้อมูล | กลยุทธ์ที่เหมาะสม | สินทรัพย์เป้าหมาย |
 |---|---|---|---|
 | **Supply Shock (สงคราม, คว่ำบาตร)** | VIX ↑, Spread กว้าง, INDPRO คงที่ | Aggressive: Overweight High-Beta Upstream | COP, PTTEP |
@@ -299,15 +299,14 @@ Key Findings:
 | **Macro Headwind (USD แข็ง, เศรษฐกิจชะลอ)** | DXY ↑, INDPRO ↓, Spread แคบ | Defensive: Low-Beta + Cash | PTG, BCP, ลด Position |
 | **Systemic Crisis (GFC-type)** | VIX > 30, MDD > 30% | Contrarian: รอจุดต่ำสุดแล้ว Accumulate | INDPRO ฟื้น + VIX ลง → COP, XOM |
 
-## หลักการ 5 ประการที่ได้จากหลักฐานเชิงประจักษ์:
+### หลักการ 5 ประการที่ได้จากหลักฐานเชิงประจักษ์:
 **1. Oil Price เป็น Dominant Factor** (Fig 1-3) — ทุกสินทรัพย์พลังงานมี Positive Loading ต่อราคาน้ำมัน การติดตาม Brent Crude เป็นสิ่งจำเป็นลำดับแรก<br>
 **2. Macro Regime กำหนดทิศทาง** (Fig 4-6) — สภาพแวดล้อมมหภาคที่เอื้อประโยชน์สูงสุดคือ: Inflation ↑ + USD ↓ + Industrial Production ↑<br>
 **3. Crisis Classification กำหนดกลยุทธ์** (Fig 7-9) — Supply Shock สร้างโอกาส, Demand Shock สร้างความเสี่ยงทั่วถึง, Systemic Risk ทำลายทุกกลุ่ม<br>
 **4. Beta เป็นตัวแปรควบคุม** (Fig 10-14) — ผู้ลงทุนสามารถปรับ Oil Exposure ผ่าน Beta Selection: High-Beta (Aggressive) vs Low-Beta (Defensive)<br>
 **5. Sharpe Ratio เป็นเกณฑ์ตัดสิน** (Fig 15-18) — ผลตอบแทนที่สูงไม่มีคุณค่าหากมาพร้อมความเสี่ยงที่สูงเกินไป Sharpe > 1.0 เป็นเกณฑ์ขั้นต่ำสำหรับ Quality Investment
 
----
-## ตัวอย่างการจัดสรร (Illustrative Portfolio Allocation)
+### ตัวอย่างการจัดสรร (Illustrative Portfolio Allocation)
 **Aggressive Portfolio (ภาวะ Supply Shock): 40% COP + 30% PTTEP + 30% XOM**<br>
 **Balanced Portfolio (ภาวะปกติ): 25% XOM + 25% CVX + 25% PTT + 25% PTTEP**<br>
 **Defensive Portfolio (ภาวะ Macro Headwind): 30% PTG + 30% BCP + 20% XOM + 20% Cash Equivalent**
