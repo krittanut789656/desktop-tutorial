@@ -13,7 +13,6 @@
 ก่อนที่จะวิเคราะห์ผลตอบแทนหรือออกแบบกลยุทธ์ใดๆ สิ่งแรกที่ต้องทำความเข้าใจคือ โครงสร้างความสัมพันธ์ (Correlation Structure) ระหว่างสินทรัพย์พลังงาน ส่วนนี้จะนำเสนอข้อค้นพบ 3 ประการ ได้แก่ แผนที่ Correlation Matrix ระหว่างสินทรัพย์ การจัดอันดับความไวต่อราคาน้ำมัน (Oil Price Sensitivity) และพลวัตของ Spread ระหว่าง Brent กับ WTI
 
 ### Fig 1. Correlation Matrix — โครงสร้างความสัมพันธ์ระหว่างสินทรัพย์พลังงาน
-
 ![Correlation Matrix](outputs/figures/01_correlation_matrix.png)
 
 ### การวิเคราะห์ Fig 1: Correlation Structure ของสินทรัพย์พลังงาน
