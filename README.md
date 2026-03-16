@@ -13,8 +13,7 @@
 ก่อนที่จะวิเคราะห์ผลตอบแทนหรือออกแบบกลยุทธ์ใดๆ สิ่งแรกที่ต้องทำความเข้าใจคือ โครงสร้างความสัมพันธ์ (Correlation Structure) ระหว่างสินทรัพย์พลังงาน ส่วนนี้จะนำเสนอข้อค้นพบ 3 ประการ ได้แก่ แผนที่ Correlation Matrix ระหว่างสินทรัพย์ การจัดอันดับความไวต่อราคาน้ำมัน (Oil Price Sensitivity) และพลวัตของ Spread ระหว่าง Brent กับ WTI
 
 ### Fig 1. Correlation Matrix — โครงสร้างความสัมพันธ์ระหว่างสินทรัพย์พลังงาน<br>
-![Correlation Matrix](outputs/figures/01_correlation_matrix.png)<br>
-### การวิเคราะห์ Fig 1: Correlation Structure ของสินทรัพย์พลังงาน
+![Correlation Matrix](outputs/figures/01_correlation_matrix.png)<br>### การวิเคราะห์ Fig 1: Correlation Structure ของสินทรัพย์พลังงาน
 Correlation Matrix ที่คำนวณจาก Weekly Returns ตลอด 26 ปี เผยให้เห็นโครงสร้างความสัมพันธ์ที่สำคัญ 3 ประการ ประการแรก หุ้นพลังงานสหรัฐฯ (XOM, CVX, COP) มี Intra-group Correlation สูงมาก (r > 0.7) แสดงว่าหุ้นกลุ่มนี้เคลื่อนไหวเป็นกลุ่มก้อน (Cluster) การถือหุ้น US Energy หลายตัวพร้อมกันจึงไม่ได้ให้ Diversification Benefit ที่แท้จริง
 
 ประการที่สอง Correlation ระหว่างกลุ่ม US กับกลุ่ม Thai อยู่ที่ระดับปานกลาง (~0.45) ซึ่งเกิดจากความแตกต่างด้านโครงสร้างตลาดทุน อัตราแลกเปลี่ยน นโยบายการควบคุมราคาภายในประเทศ และสัดส่วนธุรกิจ Upstream-Downstream ที่ต่างกัน ความแตกต่างนี้ชี้ให้เห็นว่าการจัดสรรข้ามประเทศ (Cross-country Allocation) ให้ประโยชน์ด้านการกระจายความเสี่ยงได้ดีกว่าการจัดสรรภายในประเทศเดียว
