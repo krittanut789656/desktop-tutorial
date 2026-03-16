@@ -58,9 +58,9 @@ Key Findings:
 - Spread > $10 มักเป็น Leading Signal ว่าหุ้น Upstream กำลังจะปรับตัวขึ้นตาม Supply Premium
 - Spread ที่แคบลง (Convergence) บ่งชี้ว่าตลาดกลับสู่ดุลยภาพ → Downstream มักได้เปรียบในช่วงนี้เพราะ Refining Margin คงที่
 - การติดตาม Spread Dynamics เป็นเครื่องมือเสริมที่มีคุณค่าสำหรับ Tactical Timing ในกลุ่มพลังงาน
-
 ---
-# Part 1	Macroeconomic Drivers
+
+# Part 2	Macroeconomic Drivers
 ## การศึกษาตัวแปรมหภาคที่กำหนดทิศทางราคาหุ้นพลังงาน
 ราคาหุ้นพลังงานไม่ได้ถูกกำหนดโดยอุปสงค์-อุปทานน้ำมันเพียงอย่างเดียว ส่วนนี้จะวิเคราะห์ตัวแปรมหภาค 3 ตัวที่มีอิทธิพลสำคัญ ได้แก่ ดัชนีเงินเฟ้อพลังงาน (Energy CPI) ดัชนีค่าเงินดอลลาร์สหรัฐ (Trade-Weighted USD Index) และดัชนีผลผลิตอุตสาหกรรม (Industrial Production Index) ผ่านการเปรียบเทียบเชิงบรรทัดฐาน (Normalized Comparison) กับผลตอบแทนหุ้นพลังงาน
 
@@ -105,8 +105,8 @@ Key Findings:
 - INDPRO เป็น Leading Indicator ที่มีคุณค่าสำหรับการจำแนกประเภทวิกฤต (Demand Shock vs Supply Shock)
 - Supply Shock (สงคราม) → โอกาสสำหรับ Upstream | Demand Shock (COVID) → ความเสี่ยงสูงสำหรับทุกกลุ่ม
 - สัญญาณ INDPRO ฟื้นตัวมักนำหน้าการฟื้นตัวของราคาน้ำมัน → ใช้เป็น Entry Signal ได้
-
 ---
+
 # Part 3: Crisis Analysis & Volatility Regime
 ## การวิเคราะห์วิกฤตและรูปแบบความผันผวนตลอด 26 ปี
 ตลอดช่วงเวลาที่ศึกษา (2000–2026) ตลาดพลังงานผ่านวิกฤตสำคัญ 6 ครั้ง ได้แก่ Dot-com/Oil Spike, Great Financial Crisis, Shale Revolution, COVID-19 Pandemic, สงครามรัสเซีย-ยูเครน และวิกฤตอิหร่าน ส่วนนี้จะวิเคราะห์ผลกระทบของแต่ละวิกฤตผ่าน 3 มิติ คือ Long-term Price Evolution, ความสัมพันธ์ระหว่าง VIX กับ Energy Volatility และการกระจายตัวทางสถิติของความผันผวนในแต่ละยุค
@@ -152,8 +152,8 @@ Key Findings:
 - การจำแนก Volatility Regime (Sharp vs Sustained) ช่วยกำหนดกลยุทธ์ที่เหมาะสม: Sharp Crisis → Contrarian Buy ได้เร็ว | Sustained Crisis → ต้องรอนานกว่า
 - Shale Revolution Period เป็นสภาพแวดล้อมที่เอื้อต่อกลยุทธ์ Buy & Hold มากที่สุด
 - Global Median Line ช่วยให้ประเมินได้ว่า Volatility ปัจจุบันอยู่สูงหรือต่ำกว่าค่าปกติ
-
 ---
+
 # Part 4: Comparative Performance & Event Studies
 ## การเปรียบเทียบผลตอบแทนและการศึกษาเหตุการณ์เฉพาะ
 ส่วนนี้จะเปรียบเทียบผลการดำเนินงานจริง (Realized Performance) ของหุ้นพลังงานไทยกับสหรัฐฯ ผ่าน 5 มิติ ได้แก่ ผลตอบแทนเฉลี่ยในช่วงวิกฤต, Event Study สงครามรัสเซีย-ยูเครน, Event Study วิกฤตอิหร่าน, Recovery Speed Analysis, และ Maximum Drawdown Comparison
@@ -227,8 +227,8 @@ Key Findings:
 - GFC MDD > 60% ควรใช้เป็น Stress Test Scenario มาตรฐานสำหรับพอร์ตพลังงาน
 - หุ้นที่มี MDD < 30% ในทุกวิกฤต แสดง Balance Sheet Resilience ที่โดดเด่น → สมควรได้รับ Premium Weight
 - Position Sizing Rule: Max Acceptable Loss ÷ Historical MDD = Maximum Allocation Percentage
-
 ---
+
 # Part 5: Strategic Allocation Framework
 ## การสังเคราะห์ผลวิเคราะห์สู่กรอบการจัดสรรการลงทุน
 ส่วนสุดท้ายจะสังเคราะห์ข้อค้นพบจาก 14 กราฟก่อนหน้าเป็น กรอบยุทธศาสตร์การจัดสรรการลงทุน (Strategic Allocation Framework) ที่ครอบคลุม 4 มิติ ได้แก่ การเลือกระดับ Beta ที่สอดคล้องกับ Risk Tolerance, การวิเคราะห์ Wealth Creation Power ในระยะยาว, ประสิทธิภาพการลงทุนผ่าน Sharpe Ratio, และแผนที่ Risk-Return Frontier
@@ -265,4 +265,52 @@ Key Findings:
 
 ## รูป17
 
-### 
+### การวิเคราะห์ Fig 17: Risk-Adjusted Efficiency ผ่าน Sharpe Ratio
+Heatmap นี้แสดง Annualized Sharpe Ratio ของหุ้นพลังงานทุกตัวใน 6 ยุคสำคัญ โดย Sharpe Ratio คำนวณจากสูตร (Annualized Return - Risk-Free Rate) / Annualized Volatility ซึ่งเป็นมาตรวัด Risk-Adjusted Return ที่ใช้กันแพร่หลายในทางวิชาการและอุตสาหกรรมการลงทุน เกณฑ์ตัดสิน: Sharpe > 1.0 = ยอดเยี่ยม, 0.5-1.0 = ดี, < 0 = ผลตอบแทนต่ำกว่าอัตราปลอดความเสี่ยง
+
+Pattern ที่ชัดเจนจาก Heatmap คือ Great Recession เป็น "Red Zone" ที่แทบทุกตัวมี Sharpe ติดลบ — สะท้อนว่าเมื่อเกิด Systemic Risk ไม่มีหุ้นพลังงานตัวใดให้ผลตอบแทนที่คุ้มค่ากับความเสี่ยง ในทางตรงข้าม Russia-Ukraine War Period เป็น "Green Zone" สำหรับ US Upstream (COP, XOM) ที่ให้ Sharpe > 1.0 เพราะราคาน้ำมันพุ่งขึ้นด้วย Realized Volatility ที่ต่ำกว่า GFC ข้อสรุปคือ Supply Shock สร้างสภาพแวดล้อมที่ให้ Risk-Adjusted Return ดี ขณะที่ Systemic Crisis ทำลายทุกตัว
+
+Key Findings:
+- Sharpe > 1.0 ควรเป็นเป้าหมายในการคัดเลือกหุ้น → ใช้ Heatmap นี้เป็นข้อมูลอ้างอิงในการจัดสรร
+- Systemic Risk (GFC) ไม่มีที่หลบในกลุ่มพลังงาน → ต้องใช้ Cross-Asset Hedging (เช่น Gold, Treasuries)
+- US Upstream มี Sharpe ดีกว่า Thai ในเกือบทุกยุค → ยืนยัน Alpha ของตลาดสหรัฐฯ ในเชิง Risk-Adjusted
+
+### Fig 18. Risk-Return Frontier — แผนที่ยุทธศาสตร์การจัดสรรในภาวะสงคราม
+
+## รูป18
+
+### การวิเคราะห์ Fig 18: War-Time Efficient Frontier
+Bubble Chart นี้จัดวาง Annualized Volatility (แกน X) กับ Annualized Return (แกน Y) ของสินทรัพย์พลังงานทุกตัว โดย Bubble Size แสดง Sharpe Ratio สีแบ่งกลุ่มสินทรัพย์ (US = น้ำเงินเข้ม, Thai = ส้ม, Crude = เทา) และเส้นประ Quadrant Lines แบ่งพื้นที่เป็น 4 โซน ตามค่าเฉลี่ยของ Return และ Volatility ทั้งหมดคำนวณจากช่วงสงคราม (Russia-Ukraine + Iran Crisis)
+
+มุมซ้ายบน (Sweet Spot) คือพื้นที่ที่สินทรัพย์ให้ Return สูงกว่าค่าเฉลี่ยด้วย Volatility ต่ำกว่าค่าเฉลี่ย — ตำแหน่งที่มีประสิทธิภาพสูงสุดตามกรอบ Modern Portfolio Theory มุมขวาล่าง (Danger Zone) คือพื้นที่ที่ต้องหลีกเลี่ยง เพราะให้ Return ต่ำกว่าค่าเฉลี่ยด้วย Volatility สูงกว่าค่าเฉลี่ย สินทรัพย์ที่มี Bubble ใหญ่ที่ Sweet Spot คือ Optimal Choice สำหรับการจัดสรรในภาวะสงคราม
+
+Key Findings:
+- สินทรัพย์ที่อยู่มุมซ้ายบน (Sweet Spot) ควรได้รับ Overweight ในพอร์ต
+- Bubble Size (Sharpe) ช่วยจำแนกระหว่างสินทรัพย์ที่ Return สูงเพราะ Skill กับที่ Return สูงเพราะ Risk
+- แผนที่นี้ไม่คงที่ — ต้อง Re-evaluate อย่างน้อย Quarterly เพื่อปรับ Allocation ตามการเปลี่ยนแปลงของ Regime
+---
+
+# สรุปผลการศึกษาและกรอบกลยุทธ์การลงทุน (Conclusion & Framework)
+## ข้อค้นพบหลักจากการวิเคราะห์ 18 มิติ
+### กรอบการตัดสินใจ (Decision Framework)
+| สภาพแวดล้อม | สัญญาณจากข้อมูล | กลยุทธ์ที่เหมาะสม | สินทรัพย์เป้าหมาย |
+|---|---|---|---|
+| **Supply Shock (สงคราม, คว่ำบาตร)** | VIX ↑, Spread กว้าง, INDPRO คงที่ | Aggressive: Overweight High-Beta Upstream | COP, PTTEP |
+| **Goldilocks (เศรษฐกิจดี, เงินเฟ้อต่ำ)** | VIX < 20, USD อ่อน, CPI ต่ำ | Balanced: Equal-Weight US + TH | XOM, CVX, PTT |
+| **Macro Headwind (USD แข็ง, เศรษฐกิจชะลอ)** | DXY ↑, INDPRO ↓, Spread แคบ | Defensive: Low-Beta + Cash | PTG, BCP, ลด Position |
+| **Systemic Crisis (GFC-type)** | VIX > 30, MDD > 30% | Contrarian: รอจุดต่ำสุดแล้ว Accumulate | INDPRO ฟื้น + VIX ลง → COP, XOM |
+
+## หลักการ 5 ประการที่ได้จากหลักฐานเชิงประจักษ์:
+**1. Oil Price เป็น Dominant Factor** (Fig 1-3) — ทุกสินทรัพย์พลังงานมี Positive Loading ต่อราคาน้ำมัน การติดตาม Brent Crude เป็นสิ่งจำเป็นลำดับแรก<br>
+**2. Macro Regime กำหนดทิศทาง** (Fig 4-6) — สภาพแวดล้อมมหภาคที่เอื้อประโยชน์สูงสุดคือ: Inflation ↑ + USD ↓ + Industrial Production ↑<br>
+**3. Crisis Classification กำหนดกลยุทธ์** (Fig 7-9) — Supply Shock สร้างโอกาส, Demand Shock สร้างความเสี่ยงทั่วถึง, Systemic Risk ทำลายทุกกลุ่ม<br>
+**4. Beta เป็นตัวแปรควบคุม** (Fig 10-14) — ผู้ลงทุนสามารถปรับ Oil Exposure ผ่าน Beta Selection: High-Beta (Aggressive) vs Low-Beta (Defensive)<br>
+**5. Sharpe Ratio เป็นเกณฑ์ตัดสิน** (Fig 15-18) — ผลตอบแทนที่สูงไม่มีคุณค่าหากมาพร้อมความเสี่ยงที่สูงเกินไป Sharpe > 1.0 เป็นเกณฑ์ขั้นต่ำสำหรับ Quality Investment
+
+---
+## ตัวอย่างการจัดสรร (Illustrative Portfolio Allocation)
+Aggressive Portfolio (ภาวะ Supply Shock): 40% COP + 30% PTTEP + 30% XOM<br>
+Balanced Portfolio (ภาวะปกติ): 25% XOM + 25% CVX + 25% PTT + 25% PTTEP<br>
+Defensive Portfolio (ภาวะ Macro Headwind): 30% PTG + 30% BCP + 20% XOM + 20% Cash Equivalent
+
+
