@@ -2,11 +2,11 @@
 ### วิเคราะห์พลวัตหุ้นกลุ่มพลังงานสหรัฐฯ และไทย ท่ามกลางวิกฤตภูมิรัฐศาสตร์และเศรษฐกิจมหภาค (2000–2026)
 
 โครงการนี้แบ่งการวิเคราะห์ออกเป็น 5 ส่วน เพื่อศึกษาปัจจัยที่มีผลต่ออุตสาหกรรมพลังงานและนำไปสู่กรอบการลงทุนเชิงกลยุทธ์<br>
-**Part 1 – Market Structure & Correlation** วิเคราะห์โครงสร้างความสัมพันธ์ระหว่างสินทรัพย์พลังงาน<br>
-**Part 2 – Macroeconomic Drivers** ศึกษาตัวแปรมหภาคที่กำหนดทิศทางราคาหุ้นพลังงาน<br>
-**Part 3 – Crisis Analysis & Volatility Regime** จำแนกรูปแบบความเสี่ยงในแต่ละช่วงวิกฤต<br>
-**Part 4 – Comparative Performance & Event Studies** เปรียบเทียบผลตอบแทนเชิงเปรียบเทียบ US vs Thai<br>
-**Part 5 – Strategic Allocation Framework** สังเคราะห์ผลวิเคราะห์สู่กรอบการจัดสรรการลงทุน
+  **Part 1 – Market Structure & Correlation** วิเคราะห์โครงสร้างความสัมพันธ์ระหว่างสินทรัพย์พลังงาน<br>
+  **Part 2 – Macroeconomic Drivers** ศึกษาตัวแปรมหภาคที่กำหนดทิศทางราคาหุ้นพลังงาน<br>
+  **Part 3 – Crisis Analysis & Volatility Regime** จำแนกรูปแบบความเสี่ยงในแต่ละช่วงวิกฤต<br>
+  **Part 4 – Comparative Performance & Event Studies** เปรียบเทียบผลตอบแทนเชิงเปรียบเทียบ US vs Thai<br>
+  **Part 5 – Strategic Allocation Framework** สังเคราะห์ผลวิเคราะห์สู่กรอบการจัดสรรการลงทุน
 
 # Part 1	Market Structure & Correlation
 การวิเคราะห์โครงสร้างความสัมพันธ์ระหว่างสินทรัพย์พลังงาน
