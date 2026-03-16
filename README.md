@@ -141,5 +141,128 @@ Key Findings:
 
 ### Fig 9. Volatility Regime Analysis — การกระจายตัวของความเสี่ยงในแต่ละยุค
 
+## รูป9
 
+### การวิเคราะห์ Fig 9: Statistical Distribution ของ Volatility ข้ามช่วงวิกฤต
+Box Plot นี้แสดงการกระจายตัวทางสถิติของ 20-Week Rolling Volatility ใน 6 ยุคสำคัญ เครื่องมือนี้ให้ข้อมูลที่สมบูรณ์กว่ากราฟเส้น — โดย Box Width สะท้อน Interquartile Range (IQR) หรือ "ระยะเวลาที่ความไม่แน่นอนดำรงอยู่" ขณะที่ Outlier Points แสดง "ค่า Extreme" ที่เกิดขึ้นชั่วคราว
 
+ผลการวิเคราะห์แสดงว่า COVID-19 สร้าง Volatility Spike สูงสุด (Outlier สูงที่สุด) แต่เป็นวิกฤตที่ "รุนแรงแต่สั้น" (Sharp but Short) เห็นได้จาก Box ที่ไม่กว้างมาก ในทางตรงข้าม Great Recession มี Box กว้างที่สุด สะท้อนว่าความไม่แน่นอนกินเวลาหลายเดือนถึงหลายปี (Sustained Uncertainty) ส่วน Shale Revolution (สีเขียว) มี Box แคบที่สุดและ Median ต่ำที่สุด แสดงว่าเป็นยุคที่เสถียรที่สุดในรอบ 26 ปี
+
+Key Findings:
+- การจำแนก Volatility Regime (Sharp vs Sustained) ช่วยกำหนดกลยุทธ์ที่เหมาะสม: Sharp Crisis → Contrarian Buy ได้เร็ว | Sustained Crisis → ต้องรอนานกว่า
+- Shale Revolution Period เป็นสภาพแวดล้อมที่เอื้อต่อกลยุทธ์ Buy & Hold มากที่สุด
+- Global Median Line ช่วยให้ประเมินได้ว่า Volatility ปัจจุบันอยู่สูงหรือต่ำกว่าค่าปกติ
+
+---
+# Part 4: Comparative Performance & Event Studies
+## การเปรียบเทียบผลตอบแทนและการศึกษาเหตุการณ์เฉพาะ
+ส่วนนี้จะเปรียบเทียบผลการดำเนินงานจริง (Realized Performance) ของหุ้นพลังงานไทยกับสหรัฐฯ ผ่าน 5 มิติ ได้แก่ ผลตอบแทนเฉลี่ยในช่วงวิกฤต, Event Study สงครามรัสเซีย-ยูเครน, Event Study วิกฤตอิหร่าน, Recovery Speed Analysis, และ Maximum Drawdown Comparison
+
+### Fig 10. Cross-Market Resilience — ผลตอบแทนเฉลี่ยในช่วงวิกฤต Thai vs US
+
+## รูป10
+
+### การวิเคราะห์ Fig 10: Comparative Average Returns ในช่วงวิกฤต
+Grouped Bar Chart นี้เปรียบเทียบผลตอบแทนเฉลี่ยรายสัปดาห์ (Average Weekly Return) ของกลุ่มหุ้นพลังงาน US กับ Thai ใน 3 ช่วงวิกฤตสำคัญ ผลลัพธ์ไม่ได้ชี้ว่าฝั่งใดฝั่งหนึ่ง "ชนะ" ทุกวิกฤต แต่แสดง Pattern ที่สม่ำเสมอ — US Energy มักให้ Upside ที่สูงกว่าในช่วง Recovery ขณะที่ Thai Energy บางครั้งมี Downside Protection ที่ดีกว่าในช่วงขาลง
+
+ปัจจัยเชิงโครงสร้างที่อธิบายความแตกต่างนี้ ได้แก่ ความลึกของตลาดทุน (Market Depth) ที่สหรัฐฯ สูงกว่าอย่างมีนัยสำคัญ ส่งผลให้มี Contrarian Capital ไหลเข้าเร็วกว่าในจังหวะวิกฤต นอกจากนี้ หุ้นพลังงาน US มี Global Investor Base ที่กว้างกว่า ขณะที่หุ้นไทยพึ่งพาการลงทุนจากต่างชาติซึ่งมักไหลออกในช่วง Risk-Off (Capital Flight)
+
+Key Findings:
+- US Energy แสดง Recovery Alpha ที่สูงกว่า Thai ในทุกวิกฤตที่ศึกษา → เหมาะเป็น Core Growth Component
+- Thai Energy อาจให้ Downside Buffer ในบางวิกฤต → เหมาะเป็น Stabilizing Component
+- กลยุทธ์ที่มีประสิทธิภาพคือ Blended Allocation (US Core + Thai Satellite) เพื่อใช้ประโยชน์จากทั้งสองลักษณะ
+
+### Fig 11. Event Study: สงครามรัสเซีย-ยูเครน — High-Beta vs Low-Beta
+
+## รูป11
+
+### การวิเคราะห์ Fig 11: Beta Sensitivity ในช่วงสงครามรัสเซีย-ยูเครน (2022)
+Event Study นี้กำหนดจุดเริ่มต้นที่ 24 กุมภาพันธ์ 2022 (วันที่รัสเซียบุกยูเครน) และ Normalize ราคาที่ฐาน 100 เพื่อเปรียบเทียบ Relative Performance ของ 4 หุ้นหลัก + Brent Crude ตลอดระยะเวลา ~100 สัปดาห์ เส้นประ Brent ทำหน้าที่เป็น Benchmark สำหรับวัด Alpha (ส่วนที่เกิน Benchmark)
+
+ผลลัพธ์ยืนยันทฤษฎี Beta — COP (US High-Beta) ให้ผลตอบแทนสูงสุดในช่วง 15 สัปดาห์แรก (Panic Phase) สอดคล้องกับ Pure-Play Upstream ที่มี Revenue Leverage สูงต่อราคาน้ำมัน PTT (TH Low-Beta) ให้ผลตอบแทนต่ำสุดเนื่องจากธุรกิจกระจายตัวและราคาพลังงานภายในถูกอุดหนุน PTTEP อยู่ตรงกลาง โดยได้ประโยชน์จากราคาน้ำมันที่สูงขึ้นแต่ถูก Discount จาก Emerging Market Risk Premium
+
+Key Findings:
+- ในช่วง Supply Shock จากสงคราม Sector Selection (Upstream vs Downstream) มีอิทธิพลต่อผลตอบแทนมากกว่า Geography (US vs TH)
+- Alpha สูงสุดกระจุกตัวใน Panic Phase (15 สัปดาห์แรก) → Time-to-Decision เป็นปัจจัยสำคัญ
+- High-Beta Upstream ให้ Upside Premium แต่ต้องแลกกับ Downside Risk ที่สูงกว่า — เป็น Risk-Reward Trade-off ที่ต้องประเมิน
+
+### Fig 12. Event Study: วิกฤตอิหร่าน 2025-26 — การทดสอบ Pattern Repetition
+
+## รูป12
+
+### การวิเคราะห์ Fig 12: Beta Sensitivity ในช่วงวิกฤตอิหร่าน (2025-26)
+Event Study ครั้งที่สองนี้ใช้วิธีการเดียวกับ Fig 11 แต่กำหนดจุดเริ่มต้นที่มิถุนายน 2025 (จุดเริ่มวิกฤตอิหร่าน) เพื่อทดสอบว่า Pattern ที่พบในสงครามยูเครนสามารถ Replicate ได้หรือไม่ (Out-of-Sample Test) ผลลัพธ์แสดงว่า Behavioral Pattern เดิมปรากฏขึ้นอีกครั้ง — High-Beta (COP, PTTEP) นำขึ้นเป็นกลุ่มแรก ขณะที่ Low-Beta (XOM, PTT) ขยับตามช้ากว่า
+
+สิ่งที่ต่างจากกรณียูเครนคือ PTTEP แสดง Relative Strength ที่ดีขึ้น ซึ่งอาจอธิบายได้จาก Adaptive Expectation — นักลงทุนเรียนรู้จากวิกฤตก่อนหน้าและเข้าซื้อ High-Beta Thai Upstream เร็วขึ้น (Learning Effect) รวมถึง PTTEP มีสัมปทานในแหล่งผลิตที่ได้รับประโยชน์โดยตรงจากราคาน้ำมันที่สูงขึ้น การซ้ำรอยนี้ยืนยันว่า Supply Shock จากความขัดแย้งด้านภูมิรัฐศาสตร์มี Playbook ที่ค่อนข้างสม่ำเสมอ
+
+Key Findings:
+- Pattern ของ Supply Shock Crisis มีความ Reproducible — สามารถใช้เป็น Playbook สำหรับวิกฤตในอนาคตได้
+- PTTEP แสดง Improvement ในความสามารถ Capture Oil Upside ซึ่งสะท้อน Learning Curve ของตลาด
+- การ Confirm Pattern จาก 2 วิกฤตที่ต่างกันเพิ่มความน่าเชื่อถือ (Statistical Robustness) ของข้อสรุป
+
+### Fig 13. Recovery Path Analysis — การเปรียบเทียบความเร็วในการฟื้นตัว
+
+## รูป13
+
+### การวิเคราะห์ Fig 13: Multi-Crisis Recovery Comparison
+กราฟ Panel นี้เปรียบเทียบ Recovery Path ของกลุ่ม US vs Thai โดยปรับฐาน 100 ที่จุดต่ำสุด (Trough) ของแต่ละวิกฤต (T=0) แล้วติดตามไปอีก 30 สัปดาห์ วิธีการนี้เป็นมาตรฐานของ Event Study ในทางวิชาการ ที่ช่วยให้เปรียบเทียบ Recovery Speed ข้ามวิกฤตที่มีขนาดและลักษณะต่างกันได้
+
+ข้อค้นพบหลักคือ US Energy มี Recovery Speed ที่สูงกว่า Thai Energy ในทุกวิกฤตที่ศึกษา ปัจจัยหลักที่อธิบายได้แก่ Market Microstructure ที่ต่างกัน — ตลาดหุ้นสหรัฐฯ มี Institutional Ownership สูงกว่า มี Short Selling Mechanism ที่ช่วย Price Discovery และมี Contrarian Capital (เช่น Value Fund, Pension Fund) ที่เข้าซื้อในจังหวะวิกฤตได้รวดเร็วกว่า ขณะที่ตลาดไทยต้องรอจนเข้า Risk-On Regime จริงๆ ก่อนที่เงินต่างชาติจะไหลกลับเข้ามา
+
+Key Findings:
+- US Energy ฟื้นตัวเร็วกว่า Thai ในทุกกรณี → ถ้าต้องเลือกฝั่งเดียวในช่วง Recovery ข้อมูลเชิงประจักษ์ชี้ไปที่ US
+- COVID-19 Recovery เป็น V-Shape (เร็ว) | GFC Recovery เป็น U-Shape (ช้า) → ประเภทวิกฤตกำหนดรูปแบบ Recovery
+- Entry Signal ที่เหมาะสมคือ VIX เริ่มลดจากจุดสูงสุด + INDPRO เริ่มฟื้นตัว = สัญญาณที่ Recovery กำลังเริ่มต้น
+
+### Fig 14. Maximum Drawdown — การวัดความเสียหายสูงสุดในแต่ละวิกฤต
+
+## รูป14
+
+### การวิเคราะห์ Fig 14: Maximum Drawdown Comparison ข้ามวิกฤต
+Maximum Drawdown (MDD) คือการวัดความเสียหายจาก Peak สู่ Trough ที่มากที่สุดในช่วงเวลาหนึ่ง ซึ่งเป็นตัวชี้วัดความเสี่ยงขาลง (Downside Risk Metric) ที่นักลงทุนสถาบันให้ความสำคัญ เนื่องจากสะท้อน "Worst Case ที่เคยเกิดขึ้นจริง" Grouped Horizontal Bar Chart นี้เปรียบเทียบ MDD ของหุ้นพลังงานแต่ละตัวใน 4 วิกฤตสำคัญ
+
+Great Recession (สีแดงเข้ม) สร้าง MDD รุนแรงที่สุด — หุ้นหลายตัวมี Drawdown เกิน 60% สะท้อนความเสียหายที่รุนแรงเมื่อเกิด Systemic Risk ที่ลุกลามจากภาคการเงินสู่ภาคเศรษฐกิจจริง COVID-19 สร้าง Drawdown ที่รุนแรงสำหรับหุ้น US มากกว่า Thai เนื่องจาก Valuation ของหุ้น US สูงกว่าจึงมี "ระยะทางร่วง" มากกว่า ในทางตรงข้าม วิกฤตอิหร่าน (สีเทา) สร้าง MDD ที่เบาที่สุด ซึ่งอาจสะท้อน Market Learning Effect ที่นักลงทุนมีประสบการณ์จัดการวิกฤตด้านภูมิรัฐศาสตร์ดีขึ้น
+
+Key Findings:
+- GFC MDD > 60% ควรใช้เป็น Stress Test Scenario มาตรฐานสำหรับพอร์ตพลังงาน
+- หุ้นที่มี MDD < 30% ในทุกวิกฤต แสดง Balance Sheet Resilience ที่โดดเด่น → สมควรได้รับ Premium Weight
+- Position Sizing Rule: Max Acceptable Loss ÷ Historical MDD = Maximum Allocation Percentage
+
+---
+# Part 5: Strategic Allocation Framework
+## การสังเคราะห์ผลวิเคราะห์สู่กรอบการจัดสรรการลงทุน
+ส่วนสุดท้ายจะสังเคราะห์ข้อค้นพบจาก 14 กราฟก่อนหน้าเป็น กรอบยุทธศาสตร์การจัดสรรการลงทุน (Strategic Allocation Framework) ที่ครอบคลุม 4 มิติ ได้แก่ การเลือกระดับ Beta ที่สอดคล้องกับ Risk Tolerance, การวิเคราะห์ Wealth Creation Power ในระยะยาว, ประสิทธิภาพการลงทุนผ่าน Sharpe Ratio, และแผนที่ Risk-Return Frontier
+
+### Fig 15. Beta Selection Framework — COP (Aggressive) vs PTTEP (Defensive)
+
+## รูป15
+
+### การวิเคราะห์ Fig 15: Oil-Beta ในฐานะเกณฑ์การคัดเลือกหุ้น
+กราฟ Indexed Performance นี้เปรียบเทียบ COP กับ PTTEP โดยมี Brent Crude เป็น Benchmark ทำให้มองเห็น "Oil-Beta" ของแต่ละตัวอย่างชัดเจน COP มี Beta > 1 ต่อ Brent (ขยายการเคลื่อนไหวทั้งขาขึ้นและขาลง) ขณะที่ PTTEP มี Beta < 1 (เคลื่อนไหวพอประมาณกว่า)
+
+การเลือก Beta ไม่ใช่คำถามเรื่อง "ถูก-ผิด" แต่เป็นเรื่อง Risk Tolerance Alignment — ผู้ลงทุนที่มี Time Horizon ยาว สามารถรับ Drawdown มากกว่า 40% ได้ และมีมุมมองเชิงบวกต่อ Oil Supercycle ควรพิจารณา COP (Aggressive Allocation) ในทางตรงข้าม ผู้ลงทุนที่ต้องการ Stable Income, รับ Volatility ได้จำกัด หรือต้องการ Energy Exposure โดยไม่รับความเสี่ยงมากเกินไป ควรพิจารณา PTTEP (Defensive Allocation) ทั้งนี้ พอร์ตที่ผสม Beta หลายระดับ (Blended Beta Portfolio) มักให้ Risk-Adjusted Return ที่ดีกว่าการเลือกเพียงระดับเดียว
+
+Key Findings:
+- High Oil-Beta (COP) เหมาะสำหรับ Tactical/Thematic Allocation ที่มุ่งเน้น Oil Price Exposure
+- Low Oil-Beta (PTTEP) เหมาะเป็น Core Holding ที่ให้ทั้ง Capital Appreciation และ Dividend อย่างพอประมาณ
+- Blended Portfolio (เช่น 40% COP + 30% PTTEP + 30% PTG) ช่วย Optimize Risk-Adjusted Return
+
+### Fig 16. Cumulative Wealth Creation — การเปรียบเทียบพลังทบต้นระยะยาว
+
+## รูป16
+
+### การวิเคราะห์ Fig 16: Long-term Wealth Accumulation Comparison
+Split Panel Chart นี้แสดง Cumulative Wealth Index (ฐาน 100) ของหุ้นพลังงานแต่ละตัว โดยแบ่งเป็น US Energy (แผงซ้าย) และ Thai Energy (แผงขวา) เส้นหนา (Group Average) แสดงผลตอบแทนของ Equal-Weighted Portfolio ที่ถือหุ้นทุกตัวในกลุ่มด้วยน้ำหนักเท่ากัน
+
+ผลลัพธ์แสดงว่ากลุ่ม US Energy สร้าง Wealth ได้มากกว่ากลุ่ม Thai อย่างมีนัยสำคัญในระยะยาว ปัจจัยที่อธิบายได้แก่ Capital Efficiency ที่สูงกว่า (วัดจาก ROIC), Shareholder Return Policy ที่เน้น Buyback + Dividend Growth, การเข้าถึงแหล่ง Reserves ระดับโลก, และ Valuation Re-rating จากนักลงทุนสถาบันทั่วโลก เส้น Group Average ยังแสดง "Diversification Benefit ภายในกลุ่ม" — แม้หุ้นบางตัวจะ Underperform แต่ค่าเฉลี่ยยังคงแสดง Upward Trend ที่สม่ำเสมอ ซึ่งสะท้อนพลังของ Portfolio Effect
+
+Key Findings:
+- US Energy สร้าง Wealth ได้มากกว่า Thai ในระยะยาว เนื่องจาก Capital Efficiency และ Market Premium ที่สูงกว่า
+- Compounding ทำงานได้ดีที่สุดเมื่อไม่ขายในจังหวะวิกฤต — การ Panic Sell ทำลาย Compounding Power อย่างถาวร
+- Equal-Weighted Portfolio + Annual Rebalancing เป็นกลยุทธ์ที่เรียบง่ายแต่ให้ผลลัพธ์ที่แข็งแกร่ง
+
+### Fig 17. Sharpe Ratio Heatmap — ประสิทธิภาพการลงทุนต่อหน่วยความเสี่ยงในแต่ละยุค
+
+## รูป17
+
+### 
