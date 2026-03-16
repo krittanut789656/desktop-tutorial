@@ -289,7 +289,7 @@ Key Findings:
 - แผนที่นี้ไม่คงที่ — ต้อง Re-evaluate อย่างน้อย Quarterly เพื่อปรับ Allocation ตามการเปลี่ยนแปลงของ Regime
 ---
 
-# สรุปผลการศึกษาและกรอบกลยุทธ์การลงทุน <span style="font-size:14px">(Conclusion & Framework)</span>
+## สรุปผลการศึกษาและกรอบกลยุทธ์การลงทุน (Conclusion & Framework)
 ### กรอบการตัดสินใจ (Decision Framework)
 | สภาพแวดล้อม | สัญญาณจากข้อมูล | กลยุทธ์ที่เหมาะสม | สินทรัพย์เป้าหมาย |
 |---|---|---|---|
