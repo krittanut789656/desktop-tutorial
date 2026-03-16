@@ -14,8 +14,7 @@
 
 ### Fig 1. Correlation Matrix — โครงสร้างความสัมพันธ์ระหว่างสินทรัพย์พลังงาน
 
-## รูป1
-
+#### รูป1
 
 ### การวิเคราะห์ Fig 1: Correlation Structure ของสินทรัพย์พลังงาน
 Correlation Matrix ที่คำนวณจาก Weekly Returns ตลอด 26 ปี เผยให้เห็นโครงสร้างความสัมพันธ์ที่สำคัญ 3 ประการ ประการแรก หุ้นพลังงานสหรัฐฯ (XOM, CVX, COP) มี Intra-group Correlation สูงมาก (r > 0.7) แสดงว่าหุ้นกลุ่มนี้เคลื่อนไหวเป็นกลุ่มก้อน (Cluster) การถือหุ้น US Energy หลายตัวพร้อมกันจึงไม่ได้ให้ Diversification Benefit ที่แท้จริง
@@ -31,7 +30,7 @@ Key Findings:
 
 ### Fig 2. Oil Price Sensitivity — การจัดอันดับความไวต่อราคาน้ำมัน
 
-## รูป2
+#### รูป2
 
 ### การวิเคราะห์ Fig 2: Oil Sensitivity Spectrum ของหุ้นพลังงาน
 Horizontal Bar Chart นี้จัดอันดับค่า Correlation ของราคาปิดรายสัปดาห์ระหว่างหุ้นพลังงานแต่ละตัวกับ Brent Crude (BZ=F) ผลลัพธ์แสดง Spectrum ที่ชัดเจน — หุ้น Upstream อย่าง ConocoPhillips (COP) และ PTTEP มีค่า Correlation สูงสุด เนื่องจากรายได้ผูกติดกับราคาน้ำมันโดยตรง (Revenue = Production Volume x Oil Price) ในทางตรงข้าม หุ้น Downstream Retail อย่าง PTG Energy มีค่า Correlation ต่ำสุด เพราะธุรกิจปั๊มน้ำมันมี Margin ที่ค่อนข้างคงที่ และราคาขายปลีกในประเทศไทยอยู่ภายใต้กลไกการอุดหนุนของกองทุนน้ำมันเชื้อเพลิง
@@ -309,8 +308,8 @@ Key Findings:
 
 ---
 ## ตัวอย่างการจัดสรร (Illustrative Portfolio Allocation)
-Aggressive Portfolio (ภาวะ Supply Shock): 40% COP + 30% PTTEP + 30% XOM<br>
-Balanced Portfolio (ภาวะปกติ): 25% XOM + 25% CVX + 25% PTT + 25% PTTEP<br>
-Defensive Portfolio (ภาวะ Macro Headwind): 30% PTG + 30% BCP + 20% XOM + 20% Cash Equivalent
+**Aggressive Portfolio (ภาวะ Supply Shock): 40% COP + 30% PTTEP + 30% XOM**<br>
+**Balanced Portfolio (ภาวะปกติ): 25% XOM + 25% CVX + 25% PTT + 25% PTTEP**<br>
+**Defensive Portfolio (ภาวะ Macro Headwind): 30% PTG + 30% BCP + 20% XOM + 20% Cash Equivalent**
 
 
