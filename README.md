@@ -14,7 +14,7 @@
 
 ### Fig 1. Correlation Matrix — โครงสร้างความสัมพันธ์ระหว่างสินทรัพย์พลังงาน
 
-![Correlation Matrix](outputs/figures/01_correlation_matrix.png)
+![Correlation Matrix](outputs/figures/insight_19_corr_matrix.png)
 
 ### การวิเคราะห์ Fig 1: Correlation Structure ของสินทรัพย์พลังงาน
 Correlation Matrix ที่คำนวณจาก Weekly Returns ตลอด 26 ปี เผยให้เห็นโครงสร้างความสัมพันธ์ที่สำคัญ 3 ประการ ประการแรก หุ้นพลังงานสหรัฐฯ (XOM, CVX, COP) มี Intra-group Correlation สูงมาก (r > 0.7) แสดงว่าหุ้นกลุ่มนี้เคลื่อนไหวเป็นกลุ่มก้อน (Cluster) การถือหุ้น US Energy หลายตัวพร้อมกันจึงไม่ได้ให้ Diversification Benefit ที่แท้จริง
