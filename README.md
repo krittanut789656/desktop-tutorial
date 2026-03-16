@@ -44,7 +44,7 @@ Key Findings:
 
 ### Fig 3. Brent-WTI Spread — พลวัตของตลาดน้ำมันระดับโลก
 
-## รูป3
+#### รูป3
 
 ### การวิเคราะห์ Fig 3: Brent-WTI Spread ในฐานะ Supply Stress Indicator
 Brent Crude (ราคาอ้างอิงระดับโลก ซื้อขายที่ ICE London) และ WTI (ราคาอ้างอิงของสหรัฐฯ ส่งมอบที่ Cushing, Oklahoma) มีราคาที่เคลื่อนไหวในทิศทางเดียวกันโดยพื้นฐาน แต่ส่วนต่าง (Spread) ระหว่างทั้งสองสะท้อนดุลอุปสงค์-อุปทานระดับภูมิภาค (Regional Supply-Demand Balance) กราฟนี้แสดง Time Series ของทั้งสองราคาพร้อมกับ Spread Area ซึ่ง Overlay ด้วยช่วงเวลาวิกฤตด้านภูมิรัฐศาสตร์
@@ -65,7 +65,7 @@ Key Findings:
 
 ### Fig 4. Inflation Hedge Hypothesis — หุ้นพลังงานเป็นเกราะป้องกันเงินเฟ้อหรือไม่?
 
-## รูป4
+#### รูป4
 
 ### การวิเคราะห์ Fig 4: การทดสอบสมมติฐาน Inflation Hedge ของหุ้นพลังงาน
 การศึกษานี้เปรียบเทียบดัชนี 3 ตัว — Headline CPI (เงินเฟ้อทั่วไป), Energy CPI (เงินเฟ้อหมวดพลังงาน), และราคาหุ้น XOM — โดยปรับฐานที่ 100 (Jan 2000 = 100) เพื่อทดสอบสมมติฐานที่ว่าหุ้นพลังงานสามารถรักษามูลค่าที่แท้จริง (Real Value) ของเงินลงทุนได้ในภาวะเงินเฟ้อ ผลลัพธ์แสดงว่า XOM ให้ Cumulative Growth ที่สูงกว่าทั้ง Headline CPI และ Energy CPI อย่างมีนัยสำคัญ ซึ่งหมายความว่า Real Return (ผลตอบแทนหลังหักเงินเฟ้อ) เป็นบวกตลอดช่วงเวลาที่ศึกษา
@@ -79,7 +79,7 @@ Key Findings:
 
 ### Fig 5. USD Inverse Relationship — ความสัมพันธ์ผกผันระหว่างดอลลาร์กับราคาพลังงาน
 
-## รูป 5
+#### รูป 5
 
 ### การวิเคราะห์ Fig 5: กลไก Inverse Correlation ระหว่าง USD Index กับราคาน้ำมัน
 เนื่องจากน้ำมันดิบซื้อขายด้วยสกุลเงินดอลลาร์สหรัฐในตลาดโลก จึงมีความสัมพันธ์เชิงผกผัน (Inverse Relationship) กับค่าเงินดอลลาร์โดยธรรมชาติ กลไกนี้ทำงานผ่าน Purchasing Power Channel — เมื่อดอลลาร์แข็งค่า ประเทศผู้นำเข้าน้ำมัน (จีน, อินเดีย, สหภาพยุโรป) ต้องจ่ายแพงขึ้นในสกุลเงินของตน ส่งผลให้อุปสงค์ลดลงและกดดันราคาน้ำมัน ค่า Correlation ผกผันที่แสดงบนกราฟยืนยันกลไกนี้ด้วยข้อมูลเชิงประจักษ์
@@ -93,7 +93,7 @@ Key Findings:
 
 ### Fig 6. Industrial Production vs Oil — ภาคเศรษฐกิจจริงกับราคาพลังงาน
 
-## รูป6
+#### รูป6
 
 ### การวิเคราะห์ Fig 6: ความสัมพันธ์ระหว่าง Industrial Production กับราคาน้ำมันในช่วงวิกฤต
 กราฟ Panel 2x2 นี้เปรียบเทียบ INDPRO (Industrial Production Index) กับ WTI Crude ใน 4 ช่วงวิกฤต เพื่อจำแนกประเภทของ Shock ที่ส่งผลต่อตลาดพลังงาน ข้อค้นพบหลักคือวิกฤตแต่ละครั้งมีลักษณะที่ต่างกัน — Great Recession (2008) และ COVID-19 (2020) เป็น Demand Shock ที่ INDPRO ร่วงลงพร้อมกับราคาน้ำมัน ขณะที่สงครามรัสเซีย-ยูเครน (2022) เป็น Supply Shock ที่ INDPRO ยังเติบโตแต่ราคาน้ำมันพุ่งสูง
@@ -112,7 +112,7 @@ Key Findings:
 
 ### Fig 7. Long-term Price Evolution — พัฒนาการราคาหุ้นพลังงาน 26 ปี
 
-## รูป7
+#### รูป7
 
 ### การวิเคราะห์ Fig 7: Indexed Price Evolution ในระยะยาว (Log Scale)
 กราฟนี้แสดง Indexed Price (ฐาน 100 = ม.ค. 2000) ของหุ้นพลังงาน 10 ตัว บน Log Scale เพื่อให้สามารถเปรียบเทียบอัตราการเติบโตสะสม (Cumulative Growth Rate) ได้อย่างเที่ยงตรง โดยไม่ถูกบิดเบือนจากค่าสัมบูรณ์ที่ต่างกัน เส้น Highlight 2 เส้น — XOM (ตัวแทน US) และ PTTEP (ตัวแทน Thai) — แสดงให้เห็นว่าหุ้นทั้งสองตัวสามารถฟื้นกลับมาทำจุดสูงสุดใหม่ได้หลังทุกวิกฤต ขณะที่หุ้นบางตัว (เส้นสีจาง) ไม่สามารถกลับมาถึงระดับเดิม
@@ -126,7 +126,7 @@ Key Findings:
 
 ### Fig 8. VIX vs Energy Volatility — ดัชนีความกลัวในฐานะ Leading Indicator
 
-## รูป8
+#### รูป8
 
 ### การวิเคราะห์ Fig 8: ความสัมพันธ์ระหว่าง VIX กับ Energy Sector Volatility
 VIX Index (CBOE Volatility Index) วัดความคาดหวังของตลาดเกี่ยวกับ Implied Volatility ของ S&P 500 ใน 30 วันข้างหน้า กราฟ Dual-Axis นี้แสดง VIX เทียบกับ 20-Week Rolling Volatility เฉลี่ยของหุ้นพลังงาน 10 ตัว พร้อม Panic Zone (VIX > 30) ที่แรเงาสีแดง ค่า Correlation ระหว่างทั้งสองตัวแปรอยู่ที่ระดับสูง (> 0.8) แสดงว่า Systematic Market Risk เป็นตัวขับเคลื่อนหลักของ Energy Sector Volatility
@@ -140,7 +140,7 @@ Key Findings:
 
 ### Fig 9. Volatility Regime Analysis — การกระจายตัวของความเสี่ยงในแต่ละยุค
 
-## รูป9
+#### รูป9
 
 ### การวิเคราะห์ Fig 9: Statistical Distribution ของ Volatility ข้ามช่วงวิกฤต
 Box Plot นี้แสดงการกระจายตัวทางสถิติของ 20-Week Rolling Volatility ใน 6 ยุคสำคัญ เครื่องมือนี้ให้ข้อมูลที่สมบูรณ์กว่ากราฟเส้น — โดย Box Width สะท้อน Interquartile Range (IQR) หรือ "ระยะเวลาที่ความไม่แน่นอนดำรงอยู่" ขณะที่ Outlier Points แสดง "ค่า Extreme" ที่เกิดขึ้นชั่วคราว
@@ -159,7 +159,7 @@ Key Findings:
 
 ### Fig 10. Cross-Market Resilience — ผลตอบแทนเฉลี่ยในช่วงวิกฤต Thai vs US
 
-## รูป10
+#### รูป10
 
 ### การวิเคราะห์ Fig 10: Comparative Average Returns ในช่วงวิกฤต
 Grouped Bar Chart นี้เปรียบเทียบผลตอบแทนเฉลี่ยรายสัปดาห์ (Average Weekly Return) ของกลุ่มหุ้นพลังงาน US กับ Thai ใน 3 ช่วงวิกฤตสำคัญ ผลลัพธ์ไม่ได้ชี้ว่าฝั่งใดฝั่งหนึ่ง "ชนะ" ทุกวิกฤต แต่แสดง Pattern ที่สม่ำเสมอ — US Energy มักให้ Upside ที่สูงกว่าในช่วง Recovery ขณะที่ Thai Energy บางครั้งมี Downside Protection ที่ดีกว่าในช่วงขาลง
@@ -173,7 +173,7 @@ Key Findings:
 
 ### Fig 11. Event Study: สงครามรัสเซีย-ยูเครน — High-Beta vs Low-Beta
 
-## รูป11
+#### รูป11
 
 ### การวิเคราะห์ Fig 11: Beta Sensitivity ในช่วงสงครามรัสเซีย-ยูเครน (2022)
 Event Study นี้กำหนดจุดเริ่มต้นที่ 24 กุมภาพันธ์ 2022 (วันที่รัสเซียบุกยูเครน) และ Normalize ราคาที่ฐาน 100 เพื่อเปรียบเทียบ Relative Performance ของ 4 หุ้นหลัก + Brent Crude ตลอดระยะเวลา ~100 สัปดาห์ เส้นประ Brent ทำหน้าที่เป็น Benchmark สำหรับวัด Alpha (ส่วนที่เกิน Benchmark)
@@ -187,7 +187,7 @@ Key Findings:
 
 ### Fig 12. Event Study: วิกฤตอิหร่าน 2025-26 — การทดสอบ Pattern Repetition
 
-## รูป12
+#### รูป12
 
 ### การวิเคราะห์ Fig 12: Beta Sensitivity ในช่วงวิกฤตอิหร่าน (2025-26)
 Event Study ครั้งที่สองนี้ใช้วิธีการเดียวกับ Fig 11 แต่กำหนดจุดเริ่มต้นที่มิถุนายน 2025 (จุดเริ่มวิกฤตอิหร่าน) เพื่อทดสอบว่า Pattern ที่พบในสงครามยูเครนสามารถ Replicate ได้หรือไม่ (Out-of-Sample Test) ผลลัพธ์แสดงว่า Behavioral Pattern เดิมปรากฏขึ้นอีกครั้ง — High-Beta (COP, PTTEP) นำขึ้นเป็นกลุ่มแรก ขณะที่ Low-Beta (XOM, PTT) ขยับตามช้ากว่า
@@ -201,7 +201,7 @@ Key Findings:
 
 ### Fig 13. Recovery Path Analysis — การเปรียบเทียบความเร็วในการฟื้นตัว
 
-## รูป13
+#### รูป13
 
 ### การวิเคราะห์ Fig 13: Multi-Crisis Recovery Comparison
 กราฟ Panel นี้เปรียบเทียบ Recovery Path ของกลุ่ม US vs Thai โดยปรับฐาน 100 ที่จุดต่ำสุด (Trough) ของแต่ละวิกฤต (T=0) แล้วติดตามไปอีก 30 สัปดาห์ วิธีการนี้เป็นมาตรฐานของ Event Study ในทางวิชาการ ที่ช่วยให้เปรียบเทียบ Recovery Speed ข้ามวิกฤตที่มีขนาดและลักษณะต่างกันได้
@@ -215,7 +215,7 @@ Key Findings:
 
 ### Fig 14. Maximum Drawdown — การวัดความเสียหายสูงสุดในแต่ละวิกฤต
 
-## รูป14
+#### รูป14
 
 ### การวิเคราะห์ Fig 14: Maximum Drawdown Comparison ข้ามวิกฤต
 Maximum Drawdown (MDD) คือการวัดความเสียหายจาก Peak สู่ Trough ที่มากที่สุดในช่วงเวลาหนึ่ง ซึ่งเป็นตัวชี้วัดความเสี่ยงขาลง (Downside Risk Metric) ที่นักลงทุนสถาบันให้ความสำคัญ เนื่องจากสะท้อน "Worst Case ที่เคยเกิดขึ้นจริง" Grouped Horizontal Bar Chart นี้เปรียบเทียบ MDD ของหุ้นพลังงานแต่ละตัวใน 4 วิกฤตสำคัญ
@@ -234,7 +234,7 @@ Key Findings:
 
 ### Fig 15. Beta Selection Framework — COP (Aggressive) vs PTTEP (Defensive)
 
-## รูป15
+#### รูป15
 
 ### การวิเคราะห์ Fig 15: Oil-Beta ในฐานะเกณฑ์การคัดเลือกหุ้น
 กราฟ Indexed Performance นี้เปรียบเทียบ COP กับ PTTEP โดยมี Brent Crude เป็น Benchmark ทำให้มองเห็น "Oil-Beta" ของแต่ละตัวอย่างชัดเจน COP มี Beta > 1 ต่อ Brent (ขยายการเคลื่อนไหวทั้งขาขึ้นและขาลง) ขณะที่ PTTEP มี Beta < 1 (เคลื่อนไหวพอประมาณกว่า)
@@ -248,7 +248,7 @@ Key Findings:
 
 ### Fig 16. Cumulative Wealth Creation — การเปรียบเทียบพลังทบต้นระยะยาว
 
-## รูป16
+#### รูป16
 
 ### การวิเคราะห์ Fig 16: Long-term Wealth Accumulation Comparison
 Split Panel Chart นี้แสดง Cumulative Wealth Index (ฐาน 100) ของหุ้นพลังงานแต่ละตัว โดยแบ่งเป็น US Energy (แผงซ้าย) และ Thai Energy (แผงขวา) เส้นหนา (Group Average) แสดงผลตอบแทนของ Equal-Weighted Portfolio ที่ถือหุ้นทุกตัวในกลุ่มด้วยน้ำหนักเท่ากัน
@@ -262,7 +262,7 @@ Key Findings:
 
 ### Fig 17. Sharpe Ratio Heatmap — ประสิทธิภาพการลงทุนต่อหน่วยความเสี่ยงในแต่ละยุค
 
-## รูป17
+#### รูป17
 
 ### การวิเคราะห์ Fig 17: Risk-Adjusted Efficiency ผ่าน Sharpe Ratio
 Heatmap นี้แสดง Annualized Sharpe Ratio ของหุ้นพลังงานทุกตัวใน 6 ยุคสำคัญ โดย Sharpe Ratio คำนวณจากสูตร (Annualized Return - Risk-Free Rate) / Annualized Volatility ซึ่งเป็นมาตรวัด Risk-Adjusted Return ที่ใช้กันแพร่หลายในทางวิชาการและอุตสาหกรรมการลงทุน เกณฑ์ตัดสิน: Sharpe > 1.0 = ยอดเยี่ยม, 0.5-1.0 = ดี, < 0 = ผลตอบแทนต่ำกว่าอัตราปลอดความเสี่ยง
@@ -276,7 +276,7 @@ Key Findings:
 
 ### Fig 18. Risk-Return Frontier — แผนที่ยุทธศาสตร์การจัดสรรในภาวะสงคราม
 
-## รูป18
+#### รูป18
 
 ### การวิเคราะห์ Fig 18: War-Time Efficient Frontier
 Bubble Chart นี้จัดวาง Annualized Volatility (แกน X) กับ Annualized Return (แกน Y) ของสินทรัพย์พลังงานทุกตัว โดย Bubble Size แสดง Sharpe Ratio สีแบ่งกลุ่มสินทรัพย์ (US = น้ำเงินเข้ม, Thai = ส้ม, Crude = เทา) และเส้นประ Quadrant Lines แบ่งพื้นที่เป็น 4 โซน ตามค่าเฉลี่ยของ Return และ Volatility ทั้งหมดคำนวณจากช่วงสงคราม (Russia-Ukraine + Iran Crisis)
