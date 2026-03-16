@@ -3,6 +3,7 @@
 
 สำหรับ Project นี้จะประกอบด้วย 5 Part ได้แก่
 Part 1	Market Structure & Correlation          :	วิเคราะห์โครงสร้างความสัมพันธ์ระหว่างสินทรัพย์พลังงาน
+
 Part 2	Macroeconomic Drivers	                  : ศึกษาตัวแปรมหภาคที่กำหนดทิศทางราคาหุ้นพลังงาน
 Part 3	Crisis Analysis & Volatility Regime	    : จำแนกรูปแบบความเสี่ยงในแต่ละช่วงวิกฤต
 Part 4	Comparative Performance & Event Studies	: เปรียบเทียบผลตอบแทนเชิงเปรียบเทียบ US vs Thai
