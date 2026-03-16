@@ -3,20 +3,20 @@
 
 โครงการนี้แบ่งการวิเคราะห์ออกเป็น 5 ส่วนหลัก เพื่อศึกษาปัจจัยที่มีผลต่ออุตสาหกรรมพลังงานและนำไปสู่กรอบการลงทุนเชิงกลยุทธ์
 
-**Part 1 – Market Structure & Correlation**  
-วิเคราะห์โครงสร้างความสัมพันธ์ระหว่างสินทรัพย์พลังงาน  
+**  Part 1 – Market Structure & Correlation**  
+    วิเคราะห์โครงสร้างความสัมพันธ์ระหว่างสินทรัพย์พลังงาน  
 
-**Part 2 – Macroeconomic Drivers**  
-ศึกษาตัวแปรมหภาคที่กำหนดทิศทางราคาหุ้นพลังงาน  
+**  Part 2 – Macroeconomic Drivers**  
+    ศึกษาตัวแปรมหภาคที่กำหนดทิศทางราคาหุ้นพลังงาน  
 
-**Part 3 – Crisis Analysis & Volatility Regime**  
-จำแนกรูปแบบความเสี่ยงในแต่ละช่วงวิกฤต  
+**  Part 3 – Crisis Analysis & Volatility Regime**  
+    จำแนกรูปแบบความเสี่ยงในแต่ละช่วงวิกฤต  
 
-**Part 4 – Comparative Performance & Event Studies**  
-เปรียบเทียบผลตอบแทนเชิงเปรียบเทียบ US vs Thai  
+**  Part 4 – Comparative Performance & Event Studies**  
+    เปรียบเทียบผลตอบแทนเชิงเปรียบเทียบ US vs Thai  
 
-**Part 5 – Strategic Allocation Framework**  
-สังเคราะห์ผลวิเคราะห์สู่กรอบการจัดสรรการลงทุน
+**  Part 5 – Strategic Allocation Framework**  
+    สังเคราะห์ผลวิเคราะห์สู่กรอบการจัดสรรการลงทุน
 
 
 # Part 1	Market Structure & Correlation
