@@ -194,8 +194,7 @@ Key Findings:
 - Entry Signal ที่เหมาะสมคือ VIX เริ่มลดจากจุดสูงสุด + INDPRO เริ่มฟื้นตัว = สัญญาณที่ Recovery กำลังเริ่มต้น
 
 ### Fig 14. Maximum Drawdown — การวัดความเสียหายสูงสุดในแต่ละวิกฤต
-
-#### รูป14
+<img width="1335" height="1035" alt="14_max_drawdown" src="https://github.com/user-attachments/assets/08138f25-33f8-41da-a090-86cd97c69206" />
 
 ### การวิเคราะห์ Fig 14: Maximum Drawdown Comparison ข้ามวิกฤต
 Maximum Drawdown (MDD) คือการวัดความเสียหายจาก Peak สู่ Trough ที่มากที่สุดในช่วงเวลาหนึ่ง ซึ่งเป็นตัวชี้วัดความเสี่ยงขาลง (Downside Risk Metric) ที่นักลงทุนสถาบันให้ความสำคัญ เนื่องจากสะท้อน "Worst Case ที่เคยเกิดขึ้นจริง" Grouped Horizontal Bar Chart นี้เปรียบเทียบ MDD ของหุ้นพลังงานแต่ละตัวใน 4 วิกฤตสำคัญ
@@ -213,9 +212,7 @@ Key Findings:
 ส่วนสุดท้ายจะสังเคราะห์ข้อค้นพบจาก 14 กราฟก่อนหน้าเป็น กรอบยุทธศาสตร์การจัดสรรการลงทุน (Strategic Allocation Framework) ที่ครอบคลุม 4 มิติ ได้แก่ การเลือกระดับ Beta ที่สอดคล้องกับ Risk Tolerance, การวิเคราะห์ Wealth Creation Power ในระยะยาว, ประสิทธิภาพการลงทุนผ่าน Sharpe Ratio, และแผนที่ Risk-Return Frontier
 
 ### Fig 15. Beta Selection Framework — COP (Aggressive) vs PTTEP (Defensive)
-
-#### รูป15
-
+<img width="1916" height="982" alt="15_beta_selection" src="https://github.com/user-attachments/assets/ed30e6c2-f2e5-4281-af4c-d06e38223aea" />
 ### การวิเคราะห์ Fig 15: Oil-Beta ในฐานะเกณฑ์การคัดเลือกหุ้น
 กราฟ Indexed Performance นี้เปรียบเทียบ COP กับ PTTEP โดยมี Brent Crude เป็น Benchmark ทำให้มองเห็น "Oil-Beta" ของแต่ละตัวอย่างชัดเจน COP มี Beta > 1 ต่อ Brent (ขยายการเคลื่อนไหวทั้งขาขึ้นและขาลง) ขณะที่ PTTEP มี Beta < 1 (เคลื่อนไหวพอประมาณกว่า)
 
