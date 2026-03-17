@@ -123,7 +123,7 @@ Key Findings:
 - ช่วงที่ VIX อยู่ต่ำกว่า 20 เป็นเวลานาน (Low Volatility Regime) มักเป็นช่วงก่อนเกิด Volatility Spike ครั้งถัดไป
 
 ### Fig 9. Volatility Regime Analysis — การกระจายตัวของความเสี่ยงในแต่ละยุค
-<img width="2087" height="982" alt="09_volatility_anatomy" src="https://github.com/user-attachments/assets/b3a9bca9-4fe1-4c08-a55d-d01d82be3410" />
+<img width="2087" height="982" alt="09_volatility_anatomy" src="https://github.com/user-attachments/assets/0fadda5b-bb47-415e-9ea4-64cc5db937d7" />
 ### การวิเคราะห์ Fig 9: Statistical Distribution ของ Volatility ข้ามช่วงวิกฤต
 Box Plot นี้แสดงการกระจายตัวทางสถิติของ 20-Week Rolling Volatility ใน 6 ยุคสำคัญ เครื่องมือนี้ให้ข้อมูลที่สมบูรณ์กว่ากราฟเส้น — โดย Box Width สะท้อน Interquartile Range (IQR) หรือ "ระยะเวลาที่ความไม่แน่นอนดำรงอยู่" ขณะที่ Outlier Points แสดง "ค่า Extreme" ที่เกิดขึ้นชั่วคราว
 
