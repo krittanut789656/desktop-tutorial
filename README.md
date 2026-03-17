@@ -180,8 +180,7 @@ Key Findings:
 - การ Confirm Pattern จาก 2 วิกฤตที่ต่างกันเพิ่มความน่าเชื่อถือ (Statistical Robustness) ของข้อสรุป
 
 ### Fig 13. Recovery Path Analysis — การเปรียบเทียบความเร็วในการฟื้นตัว
-<img width="3133" height="1035" alt="13_recovery_paths" src="https://github.com/user-attachments/assets/995aef28-b608-458a-bd23-20b9b9d6d81d" />
-
+<img width="3133" height="1035" alt="13_recovery_paths" src="https://github.com/user-attachments/assets/5407e570-58ad-4a0a-a545-ae4992ed6b20" />
 ### การวิเคราะห์ Fig 13: Multi-Crisis Recovery Comparison
 กราฟ Panel นี้เปรียบเทียบ Recovery Path ของกลุ่ม US vs Thai โดยปรับฐาน 100 ที่จุดต่ำสุด (Trough) ของแต่ละวิกฤต (T=0) แล้วติดตามไปอีก 30 สัปดาห์ วิธีการนี้เป็นมาตรฐานของ Event Study ในทางวิชาการ ที่ช่วยให้เปรียบเทียบ Recovery Speed ข้ามวิกฤตที่มีขนาดและลักษณะต่างกันได้
 
