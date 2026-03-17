@@ -70,7 +70,7 @@ Key Findings:
 - ประสิทธิภาพการเป็น Inflation Hedge ขึ้นอยู่กับ Breakeven Cost ของบริษัท — บริษัทที่มี Breakeven ต่ำจะได้ประโยชน์มากกว่า
 
 ### Fig 5. USD Inverse Relationship — ความสัมพันธ์ผกผันระหว่างดอลลาร์กับราคาพลังงาน
-<img width="4155" height="1950" alt="05_usd_vs_energy" src="https://github.com/user-attachments/assets/1cf747f4-205e-4980-b412-37f2d7985300" />
+<img width="2085" height="982" alt="05_usd_vs_energy" src="https://github.com/user-attachments/assets/543a5f6b-9f16-4b89-9586-bc05ca7b0a70" />
 ### การวิเคราะห์ Fig 5: กลไก Inverse Correlation ระหว่าง USD Index กับราคาน้ำมัน
 เนื่องจากน้ำมันดิบซื้อขายด้วยสกุลเงินดอลลาร์สหรัฐในตลาดโลก จึงมีความสัมพันธ์เชิงผกผัน (Inverse Relationship) กับค่าเงินดอลลาร์โดยธรรมชาติ กลไกนี้ทำงานผ่าน Purchasing Power Channel — เมื่อดอลลาร์แข็งค่า ประเทศผู้นำเข้าน้ำมัน (จีน, อินเดีย, สหภาพยุโรป) ต้องจ่ายแพงขึ้นในสกุลเงินของตน ส่งผลให้อุปสงค์ลดลงและกดดันราคาน้ำมัน ค่า Correlation ผกผันที่แสดงบนกราฟยืนยันกลไกนี้ด้วยข้อมูลเชิงประจักษ์
 
