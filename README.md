@@ -13,7 +13,7 @@
 ก่อนที่จะวิเคราะห์ผลตอบแทนหรือออกแบบกลยุทธ์ใดๆ สิ่งแรกที่ต้องทำความเข้าใจคือ โครงสร้างความสัมพันธ์ (Correlation Structure) ระหว่างสินทรัพย์พลังงาน ส่วนนี้จะนำเสนอข้อค้นพบ 3 ประการ ได้แก่ แผนที่ Correlation Matrix ระหว่างสินทรัพย์ การจัดอันดับความไวต่อราคาน้ำมัน (Oil Price Sensitivity) และพลวัตของ Spread ระหว่าง Brent กับ WTI
 
 ### Fig 1. Correlation Matrix — โครงสร้างความสัมพันธ์ระหว่างสินทรัพย์พลังงาน<br>
-<img width="2043" height="1465" alt="01_correlation_matrix" src="https://github.com/user-attachments/assets/71d34227-1415-40b4-9aed-520b4fa53583" />
+<img width="2664" height="2124" alt="01_correlation_matrix" src="https://github.com/user-attachments/assets/9df5cd4a-784b-4094-873e-a4419e319dab" />
 ### การวิเคราะห์ Fig 1: Correlation Structure ของสินทรัพย์พลังงาน
 Correlation Matrix ที่คำนวณจาก Weekly Returns ตลอด 26 ปี เผยให้เห็นโครงสร้างความสัมพันธ์ที่สำคัญ 3 ประการ ประการแรก หุ้นพลังงานสหรัฐฯ (XOM, CVX, COP) มี Intra-group Correlation สูงมาก (r > 0.7) แสดงว่าหุ้นกลุ่มนี้เคลื่อนไหวเป็นกลุ่มก้อน (Cluster) การถือหุ้น US Energy หลายตัวพร้อมกันจึงไม่ได้ให้ Diversification Benefit ที่แท้จริง
 
@@ -27,7 +27,7 @@ Key Findings:
 - Correlation ที่สูงขึ้นในช่วงวิกฤต (Correlation Breakdown) เป็นความเสี่ยงที่ต้องคำนึงในการทำ Stress Testing
 
 ### Fig 2. Oil Price Sensitivity — การจัดอันดับความไวต่อราคาน้ำมัน
-<img width="1754" height="1758" alt="02_oil_stock_correlation" src="https://github.com/user-attachments/assets/0ac8bd65-ccc7-47e6-974a-32da9e710ba3" />
+<img width="2654" height="2356" alt="02_oil_stock_correlation" src="https://github.com/user-attachments/assets/56cf4fde-dc11-4492-969d-581594c7eaa2" />
 ### การวิเคราะห์ Fig 2: Oil Sensitivity Spectrum ของหุ้นพลังงาน
 Horizontal Bar Chart นี้จัดอันดับค่า Correlation ของราคาปิดรายสัปดาห์ระหว่างหุ้นพลังงานแต่ละตัวกับ Brent Crude (BZ=F) ผลลัพธ์แสดง Spectrum ที่ชัดเจน — หุ้น Upstream อย่าง ConocoPhillips (COP) และ PTTEP มีค่า Correlation สูงสุด เนื่องจากรายได้ผูกติดกับราคาน้ำมันโดยตรง (Revenue = Production Volume x Oil Price) ในทางตรงข้าม หุ้น Downstream Retail อย่าง PTG Energy มีค่า Correlation ต่ำสุด เพราะธุรกิจปั๊มน้ำมันมี Margin ที่ค่อนข้างคงที่ และราคาขายปลีกในประเทศไทยอยู่ภายใต้กลไกการอุดหนุนของกองทุนน้ำมันเชื้อเพลิง
 
