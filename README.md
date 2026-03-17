@@ -84,8 +84,7 @@ Key Findings:
 - หุ้นพลังงานไทยมี Double Currency Exposure ที่ต้องคำนึงเพิ่มเติม
 
 ### Fig 6. Industrial Production vs Oil — ภาคเศรษฐกิจจริงกับราคาพลังงาน
-
-#### รูป6
+<img width="4751" height="2957" alt="06_industrial_vs_oil" src="https://github.com/user-attachments/assets/a6ec3823-095f-46cd-a6c5-b12605b062bc" />
 
 ### การวิเคราะห์ Fig 6: ความสัมพันธ์ระหว่าง Industrial Production กับราคาน้ำมันในช่วงวิกฤต
 กราฟ Panel 2x2 นี้เปรียบเทียบ INDPRO (Industrial Production Index) กับ WTI Crude ใน 4 ช่วงวิกฤต เพื่อจำแนกประเภทของ Shock ที่ส่งผลต่อตลาดพลังงาน ข้อค้นพบหลักคือวิกฤตแต่ละครั้งมีลักษณะที่ต่างกัน — Great Recession (2008) และ COVID-19 (2020) เป็น Demand Shock ที่ INDPRO ร่วงลงพร้อมกับราคาน้ำมัน ขณะที่สงครามรัสเซีย-ยูเครน (2022) เป็น Supply Shock ที่ INDPRO ยังเติบโตแต่ราคาน้ำมันพุ่งสูง
