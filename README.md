@@ -13,8 +13,7 @@
 ก่อนที่จะวิเคราะห์ผลตอบแทนหรือออกแบบกลยุทธ์ใดๆ สิ่งแรกที่ต้องทำความเข้าใจคือ โครงสร้างความสัมพันธ์ (Correlation Structure) ระหว่างสินทรัพย์พลังงาน ส่วนนี้จะนำเสนอข้อค้นพบ 3 ประการ ได้แก่ แผนที่ Correlation Matrix ระหว่างสินทรัพย์ การจัดอันดับความไวต่อราคาน้ำมัน (Oil Price Sensitivity) และพลวัตของ Spread ระหว่าง Brent กับ WTI
 
 ### Fig 1. Correlation Matrix — โครงสร้างความสัมพันธ์ระหว่างสินทรัพย์พลังงาน<br>
-<img width="783" height="555" alt="01_correlation_matrix" src="https://github.com/user-attachments/assets/eddd886c-a0af-4d72-8d8b-8eed72447681" />
-
+<img width="1068" height="823" alt="01_correlation_matrix" src="https://github.com/user-attachments/assets/e7ff1491-c933-4e21-8f7b-f6580295c7fe" />
 ### การวิเคราะห์ Fig 1: Correlation Structure ของสินทรัพย์พลังงาน
 Correlation Matrix ที่คำนวณจาก Weekly Returns ตลอด 26 ปี เผยให้เห็นโครงสร้างความสัมพันธ์ที่สำคัญ 3 ประการ ประการแรก หุ้นพลังงานสหรัฐฯ (XOM, CVX, COP) มี Intra-group Correlation สูงมาก (r > 0.7) แสดงว่าหุ้นกลุ่มนี้เคลื่อนไหวเป็นกลุ่มก้อน (Cluster) การถือหุ้น US Energy หลายตัวพร้อมกันจึงไม่ได้ให้ Diversification Benefit ที่แท้จริง
 
@@ -28,7 +27,7 @@ Key Findings:
 - Correlation ที่สูงขึ้นในช่วงวิกฤต (Correlation Breakdown) เป็นความเสี่ยงที่ต้องคำนึงในการทำ Stress Testing
 
 ### Fig 2. Oil Price Sensitivity — การจัดอันดับความไวต่อราคาน้ำมัน
-<img width="2054" height="1756" alt="02_oil_stock_correlation" src="https://github.com/user-attachments/assets/6fcd7bc0-2575-4b23-93b7-cf1fd614a0d3" />
+<img width="998" height="774" alt="02_oil_stock_correlation" src="https://github.com/user-attachments/assets/7e1454ef-0fe1-4b2d-9c57-ef25f173d682" />
 ### การวิเคราะห์ Fig 2: Oil Sensitivity Spectrum ของหุ้นพลังงาน
 Horizontal Bar Chart นี้จัดอันดับค่า Correlation ของราคาปิดรายสัปดาห์ระหว่างหุ้นพลังงานแต่ละตัวกับ Brent Crude (BZ=F) ผลลัพธ์แสดง Spectrum ที่ชัดเจน — หุ้น Upstream อย่าง ConocoPhillips (COP) และ PTTEP มีค่า Correlation สูงสุด เนื่องจากรายได้ผูกติดกับราคาน้ำมันโดยตรง (Revenue = Production Volume x Oil Price) ในทางตรงข้าม หุ้น Downstream Retail อย่าง PTG Energy มีค่า Correlation ต่ำสุด เพราะธุรกิจปั๊มน้ำมันมี Margin ที่ค่อนข้างคงที่ และราคาขายปลีกในประเทศไทยอยู่ภายใต้กลไกการอุดหนุนของกองทุนน้ำมันเชื้อเพลิง
 
@@ -40,8 +39,7 @@ Key Findings:
 - การจำแนก Oil Sensitivity ช่วยให้ผู้ลงทุนสามารถปรับระดับ Oil Exposure ของพอร์ตได้ตามมุมมอง (View-Based Allocation)
 
 ### Fig 3. Brent-WTI Spread — พลวัตของตลาดน้ำมันระดับโลก
-<img width="2385" height="1035" alt="03_brent_wti_spread" src="https://github.com/user-attachments/assets/70e77e76-fb77-4682-a435-79c30f41e1c4" />
-
+<img width="2385" height="1035" alt="03_brent_wti_spread" src="https://github.com/user-attachments/assets/76937ba1-4ca2-427c-922e-9060e2e999b8" />
 ### การวิเคราะห์ Fig 3: Brent-WTI Spread ในฐานะ Supply Stress Indicator
 Brent Crude (ราคาอ้างอิงระดับโลก ซื้อขายที่ ICE London) และ WTI (ราคาอ้างอิงของสหรัฐฯ ส่งมอบที่ Cushing, Oklahoma) มีราคาที่เคลื่อนไหวในทิศทางเดียวกันโดยพื้นฐาน แต่ส่วนต่าง (Spread) ระหว่างทั้งสองสะท้อนดุลอุปสงค์-อุปทานระดับภูมิภาค (Regional Supply-Demand Balance) กราฟนี้แสดง Time Series ของทั้งสองราคาพร้อมกับ Spread Area ซึ่ง Overlay ด้วยช่วงเวลาวิกฤตด้านภูมิรัฐศาสตร์
 
