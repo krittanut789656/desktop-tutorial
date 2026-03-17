@@ -152,9 +152,7 @@ Key Findings:
 - กลยุทธ์ที่มีประสิทธิภาพคือ Blended Allocation (US Core + Thai Satellite) เพื่อใช้ประโยชน์จากทั้งสองลักษณะ
 
 ### Fig 11. Event Study: สงครามรัสเซีย-ยูเครน — High-Beta vs Low-Beta
-
-#### รูป11
-
+<img width="2010" height="1125" alt="11_beta_ukraine" src="https://github.com/user-attachments/assets/f36dc72c-995a-42cd-9431-f887118840df" />
 ### การวิเคราะห์ Fig 11: Beta Sensitivity ในช่วงสงครามรัสเซีย-ยูเครน (2022)
 Event Study นี้กำหนดจุดเริ่มต้นที่ 24 กุมภาพันธ์ 2022 (วันที่รัสเซียบุกยูเครน) และ Normalize ราคาที่ฐาน 100 เพื่อเปรียบเทียบ Relative Performance ของ 4 หุ้นหลัก + Brent Crude ตลอดระยะเวลา ~100 สัปดาห์ เส้นประ Brent ทำหน้าที่เป็น Benchmark สำหรับวัด Alpha (ส่วนที่เกิน Benchmark)
 
