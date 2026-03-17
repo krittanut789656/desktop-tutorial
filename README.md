@@ -27,7 +27,7 @@ Key Findings:
 - Correlation ที่สูงขึ้นในช่วงวิกฤต (Correlation Breakdown) เป็นความเสี่ยงที่ต้องคำนึงในการทำ Stress Testing
 
 ### Fig 2. Oil Price Sensitivity — การจัดอันดับความไวต่อราคาน้ำมัน
-<img width="2654" height="2356" alt="02_oil_stock_correlation" src="https://github.com/user-attachments/assets/56cf4fde-dc11-4492-969d-581594c7eaa2" />
+<img width="2054" height="1756" alt="02_oil_stock_correlation" src="https://github.com/user-attachments/assets/6fcd7bc0-2575-4b23-93b7-cf1fd614a0d3" />
 ### การวิเคราะห์ Fig 2: Oil Sensitivity Spectrum ของหุ้นพลังงาน
 Horizontal Bar Chart นี้จัดอันดับค่า Correlation ของราคาปิดรายสัปดาห์ระหว่างหุ้นพลังงานแต่ละตัวกับ Brent Crude (BZ=F) ผลลัพธ์แสดง Spectrum ที่ชัดเจน — หุ้น Upstream อย่าง ConocoPhillips (COP) และ PTTEP มีค่า Correlation สูงสุด เนื่องจากรายได้ผูกติดกับราคาน้ำมันโดยตรง (Revenue = Production Volume x Oil Price) ในทางตรงข้าม หุ้น Downstream Retail อย่าง PTG Energy มีค่า Correlation ต่ำสุด เพราะธุรกิจปั๊มน้ำมันมี Margin ที่ค่อนข้างคงที่ และราคาขายปลีกในประเทศไทยอยู่ภายใต้กลไกการอุดหนุนของกองทุนน้ำมันเชื้อเพลิง
 
