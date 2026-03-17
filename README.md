@@ -140,9 +140,7 @@ Key Findings:
 ส่วนนี้จะเปรียบเทียบผลการดำเนินงานจริง (Realized Performance) ของหุ้นพลังงานไทยกับสหรัฐฯ ผ่าน 5 มิติ ได้แก่ ผลตอบแทนเฉลี่ยในช่วงวิกฤต, Event Study สงครามรัสเซีย-ยูเครน, Event Study วิกฤตอิหร่าน, Recovery Speed Analysis, และ Maximum Drawdown Comparison
 
 ### Fig 10. Cross-Market Resilience — ผลตอบแทนเฉลี่ยในช่วงวิกฤต Thai vs US
-
-#### รูป10
-
+<img width="1785" height="885" alt="10_resilience" src="https://github.com/user-attachments/assets/0fe7d7c5-f1fc-4589-97f0-221f396fcd3d" />
 ### การวิเคราะห์ Fig 10: Comparative Average Returns ในช่วงวิกฤต
 Grouped Bar Chart นี้เปรียบเทียบผลตอบแทนเฉลี่ยรายสัปดาห์ (Average Weekly Return) ของกลุ่มหุ้นพลังงาน US กับ Thai ใน 3 ช่วงวิกฤตสำคัญ ผลลัพธ์ไม่ได้ชี้ว่าฝั่งใดฝั่งหนึ่ง "ชนะ" ทุกวิกฤต แต่แสดง Pattern ที่สม่ำเสมอ — US Energy มักให้ Upside ที่สูงกว่าในช่วง Recovery ขณะที่ Thai Energy บางครั้งมี Downside Protection ที่ดีกว่าในช่วงขาลง
 
