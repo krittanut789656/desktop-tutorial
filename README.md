@@ -252,9 +252,7 @@ Key Findings:
 - Equal-Weighted Portfolio + Annual Rebalancing เป็นกลยุทธ์ที่เรียบง่ายแต่ให้ผลลัพธ์ที่แข็งแกร่ง
 
 ### Fig 17. Sharpe Ratio Heatmap — ประสิทธิภาพการลงทุนต่อหน่วยความเสี่ยงในแต่ละยุค
-
-#### รูป17
-
+<img width="1288" height="795" alt="17_sharpe_heatmap" src="https://github.com/user-attachments/assets/0a239ac1-6f2a-45f9-9df7-375b135a9286" />
 ### การวิเคราะห์ Fig 17: Risk-Adjusted Efficiency ผ่าน Sharpe Ratio
 Heatmap นี้แสดง Annualized Sharpe Ratio ของหุ้นพลังงานทุกตัวใน 6 ยุคสำคัญ โดย Sharpe Ratio คำนวณจากสูตร (Annualized Return - Risk-Free Rate) / Annualized Volatility ซึ่งเป็นมาตรวัด Risk-Adjusted Return ที่ใช้กันแพร่หลายในทางวิชาการและอุตสาหกรรมการลงทุน เกณฑ์ตัดสิน: Sharpe > 1.0 = ยอดเยี่ยม, 0.5-1.0 = ดี, < 0 = ผลตอบแทนต่ำกว่าอัตราปลอดความเสี่ยง
 
