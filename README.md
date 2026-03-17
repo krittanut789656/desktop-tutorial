@@ -238,9 +238,7 @@ Key Findings:
 - Blended Portfolio (เช่น 40% COP + 30% PTTEP + 30% PTG) ช่วย Optimize Risk-Adjusted Return
 
 ### Fig 16. Cumulative Wealth Creation — การเปรียบเทียบพลังทบต้นระยะยาว
-
-#### รูป16
-
+<img width="2384" height="1035" alt="16_wealth_creation" src="https://github.com/user-attachments/assets/9b410ded-3b73-4837-9b9b-2cde84f857b3" />
 ### การวิเคราะห์ Fig 16: Long-term Wealth Accumulation Comparison
 Split Panel Chart นี้แสดง Cumulative Wealth Index (ฐาน 100) ของหุ้นพลังงานแต่ละตัว โดยแบ่งเป็น US Energy (แผงซ้าย) และ Thai Energy (แผงขวา) เส้นหนา (Group Average) แสดงผลตอบแทนของ Equal-Weighted Portfolio ที่ถือหุ้นทุกตัวในกลุ่มด้วยน้ำหนักเท่ากัน
 
