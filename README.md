@@ -39,7 +39,7 @@ Key Findings:
 - การจำแนก Oil Sensitivity ช่วยให้ผู้ลงทุนสามารถปรับระดับ Oil Exposure ของพอร์ตได้ตามมุมมอง (View-Based Allocation)
 
 ### Fig 3. Brent-WTI Spread — พลวัตของตลาดน้ำมันระดับโลก
-<img width="2385" height="1035" alt="03_brent_wti_spread" src="https://github.com/user-attachments/assets/76937ba1-4ca2-427c-922e-9060e2e999b8" />
+<img width="2385" height="1035" alt="03_brent_wti_spread" src="https://github.com/user-attachments/assets/6e57b77f-3b27-40ba-9fc4-21227b851ede" />
 ### การวิเคราะห์ Fig 3: Brent-WTI Spread ในฐานะ Supply Stress Indicator
 Brent Crude (ราคาอ้างอิงระดับโลก ซื้อขายที่ ICE London) และ WTI (ราคาอ้างอิงของสหรัฐฯ ส่งมอบที่ Cushing, Oklahoma) มีราคาที่เคลื่อนไหวในทิศทางเดียวกันโดยพื้นฐาน แต่ส่วนต่าง (Spread) ระหว่างทั้งสองสะท้อนดุลอุปสงค์-อุปทานระดับภูมิภาค (Regional Supply-Demand Balance) กราฟนี้แสดง Time Series ของทั้งสองราคาพร้อมกับ Spread Area ซึ่ง Overlay ด้วยช่วงเวลาวิกฤตด้านภูมิรัฐศาสตร์
 
