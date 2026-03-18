@@ -204,7 +204,7 @@ Grouped Bar Chart นี้เปรียบเทียบผลตอบแ�
 <b>การวิเคราะห์ Fig 11: Beta Sensitivity ในช่วงสงครามรัสเซีย-ยูเครน (2022):</b>
 Event Study นี้กำหนดจุดเริ่มต้นที่ 24 กุมภาพันธ์ 2022 (วันที่รัสเซียบุกยูเครน) และ Normalize ราคาที่ฐาน 100 เพื่อเปรียบเทียบ Relative Performance ของ 4 หุ้นหลัก + Brent Crude ตลอดระยะเวลา ~100 สัปดาห์ เส้นประ Brent ทำหน้าที่เป็น Benchmark สำหรับวัด Alpha (ส่วนที่เกิน Benchmark)
 
-ผลลัพธ์ยืนยันทฤษฎี Beta — COP (US High-Beta) ให้ผลตอบแทนสูงสุดในช่วง 15 สัปดาห์แรก (Panic Phase) สอดคล้องกับ Pure-Play Upstream ที่มี Revenue Leverage สูงต่อราคาน้ำมัน PTT (TH Low-Beta) ให้ผลตอบแทนต่ำสุดเนื่องจากธุรกิจกระจายตัวและราคาพลังงานภายในถูกอุดหนุน PTTEP อยู่ตรงกลาง โดยได้ประโยชน์จากราคาน้ำมันที่สูงขึ้นแต่ถูก Discount จาก Emerging Market Risk Premium
+ผลลัพธ์ยืนยันทฤษฎี Beta — ConocoPhillips:COP (US High-Beta) ให้ผลตอบแทนสูงสุดในช่วง 15 สัปดาห์แรก (Panic Phase) สอดคล้องกับ Pure-Play Upstream ที่มี Revenue Leverage สูงต่อราคาน้ำมัน PTT (TH Low-Beta) ให้ผลตอบแทนต่ำสุดเนื่องจากธุรกิจกระจายตัวและราคาพลังงานภายในถูกอุดหนุน PTTEP อยู่ตรงกลาง โดยได้ประโยชน์จากราคาน้ำมันที่สูงขึ้นแต่ถูก Discount จาก Emerging Market Risk Premium
 
 **Key Findings:**
 - ในช่วง Supply Shock จากสงคราม Sector Selection (Upstream vs Downstream) มีอิทธิพลต่อผลตอบแทนมากกว่า Geography (US vs TH)
