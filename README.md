@@ -214,7 +214,7 @@ Event Study นี้กำหนดจุดเริ่มต้นที่ 2
 ### Fig 12. Event Study: วิกฤตอิหร่าน 2025-26 — การทดสอบ Pattern Repetition
 <img width="1999" height="1125" alt="12_beta_iran" src="https://github.com/user-attachments/assets/405844f7-cb96-4d7c-91a0-46beaa72fc14" />
 <b>การวิเคราะห์ Fig 12: Beta Sensitivity ในช่วงวิกฤตอิหร่าน (2025-26):</b>
-Event Study ครั้งที่สองนี้ใช้วิธีการเดียวกับ Fig 11 แต่กำหนดจุดเริ่มต้นที่มิถุนายน 2025 (จุดเริ่มวิกฤตอิหร่าน) เพื่อทดสอบว่า Pattern ที่พบในสงครามยูเครนสามารถ Replicate ได้หรือไม่ (Out-of-Sample Test) ผลลัพธ์แสดงว่า Behavioral Pattern เดิมปรากฏขึ้นอีกครั้ง — High-Beta (COP, PTTEP) นำขึ้นเป็นกลุ่มแรก ขณะที่ Low-Beta (XOM, PTT) ขยับตามช้ากว่า
+Event Study ครั้งที่สองนี้ใช้วิธีการเดียวกับ Fig 11 แต่กำหนดจุดเริ่มต้นที่มิถุนายน 2025 (จุดเริ่มวิกฤตอิหร่าน) เพื่อทดสอบว่า Pattern ที่พบในสงครามยูเครนสามารถ Replicate ได้หรือไม่ (Out-of-Sample Test) ผลลัพธ์แสดงว่า Behavioral Pattern เดิมปรากฏขึ้นอีกครั้ง — High-Beta หรือกลุ่มธุรกิจ Upstream (COP, PTTEP) นำขึ้นเป็นกลุ่มแรก ขณะที่ Low-Beta (XOM, PTT) ขยับตามช้ากว่า
 
 สิ่งที่ต่างจากกรณียูเครนคือ PTTEP แสดง Relative Strength ที่ดีขึ้น ซึ่งอาจอธิบายได้จาก Adaptive Expectation — นักลงทุนเรียนรู้จากวิกฤตก่อนหน้าและเข้าซื้อ High-Beta Thai Upstream เร็วขึ้น (Learning Effect) รวมถึง PTTEP มีสัมปทานในแหล่งผลิตที่ได้รับประโยชน์โดยตรงจากราคาน้ำมันที่สูงขึ้น การซ้ำรอยนี้ยืนยันว่า Supply Shock จากความขัดแย้งด้านภูมิรัฐศาสตร์มี Playbook ที่ค่อนข้างสม่ำเสมอ
 
