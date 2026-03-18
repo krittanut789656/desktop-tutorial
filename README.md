@@ -38,7 +38,7 @@
 1.1 **น้ำมันดิบ — Crude Oil Benchmarks**
 <img width="1351" height="164" alt="image" src="https://github.com/user-attachments/assets/3f3f0a37-f14f-4a97-8e7d-737d0b7eb4e5" />
 ทำไมต้องมี 2 ราคา? 
-Brent สะท้อนตลาดโลก (Seaborne Crude) ส่วน WTI สะท้อนตลาดสหรัฐฯ (Landlocked Crude) ส่วนต่างระหว่างทั้งสอง เรียกว่า Spread เป็นตัวชี้วัดดุลอุปสงค์-อุปทานระดับภูมิภาค
+- Brent สะท้อนตลาดโลก (Seaborne Crude) ส่วน WTI สะท้อนตลาดสหรัฐฯ (Landlocked Crude) ส่วนต่างระหว่างทั้งสอง เรียกว่า Spread เป็นตัวชี้วัดดุลอุปสงค์-อุปทานระดับภูมิภาค
 
 # Part 1	Market Structure & Correlation
 ### การวิเคราะห์โครงสร้างความสัมพันธ์ระหว่างสินทรัพย์พลังงาน 
