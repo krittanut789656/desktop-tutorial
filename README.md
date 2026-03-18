@@ -285,7 +285,7 @@ Split Panel Chart นี้แสดง Cumulative Wealth Index (ฐาน 100) 
 <b>การวิเคราะห์ Fig 17: Risk-Adjusted Efficiency ผ่าน Sharpe Ratio:</b>
 Heatmap นี้แสดง Annualized Sharpe Ratio ของหุ้นพลังงานทุกตัวใน 6 ยุคสำคัญ โดย Sharpe Ratio คำนวณจากสูตร (Annualized Return - Risk-Free Rate) / Annualized Volatility ซึ่งเป็นมาตรวัด Risk-Adjusted Return ที่ใช้กันแพร่หลายในทางวิชาการและอุตสาหกรรมการลงทุน เกณฑ์ตัดสิน: Sharpe > 1.0 = ยอดเยี่ยม, 0.5-1.0 = ดี, < 0 = ผลตอบแทนต่ำกว่าอัตราปลอดความเสี่ยง
 
-Pattern ที่ชัดเจนจาก Heatmap คือ Great Recession เป็น "Red Zone" ที่แทบทุกตัวมี Sharpe ติดลบ — สะท้อนว่าเมื่อเกิด Systemic Risk ไม่มีหุ้นพลังงานตัวใดให้ผลตอบแทนที่คุ้มค่ากับความเสี่ยง ในทางตรงข้าม Russia-Ukraine War Period เป็น "Green Zone" สำหรับ US Upstream (COP, XOM) ที่ให้ Sharpe > 1.0 เพราะราคาน้ำมันพุ่งขึ้นด้วย Realized Volatility ที่ต่ำกว่า GFC ข้อสรุปคือ Supply Shock สร้างสภาพแวดล้อมที่ให้ Risk-Adjusted Return ดี ขณะที่ Systemic Crisis ทำลายทุกตัว
+Pattern ที่ชัดเจนจาก Heatmap คือ Great Recession เป็น "Red Zone" ที่แทบทุกตัวมี Sharpe ติดลบ — สะท้อนว่าเมื่อเกิด Systemic Risk ไม่มีหุ้นพลังงานตัวใดให้ผลตอบแทนที่คุ้มค่ากับความเสี่ยง ในทางตรงข้าม Russia-Ukraine War Period เป็น "Green Zone" สำหรับหุ้นธุรกิจน้ำมันสำหรับ US (COP, XOM) ที่ให้ Sharpe > 1.0 เพราะราคาน้ำมันพุ่งขึ้นด้วย Realized Volatility ที่ต่ำกว่า GFC ข้อสรุปคือ Supply Shock สร้างสภาพแวดล้อมที่ให้ Risk-Adjusted Return ดี ขณะที่ Systemic Crisis ทำลายทุกตัว
 
 **Key Findings:**
 - Sharpe > 1.0 ควรเป็นเป้าหมายในการคัดเลือกหุ้น → ใช้ Heatmap นี้เป็นข้อมูลอ้างอิงในการจัดสรร
