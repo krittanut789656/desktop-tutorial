@@ -254,7 +254,7 @@ Great Recession (สีแดงเข้ม) สร้าง MDD รุนแ�
 ### การสังเคราะห์ผลวิเคราะห์สู่กรอบการจัดสรรการลงทุน
 ส่วนสุดท้ายจะสังเคราะห์ข้อค้นพบจาก 14 กราฟก่อนหน้าเป็น กรอบยุทธศาสตร์การจัดสรรการลงทุน (Strategic Allocation Framework) ที่ครอบคลุม 4 มิติ ได้แก่ การเลือกระดับ Beta ที่สอดคล้องกับ Risk Tolerance, การวิเคราะห์ Wealth Creation Power ในระยะยาว, ประสิทธิภาพการลงทุนผ่าน Sharpe Ratio, และแผนที่ Risk-Return Frontier
 
-### Fig 15. Beta Selection Framework — หุ้นกลุ่ม Upstream ConocoPhillips:COP (Aggressive) vs PTTEP (Defensive)
+### Fig 15. Beta Selection Framework — หุ้นกลุ่ม Upstream ConocoPhillips:COP (High Beta) vs PTTEP (Low Beta)
 <img width="1832" height="982" alt="15_beta_selection" src="https://github.com/user-attachments/assets/6d846ce8-3704-4b41-adb5-26a2f76a68ad" />
 <b>การวิเคราะห์ Fig 15: Oil-Beta ในฐานะเกณฑ์การคัดเลือกหุ้น:</b>
 กราฟ Indexed Performance นี้เปรียบเทียบ COP กับ PTTEP โดยมี Brent Crude เป็น Benchmark ทำให้มองเห็น "Oil-Beta" ของแต่ละตัวอย่างชัดเจน COP มี Beta > 1 ต่อ Brent (ขยายการเคลื่อนไหวทั้งขาขึ้นและขาลง) ขณะที่ PTTEP มี Beta < 1 (เคลื่อนไหวพอประมาณกว่า)
