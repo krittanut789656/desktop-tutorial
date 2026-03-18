@@ -1,13 +1,14 @@
-# Energy Sector Analysis & Macro Crisis (2000–2026)
+<img width="1351" height="164" alt="image" src="https://github.com/user-attachments/assets/62586fd4-abe5-42ae-9705-b6204ede2aa8" /># Energy Sector Analysis & Macro Crisis (2000–2026)
 ### วิเคราะห์พลวัตหุ้นกลุ่มพลังงานสหรัฐฯ และไทย ท่ามกลางวิกฤตภูมิรัฐศาสตร์และเศรษฐกิจมหภาค (2000–2026)
 
 โครงการนี้แบ่งการวิเคราะห์ออกเป็น 5 ส่วน เพื่อศึกษาปัจจัยที่มีผลต่ออุตสาหกรรมพลังงานและนำไปสู่กรอบการลงทุนเชิงกลยุทธ์<br>
 **Part 1 – Introduction & Research Questions** ที่มาและความสำคัญของการศึกษา<br>
-**Part 2 – Market Structure & Correlation** วิเคราะห์โครงสร้างความสัมพันธ์ระหว่างสินทรัพย์พลังงาน<br>
-**Part 3 – Macroeconomic Drivers** ศึกษาตัวแปรมหภาคที่กำหนดทิศทางราคาหุ้นพลังงาน<br>
-**Part 4 – Crisis Analysis & Volatility Regime** จำแนกรูปแบบความเสี่ยงในแต่ละช่วงวิกฤต<br>
-**Part 5 – Comparative Performance & Event Studies** เปรียบเทียบผลตอบแทนเชิงเปรียบเทียบ US vs Thai<br>
-**Part 6 – Strategic Allocation Framework** สังเคราะห์ผลวิเคราะห์สู่กรอบการจัดสรรการลงทุน
+**Part 2 – Data Dictionary นิยามตัวแปรและสินทรัพย์ที่ใช้ในการศึกษา<br>
+**Part 3 – Market Structure & Correlation** วิเคราะห์โครงสร้างความสัมพันธ์ระหว่างสินทรัพย์พลังงาน<br>
+**Part 4 – Macroeconomic Drivers** ศึกษาตัวแปรมหภาคที่กำหนดทิศทางราคาหุ้นพลังงาน<br>
+**Part 5 – Crisis Analysis & Volatility Regime** จำแนกรูปแบบความเสี่ยงในแต่ละช่วงวิกฤต<br>
+**Part 6 – Comparative Performance & Event Studies** เปรียบเทียบผลตอบแทนเชิงเปรียบเทียบ US vs Thai<br>
+**Part 7 – Strategic Allocation Framework** สังเคราะห์ผลวิเคราะห์สู่กรอบการจัดสรรการลงทุน
 
 # Part 1	Introduction & Research Questions
 ### ทำไมต้องศึกษาหุ้นพลังงาน?
@@ -30,6 +31,13 @@
 - แหล่งข้อมูล: Yahoo Finance (ราคาหุ้นและสินค้าโภคภัณฑ์) และ FRED (ข้อมูลมหภาค)
 - เครื่องมือวิเคราะห์: Python (Pandas, Matplotlib, Seaborn, SciPy)
 
+# Part 2	Data Dictionary
+เพื่อให้ผู้อ่านที่อาจยังไม่คุ้นเคยกับตลาดพลังงานสามารถติดตามการวิเคราะห์ได้อย่างราบรื่น ส่วนนี้จะอธิบายความหมายของตัวแปรและสินทรัพย์ทั้งหมดที่ปรากฏในการศึกษา
+
+### 1. สินทรัพย์ที่ศึกษา (Assets Under Study)
+## 1.1 น้ำมันดิบ — Crude Oil Benchmarks
+<img width="1351" height="164" alt="image" src="https://github.com/user-attachments/assets/3f3f0a37-f14f-4a97-8e7d-737d0b7eb4e5" />
+ทำไมต้องมี 2 ราคา? Brent สะท้อนตลาดโลก (Seaborne Crude) ส่วน WTI สะท้อนตลาดสหรัฐฯ (Landlocked Crude) ส่วนต่างระหว่างทั้งสอง เรียกว่า Spread เป็นตัวชี้วัดดุลอุปสงค์-อุปทานระดับภูมิภาค
 
 # Part 1	Market Structure & Correlation
 ### การวิเคราะห์โครงสร้างความสัมพันธ์ระหว่างสินทรัพย์พลังงาน 
