@@ -50,10 +50,16 @@ Upstream vs Downstream คืออะไร?
 2.1.3 **หุ้นพลังงานไทย — Thai Energy Equities**
 <img width="1352" height="320" alt="image" src="https://github.com/user-attachments/assets/fe68a006-21f6-487f-a388-8fa591e75bb7" />
 
+### 2.2 ตัวแปรมหภาค (Macroeconomic Variables)
+<img width="1355" height="294" alt="image" src="https://github.com/user-attachments/assets/7cbc71ce-05e5-4346-aae1-ce1a6ff110fd" />
 
+### 2.3 ตัวชี้วัดทางสถิติที่ใช้ในการวิเคราะห์ (Statistical Metrics)
+<img width="1353" height="434" alt="image" src="https://github.com/user-attachments/assets/342928e8-74db-4a0d-9df8-d960151be83c" />
 
+### 2.4 ช่วงเวลาวิกฤตที่ใช้ในการศึกษา (Crisis Periods)
+<img width="1071" height="354" alt="image" src="https://github.com/user-attachments/assets/67cd9752-d56d-495f-82fd-aaaf295c3d05" />
 
-# Part 1	Market Structure & Correlation
+# Part 3	Market Structure & Correlation
 ### การวิเคราะห์โครงสร้างความสัมพันธ์ระหว่างสินทรัพย์พลังงาน 
 ก่อนที่จะวิเคราะห์ผลตอบแทนหรือออกแบบกลยุทธ์ใดๆ สิ่งแรกที่ต้องทำความเข้าใจคือ โครงสร้างความสัมพันธ์ (Correlation Structure) ระหว่างสินทรัพย์พลังงาน ส่วนนี้จะนำเสนอข้อค้นพบ 3 ประการ ได้แก่ แผนที่ Correlation Matrix ระหว่างสินทรัพย์ การจัดอันดับความไวต่อราคาน้ำมัน (Oil Price Sensitivity) และพลวัตของ Spread ระหว่าง Brent กับ WTI
 
@@ -98,7 +104,7 @@ Key Findings:
 - การติดตาม Spread Dynamics เป็นเครื่องมือเสริมที่มีคุณค่าสำหรับ Tactical Timing ในกลุ่มพลังงาน
 ---
 
-# Part 2	Macroeconomic Drivers
+# Part 4: Macroeconomic Drivers
 ### การศึกษาตัวแปรมหภาคที่กำหนดทิศทางราคาหุ้นพลังงาน
 ราคาหุ้นพลังงานไม่ได้ถูกกำหนดโดยอุปสงค์-อุปทานน้ำมันเพียงอย่างเดียว ส่วนนี้จะวิเคราะห์ตัวแปรมหภาค 3 ตัวที่มีอิทธิพลสำคัญ ได้แก่ ดัชนีเงินเฟ้อพลังงาน (Energy CPI) ดัชนีค่าเงินดอลลาร์สหรัฐ (Trade-Weighted USD Index) และดัชนีผลผลิตอุตสาหกรรม (Industrial Production Index) ผ่านการเปรียบเทียบเชิงบรรทัดฐาน (Normalized Comparison) กับผลตอบแทนหุ้นพลังงาน
 
@@ -139,7 +145,7 @@ Key Findings:
 - สัญญาณ INDPRO ฟื้นตัวมักนำหน้าการฟื้นตัวของราคาน้ำมัน → ใช้เป็น Entry Signal ได้
 ---
 
-# Part 3: Crisis Analysis & Volatility Regime
+# Part 5: Crisis Analysis & Volatility Regime
 ### การวิเคราะห์วิกฤตและรูปแบบความผันผวนตลอด 26 ปี
 ตลอดช่วงเวลาที่ศึกษา (2000–2026) ตลาดพลังงานผ่านวิกฤตสำคัญ 6 ครั้ง ได้แก่ Dot-com/Oil Spike, Great Financial Crisis, Shale Revolution, COVID-19 Pandemic, สงครามรัสเซีย-ยูเครน และวิกฤตอิหร่าน ส่วนนี้จะวิเคราะห์ผลกระทบของแต่ละวิกฤตผ่าน 3 มิติ คือ Long-term Price Evolution, ความสัมพันธ์ระหว่าง VIX กับ Energy Volatility และการกระจายตัวทางสถิติของความผันผวนในแต่ละยุค
 
@@ -180,7 +186,7 @@ Key Findings:
 - Global Median Line ช่วยให้ประเมินได้ว่า Volatility ปัจจุบันอยู่สูงหรือต่ำกว่าค่าปกติ
 ---
 
-# Part 4: Comparative Performance & Event Studies
+# Part 6: Comparative Performance & Event Studies
 ### การเปรียบเทียบผลตอบแทนและการศึกษาเหตุการณ์เฉพาะ
 ส่วนนี้จะเปรียบเทียบผลการดำเนินงานจริง (Realized Performance) ของหุ้นพลังงานไทยกับสหรัฐฯ ผ่าน 5 มิติ ได้แก่ ผลตอบแทนเฉลี่ยในช่วงวิกฤต, Event Study สงครามรัสเซีย-ยูเครน, Event Study วิกฤตอิหร่าน, Recovery Speed Analysis, และ Maximum Drawdown Comparison
 
@@ -246,7 +252,7 @@ Key Findings:
 - Position Sizing Rule: Max Acceptable Loss ÷ Historical MDD = Maximum Allocation Percentage
 ---
 
-# Part 5: Strategic Allocation Framework
+# Part 7: Strategic Allocation Framework
 ### การสังเคราะห์ผลวิเคราะห์สู่กรอบการจัดสรรการลงทุน
 ส่วนสุดท้ายจะสังเคราะห์ข้อค้นพบจาก 14 กราฟก่อนหน้าเป็น กรอบยุทธศาสตร์การจัดสรรการลงทุน (Strategic Allocation Framework) ที่ครอบคลุม 4 มิติ ได้แก่ การเลือกระดับ Beta ที่สอดคล้องกับ Risk Tolerance, การวิเคราะห์ Wealth Creation Power ในระยะยาว, ประสิทธิภาพการลงทุนผ่าน Sharpe Ratio, และแผนที่ Risk-Return Frontier
 
