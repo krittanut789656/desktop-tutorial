@@ -76,7 +76,7 @@ Correlation Matrix ที่คำนวณจาก Weekly Returns ตลอด
 
 ### Fig 2. Oil Price Sensitivity — การจัดอันดับความไวต่อราคาน้ำมัน
 <img width="998" height="774" alt="02_oil_stock_correlation" src="https://github.com/user-attachments/assets/7e1454ef-0fe1-4b2d-9c57-ef25f173d682" />
-<b>**การวิเคราะห์ Fig 2: Oil Sensitivity Spectrum ของหุ้นพลังงาน**</b>
+<b>การวิเคราะห์ Fig 2: Oil Sensitivity Spectrum ของหุ้นพลังงาน</b>
 Horizontal Bar Chart นี้จัดอันดับค่า Correlation ของราคาปิดรายสัปดาห์ระหว่างหุ้นพลังงานแต่ละตัวกับ Brent Crude (BZ=F) ผลลัพธ์แสดง Spectrum ที่ชัดเจน — หุ้น Upstream อย่าง ConocoPhillips (COP) และ PTTEP มีค่า Correlation สูงสุด เนื่องจากรายได้ผูกติดกับราคาน้ำมันโดยตรง (Revenue = Production Volume x Oil Price) ในทางตรงข้าม หุ้น Downstream Retail อย่าง PTG Energy มีค่า Correlation ต่ำสุด เพราะธุรกิจปั๊มน้ำมันมี Margin ที่ค่อนข้างคงที่ และราคาขายปลีกในประเทศไทยอยู่ภายใต้กลไกการอุดหนุนของกองทุนน้ำมันเชื้อเพลิง
 
 ความแตกต่างนี้มีนัยสำคัญในเชิงกลยุทธ์ — หุ้น Upstream สามารถใช้เป็น Directional Bet ต่อทิศทางราคาน้ำมันได้ (Proxy for Oil Exposure) ขณะที่หุ้น Downstream ให้ผลตอบแทนที่ไม่ไวต่อราคาน้ำมันมากนัก จึงเหมาะเป็นส่วนประกอบที่ให้ Stability ในพอร์ตการลงทุน การจำแนก Oil Sensitivity นี้เทียบเคียงได้กับแนวคิด Factor Loading ใน Multi-Factor Model ซึ่ง Oil Factor เป็นปัจจัยที่มีอิทธิพลสูงสุดในกลุ่มพลังงาน
