@@ -164,7 +164,7 @@ Key Findings:
 - High-Beta Upstream ให้ Upside Premium แต่ต้องแลกกับ Downside Risk ที่สูงกว่า — เป็น Risk-Reward Trade-off ที่ต้องประเมิน
 
 ### Fig 12. Event Study: วิกฤตอิหร่าน 2025-26 — การทดสอบ Pattern Repetition
-<img width="2010" height="1125" alt="12_beta_iran" src="https://github.com/user-attachments/assets/70dbea3a-19e0-4faa-bd3e-03dcdcc3540a" />
+<img width="1999" height="1125" alt="12_beta_iran" src="https://github.com/user-attachments/assets/405844f7-cb96-4d7c-91a0-46beaa72fc14" />
 <b>การวิเคราะห์ Fig 12: Beta Sensitivity ในช่วงวิกฤตอิหร่าน (2025-26)</b>
 Event Study ครั้งที่สองนี้ใช้วิธีการเดียวกับ Fig 11 แต่กำหนดจุดเริ่มต้นที่มิถุนายน 2025 (จุดเริ่มวิกฤตอิหร่าน) เพื่อทดสอบว่า Pattern ที่พบในสงครามยูเครนสามารถ Replicate ได้หรือไม่ (Out-of-Sample Test) ผลลัพธ์แสดงว่า Behavioral Pattern เดิมปรากฏขึ้นอีกครั้ง — High-Beta (COP, PTTEP) นำขึ้นเป็นกลุ่มแรก ขณะที่ Low-Beta (XOM, PTT) ขยับตามช้ากว่า
 
