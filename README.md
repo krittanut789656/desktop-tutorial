@@ -271,12 +271,14 @@ Great Recession (สีแดงเข้ม) สร้าง MDD รุนแ�
 <b>การวิเคราะห์ Fig 16: Long-term Wealth Accumulation Comparison:</b>
 Split Panel Chart นี้แสดง Cumulative Wealth Index (ฐาน 100) ของหุ้นพลังงานแต่ละตัว โดยแบ่งเป็น US Energy (แผงซ้าย) และ Thai Energy (แผงขวา) เส้นหนา (Group Average) แสดงผลตอบแทนของ Equal-Weighted Portfolio ที่ถือหุ้นทุกตัวในกลุ่มด้วยน้ำหนักเท่ากัน
 
-ผลลัพธ์แสดงว่ากลุ่ม US Energy สร้าง Wealth ได้มากกว่ากลุ่ม Thai อย่างมีนัยสำคัญในระยะยาว ปัจจัยที่อธิบายได้แก่ Capital Efficiency ที่สูงกว่า (วัดจาก ROIC), Shareholder Return Policy ที่เน้น Buyback + Dividend Growth, การเข้าถึงแหล่ง Reserves ระดับโลก, และ Valuation Re-rating จากนักลงทุนสถาบันทั่วโลก เส้น Group Average ยังแสดง "Diversification Benefit ภายในกลุ่ม" — แม้หุ้นบางตัวจะ Underperform แต่ค่าเฉลี่ยยังคงแสดง Upward Trend ที่สม่ำเสมอ ซึ่งสะท้อนพลังของ Portfolio Effect
+ข้อค้นพบที่สำคัญและอาจขัดกับสัญชาตญาณคือ — เมื่อพิจารณาตลอดทั้งช่วง 26 ปี กลุ่ม Thai Energy มีผลตอบแทนสะสมเฉลี่ยที่สูงกว่ากลุ่ม US Energy ปัจจัยที่อธิบายได้คือหุ้นไทยหลายตัวเริ่มต้นจากฐานที่ต่ำกว่าในปี 2000 และได้รับ Valuation Re-rating อย่างมากในช่วงทศวรรษ 2000-2010 ที่เศรษฐกิจไทยเติบโตสูง ประกอบกับ PTT Group ขยายธุรกิจอย่างก้าวกระโดดในช่วงนั้น ส่งผลให้ Cumulative Growth ในระยะยาวของกลุ่มไทยอยู่ในระดับที่น่าประทับใจ
+
+อย่างไรก็ตาม เมื่อแบ่งช่วงเวลาให้ละเอียดขึ้น จะพบ จุดเปลี่ยนสำคัญในช่วงหลัง COVID-19 (2020 เป็นต้นมา) กลุ่ม US Energy เริ่มเร่งตัวขึ้นอย่างชัดเจนและลดช่องว่างกับกลุ่มไทยลงอย่างรวดเร็ว สาเหตุหลักมาจาก Capital Discipline ที่บริษัทน้ำมัน US ปรับเปลี่ยนหลัง Shale Bust — เปลี่ยนจากการเน้น Production Growth มาเป็น Shareholder Return (Buyback + Dividend Growth) ทำให้ Free Cash Flow Yield สูงขึ้นอย่างมาก ขณะเดียวกัน สงครามรัสเซีย-ยูเครน (2022) และวิกฤตอิหร่าน (2025) สร้าง Oil Price Tailwind ที่หุ้น US Upstream รับประโยชน์ได้เต็มที่กว่า เนื่องจาก Liquidity ของตลาดสหรัฐฯ ดึงดูด Capital Inflow จากนักลงทุนสถาบันทั่วโลกในช่วง Energy Crisis
 
 **Key Findings:**
-- US Energy สร้าง Wealth ได้มากกว่า Thai ในระยะยาว เนื่องจาก Capital Efficiency และ Market Premium ที่สูงกว่า
-- Compounding ทำงานได้ดีที่สุดเมื่อไม่ขายในจังหวะวิกฤต — การ Panic Sell ทำลาย Compounding Power อย่างถาวร
-- Equal-Weighted Portfolio + Annual Rebalancing เป็นกลยุทธ์ที่เรียบง่ายแต่ให้ผลลัพธ์ที่แข็งแกร่ง
+- ในภาพรวม 26 ปี Thai Energy ให้ผลตอบแทนสะสมเฉลี่ยที่สูงกว่า US — สะท้อน Emerging Market Growth Premium ในช่วง 2000-2019
+- หลัง COVID-19 เกิดจุดเปลี่ยน: US Energy เร่งตัวขึ้นอย่างชัดเจนจาก Capital Discipline + Geopolitical Tailwind + Global Capital Inflow
+- นัยเชิงกลยุทธ์: ผู้ลงทุนควรพิจารณา Regime ปัจจุบัน ไม่ใช่แค่ผลตอบแทนในอดีตทั้งช่วง — ในช่วงที่ Oil Geopolitics เป็นธีมหลัก US Energy อาจมี Momentum ที่ดีกว่า ขณะที่ Thai Energy อาจกลับมาโดดเด่นในช่วง Emerging Market Recovery
 
 ### Fig 17. Sharpe Ratio Heatmap — ประสิทธิภาพการลงทุนต่อหน่วยความเสี่ยงในแต่ละยุค
 <img width="1288" height="795" alt="17_sharpe_heatmap" src="https://github.com/user-attachments/assets/0a239ac1-6f2a-45f9-9df7-375b135a9286" />
