@@ -1,4 +1,4 @@
-<img width="1351" height="164" alt="image" src="https://github.com/user-attachments/assets/62586fd4-abe5-42ae-9705-b6204ede2aa8" /># Energy Sector Analysis & Macro Crisis (2000–2026)
+# Energy Sector Analysis & Macro Crisis (2000–2026)
 ### วิเคราะห์พลวัตหุ้นกลุ่มพลังงานสหรัฐฯ และไทย ท่ามกลางวิกฤตภูมิรัฐศาสตร์และเศรษฐกิจมหภาค (2000–2026)
 
 โครงการนี้แบ่งการวิเคราะห์ออกเป็น 5 ส่วน เพื่อศึกษาปัจจัยที่มีผลต่ออุตสาหกรรมพลังงานและนำไปสู่กรอบการลงทุนเชิงกลยุทธ์<br>
