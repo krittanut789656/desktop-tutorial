@@ -81,7 +81,7 @@ Horizontal Bar Chart นี้จัดอันดับค่า Correlation �
 
 ความแตกต่างนี้มีนัยสำคัญในเชิงกลยุทธ์ — หุ้น Upstream สามารถใช้เป็น Directional Bet ต่อทิศทางราคาน้ำมันได้ (Proxy for Oil Exposure) ขณะที่หุ้น Downstream ให้ผลตอบแทนที่ไม่ไวต่อราคาน้ำมันมากนัก จึงเหมาะเป็นส่วนประกอบที่ให้ Stability ในพอร์ตการลงทุน การจำแนก Oil Sensitivity นี้เทียบเคียงได้กับแนวคิด Factor Loading ใน Multi-Factor Model ซึ่ง Oil Factor เป็นปัจจัยที่มีอิทธิพลสูงสุดในกลุ่มพลังงาน
 
-Key Findings:
+**Key Findings:**
 - Upstream (COP, PTTEP) = High Oil-Beta → เหมาะสำหรับ Tactical Allocation เมื่อมีมุมมองเชิงบวกต่อราคาน้ำมัน
 - Downstream (PTG, BCP) = Low Oil-Beta → เหมาะเป็นส่วนประกอบเชิงป้องกัน (Defensive Component) ในพอร์ต
 - การจำแนก Oil Sensitivity ช่วยให้ผู้ลงทุนสามารถปรับระดับ Oil Exposure ของพอร์ตได้ตามมุมมอง (View-Based Allocation)
@@ -95,7 +95,7 @@ Brent Crude (ราคาอ้างอิงระดับโลก ซื้
 
 กรณีพิเศษคือ COVID-19 (มี.ค. 2020) ที่ WTI ราคาติดลบเป็นครั้งแรกในประวัติศาสตร์ สาเหตุมาจาก Storage Constraint ที่ Cushing เนื่องจาก Demand Shock ทำให้ปริมาณน้ำมันในถังเก็บเต็มจนล้น เหตุการณ์นี้เป็นตัวอย่างของ Contango Extreme ที่แสดงว่าแม้แต่สินค้าโภคภัณฑ์ก็มี Physical Constraint ที่กำหนดราคาได้
 
-Key Findings:
+**Key Findings:**
 - Spread > $10 มักเป็น Leading Signal ว่าหุ้น Upstream กำลังจะปรับตัวขึ้นตาม Supply Premium
 - Spread ที่แคบลง (Convergence) บ่งชี้ว่าตลาดกลับสู่ดุลยภาพ → Downstream มักได้เปรียบในช่วงนี้เพราะ Refining Margin คงที่
 - การติดตาม Spread Dynamics เป็นเครื่องมือเสริมที่มีคุณค่าสำหรับ Tactical Timing ในกลุ่มพลังงาน
@@ -112,7 +112,7 @@ Key Findings:
 
 กลไกเชิงโครงสร้างที่อธิบายปรากฏการณ์นี้คือ Operating Leverage ของบริษัทน้ำมัน — เมื่อราคาพลังงานสูงขึ้น (Energy CPI เพิ่ม) รายได้ของบริษัท Upstream จะเพิ่มขึ้นตามสัดส่วน ขณะที่ต้นทุนการผลิต (Lifting Cost) ไม่ได้เพิ่มในอัตราเดียวกัน ส่งผลให้ Profit Margin ขยายตัวแบบ Non-linear นี่คือเหตุผลที่นักลงทุนสถาบัน รวมถึง Berkshire Hathaway ของ Warren Buffett เพิ่มสัดส่วนการลงทุนในหุ้นพลังงาน (Chevron, Occidental Petroleum) ในช่วงที่เงินเฟ้อพุ่งสูงปี 2022
 
-Key Findings:
+**Key Findings:**
 - หุ้นพลังงาน Upstream ยืนยันคุณสมบัติ Inflation Hedge ด้วย Real Return เป็นบวกในระยะยาว
 - ในภาวะ Stagflation (เงินเฟ้อสูง + การเติบโตทางเศรษฐกิจชะลอ) หุ้นพลังงานเป็นหนึ่งใน Asset Class ที่ให้ผลตอบแทนดีที่สุดตามหลักฐานเชิงประจักษ์
 - ประสิทธิภาพการเป็น Inflation Hedge ขึ้นอยู่กับ Breakeven Cost ของบริษัท — บริษัทที่มี Breakeven ต่ำจะได้ประโยชน์มากกว่า
@@ -124,7 +124,7 @@ Key Findings:
 
 สิ่งที่น่าสนใจเพิ่มเติมคือผลกระทบต่อหุ้นพลังงานไทย (PTT.BK) — เมื่อดอลลาร์แข็งค่า PTT ได้รับผลกระทบซ้อนกัน 2 ชั้น (Double Impact) กล่าวคือ ราคาน้ำมันลดลง (กระทบรายได้) และเงินบาทอ่อนค่า (ทำให้ต้นทุนนำเข้าวัตถุดิบสูงขึ้น) ผลกระทบซ้อนนี้อธิบายได้ว่าทำไมหุ้นพลังงานไทยจึงมี Sensitivity ต่อค่าเงินดอลลาร์มากกว่าหุ้นพลังงานสหรัฐฯ และผู้ลงทุนในหุ้นพลังงานไทยจึงต้องติดตาม DXY (Dollar Index) เป็นตัวแปรเสริมในการวิเคราะห์
 
-Key Findings:
+**Key Findings:**
 - USD ↑ → Oil ↓ → Energy Stocks ↓ — กลไกผกผันที่ขับเคลื่อนผ่าน Purchasing Power Channel
 - นโยบาย Fed Hawkish (ขึ้นดอกเบี้ย → ดอลลาร์แข็ง) สร้าง Headwind ต่อหุ้นพลังงาน | Fed Dovish สร้าง Tailwind
 - หุ้นพลังงานไทยมี Double Currency Exposure ที่ต้องคำนึงเพิ่มเติม
@@ -136,7 +136,7 @@ Key Findings:
 
 COVID-19 เป็นกรณีศึกษาที่หายากในทางวิชาการ เพราะเป็น Simultaneous Supply-Demand Shock — ทั้งภาคการผลิตหยุดชะงัก (โรงงานปิด, สายการบินหยุดบิน) และ OPEC ลดการผลิตไม่ทันกับการลดลงของอุปสงค์ ทำให้ WTI ติดลบเป็นครั้งแรกในประวัติศาสตร์ ในทางตรงข้าม Supply Shock จากสงครามมักทำให้ราคาน้ำมันสูงขึ้นขณะที่ภาคการผลิตยังดำเนินต่อ ซึ่งเป็นสภาพแวดล้อมที่เอื้อต่อหุ้น Upstream โดยเฉพาะ
 
-Key Findings:
+**Key Findings:**
 - INDPRO เป็น Leading Indicator ที่มีคุณค่าสำหรับการจำแนกประเภทวิกฤต (Demand Shock vs Supply Shock)
 - Supply Shock (สงคราม) → โอกาสสำหรับ Upstream | Demand Shock (COVID) → ความเสี่ยงสูงสำหรับทุกกลุ่ม
 - สัญญาณ INDPRO ฟื้นตัวมักนำหน้าการฟื้นตัวของราคาน้ำมัน → ใช้เป็น Entry Signal ได้
@@ -153,7 +153,7 @@ Key Findings:
 
 แถบสีเทาบนกราฟแสดงช่วงวิกฤตสำคัญ 4 ครั้ง สิ่งที่สังเกตได้คือหุ้นทุกตัว "ร่วงพร้อมกัน" ในช่วงวิกฤต (Correlation Spike) แต่ "ฟื้นตัวไม่เท่ากัน" (Asymmetric Recovery) ซึ่งเป็นหลักฐานว่าคุณภาพของบริษัท (Competitive Advantage, Balance Sheet Strength, Capital Discipline) เป็นตัวกำหนดความสามารถในการฟื้นตัวระยะยาว ไม่ใช่แค่ทิศทางของราคาน้ำมัน
 
-Key Findings:
+**Key Findings:**
 - Log Scale เผยให้เห็นว่าหุ้นที่ดู "เติบโตใกล้เคียงกัน" บน Linear Scale อาจมีผลตอบแทนสะสมต่างกัน 3-5 เท่า
 - XOM แสดง Recovery Power ที่สม่ำเสมอ สอดคล้องกับโครงสร้างธุรกิจที่กระจายตัว (Integrated Oil Major)
 - การคัดเลือกหุ้น (Stock Selection) มีความสำคัญไม่น้อยกว่าการเลือกจังหวะ (Market Timing)
@@ -165,7 +165,7 @@ VIX Index (CBOE Volatility Index) วัดความคาดหวังข�
 
 ข้อสังเกตที่มีคุณค่าเชิงปฏิบัติคือ VIX มักพุ่งขึ้นก่อน (Lead) Energy Volatility ประมาณ 1-2 สัปดาห์ — สอดคล้องกับทฤษฎี Information Cascade ที่ตลาดออปชัน (ที่ VIX วัด) สะท้อนข้อมูลเร็วกว่าตลาดหุ้นรายตัว คุณสมบัตินี้ทำให้ VIX สามารถใช้เป็น Early Warning System สำหรับการบริหารความเสี่ยงพอร์ตพลังงานได้
 
-Key Findings:
+**Key Findings:**
 - VIX > 30 เป็นสัญญาณเตือนว่าหุ้นพลังงานกำลังจะเข้าสู่ช่วง High Volatility → ควรพิจารณา Hedge หรือลดขนาด Position
 - VIX ที่พุ่งสูงแล้วเริ่มลดลง มักตรงกับ Contrarian Entry Point — จุดที่ให้ Risk-Reward Ratio ดีที่สุด
 - ช่วงที่ VIX อยู่ต่ำกว่า 20 เป็นเวลานาน (Low Volatility Regime) มักเป็นช่วงก่อนเกิด Volatility Spike ครั้งถัดไป
@@ -177,7 +177,7 @@ Box Plot นี้แสดงการกระจายตัวทางส�
 
 ผลการวิเคราะห์แสดงว่า COVID-19 สร้าง Volatility Spike สูงสุด (Outlier สูงที่สุด) แต่เป็นวิกฤตที่ "รุนแรงแต่สั้น" (Sharp but Short) เห็นได้จาก Box ที่ไม่กว้างมาก ในทางตรงข้าม Great Recession มี Box กว้างที่สุด สะท้อนว่าความไม่แน่นอนกินเวลาหลายเดือนถึงหลายปี (Sustained Uncertainty) ส่วน Shale Revolution (สีเขียว) มี Box แคบที่สุดและ Median ต่ำที่สุด แสดงว่าเป็นยุคที่เสถียรที่สุดในรอบ 26 ปี
 
-Key Findings:
+**Key Findings:**
 - การจำแนก Volatility Regime (Sharp vs Sustained) ช่วยกำหนดกลยุทธ์ที่เหมาะสม: Sharp Crisis → Contrarian Buy ได้เร็ว | Sustained Crisis → ต้องรอนานกว่า
 - Shale Revolution Period เป็นสภาพแวดล้อมที่เอื้อต่อกลยุทธ์ Buy & Hold มากที่สุด
 - Global Median Line ช่วยให้ประเมินได้ว่า Volatility ปัจจุบันอยู่สูงหรือต่ำกว่าค่าปกติ
@@ -194,7 +194,7 @@ Grouped Bar Chart นี้เปรียบเทียบผลตอบแ�
 
 ปัจจัยเชิงโครงสร้างที่อธิบายความแตกต่างนี้ ได้แก่ ความลึกของตลาดทุน (Market Depth) ที่สหรัฐฯ สูงกว่าอย่างมีนัยสำคัญ ส่งผลให้มี Contrarian Capital ไหลเข้าเร็วกว่าในจังหวะวิกฤต นอกจากนี้ หุ้นพลังงาน US มี Global Investor Base ที่กว้างกว่า ขณะที่หุ้นไทยพึ่งพาการลงทุนจากต่างชาติซึ่งมักไหลออกในช่วง Risk-Off (Capital Flight)
 
-Key Findings:
+**Key Findings:**
 - US Energy แสดง Recovery Alpha ที่สูงกว่า Thai ในทุกวิกฤตที่ศึกษา → เหมาะเป็น Core Growth Component
 - Thai Energy อาจให้ Downside Buffer ในบางวิกฤต → เหมาะเป็น Stabilizing Component
 - กลยุทธ์ที่มีประสิทธิภาพคือ Blended Allocation (US Core + Thai Satellite) เพื่อใช้ประโยชน์จากทั้งสองลักษณะ
@@ -206,7 +206,7 @@ Event Study นี้กำหนดจุดเริ่มต้นที่ 2
 
 ผลลัพธ์ยืนยันทฤษฎี Beta — COP (US High-Beta) ให้ผลตอบแทนสูงสุดในช่วง 15 สัปดาห์แรก (Panic Phase) สอดคล้องกับ Pure-Play Upstream ที่มี Revenue Leverage สูงต่อราคาน้ำมัน PTT (TH Low-Beta) ให้ผลตอบแทนต่ำสุดเนื่องจากธุรกิจกระจายตัวและราคาพลังงานภายในถูกอุดหนุน PTTEP อยู่ตรงกลาง โดยได้ประโยชน์จากราคาน้ำมันที่สูงขึ้นแต่ถูก Discount จาก Emerging Market Risk Premium
 
-Key Findings:
+**Key Findings:**
 - ในช่วง Supply Shock จากสงคราม Sector Selection (Upstream vs Downstream) มีอิทธิพลต่อผลตอบแทนมากกว่า Geography (US vs TH)
 - Alpha สูงสุดกระจุกตัวใน Panic Phase (15 สัปดาห์แรก) → Time-to-Decision เป็นปัจจัยสำคัญ
 - High-Beta Upstream ให้ Upside Premium แต่ต้องแลกกับ Downside Risk ที่สูงกว่า — เป็น Risk-Reward Trade-off ที่ต้องประเมิน
@@ -218,7 +218,7 @@ Event Study ครั้งที่สองนี้ใช้วิธีก�
 
 สิ่งที่ต่างจากกรณียูเครนคือ PTTEP แสดง Relative Strength ที่ดีขึ้น ซึ่งอาจอธิบายได้จาก Adaptive Expectation — นักลงทุนเรียนรู้จากวิกฤตก่อนหน้าและเข้าซื้อ High-Beta Thai Upstream เร็วขึ้น (Learning Effect) รวมถึง PTTEP มีสัมปทานในแหล่งผลิตที่ได้รับประโยชน์โดยตรงจากราคาน้ำมันที่สูงขึ้น การซ้ำรอยนี้ยืนยันว่า Supply Shock จากความขัดแย้งด้านภูมิรัฐศาสตร์มี Playbook ที่ค่อนข้างสม่ำเสมอ
 
-Key Findings:
+**Key Findings:**
 - Pattern ของ Supply Shock Crisis มีความ Reproducible — สามารถใช้เป็น Playbook สำหรับวิกฤตในอนาคตได้
 - PTTEP แสดง Improvement ในความสามารถ Capture Oil Upside ซึ่งสะท้อน Learning Curve ของตลาด
 - การ Confirm Pattern จาก 2 วิกฤตที่ต่างกันเพิ่มความน่าเชื่อถือ (Statistical Robustness) ของข้อสรุป
@@ -230,7 +230,7 @@ Key Findings:
 
 ข้อค้นพบหลักคือ US Energy มี Recovery Speed ที่สูงกว่า Thai Energy ในทุกวิกฤตที่ศึกษา ปัจจัยหลักที่อธิบายได้แก่ Market Microstructure ที่ต่างกัน — ตลาดหุ้นสหรัฐฯ มี Institutional Ownership สูงกว่า มี Short Selling Mechanism ที่ช่วย Price Discovery และมี Contrarian Capital (เช่น Value Fund, Pension Fund) ที่เข้าซื้อในจังหวะวิกฤตได้รวดเร็วกว่า ขณะที่ตลาดไทยต้องรอจนเข้า Risk-On Regime จริงๆ ก่อนที่เงินต่างชาติจะไหลกลับเข้ามา
 
-Key Findings:
+**Key Findings:**
 - US Energy ฟื้นตัวเร็วกว่า Thai ในทุกกรณี → ถ้าต้องเลือกฝั่งเดียวในช่วง Recovery ข้อมูลเชิงประจักษ์ชี้ไปที่ US
 - COVID-19 Recovery เป็น V-Shape (เร็ว) | GFC Recovery เป็น U-Shape (ช้า) → ประเภทวิกฤตกำหนดรูปแบบ Recovery
 - Entry Signal ที่เหมาะสมคือ VIX เริ่มลดจากจุดสูงสุด + INDPRO เริ่มฟื้นตัว = สัญญาณที่ Recovery กำลังเริ่มต้น
@@ -243,7 +243,7 @@ Maximum Drawdown (MDD) คือการวัดความเสียหา
 
 Great Recession (สีแดงเข้ม) สร้าง MDD รุนแรงที่สุด — หุ้นหลายตัวมี Drawdown เกิน 60% สะท้อนความเสียหายที่รุนแรงเมื่อเกิด Systemic Risk ที่ลุกลามจากภาคการเงินสู่ภาคเศรษฐกิจจริง COVID-19 สร้าง Drawdown ที่รุนแรงสำหรับหุ้น US มากกว่า Thai เนื่องจาก Valuation ของหุ้น US สูงกว่าจึงมี "ระยะทางร่วง" มากกว่า ในทางตรงข้าม วิกฤตอิหร่าน (สีเทา) สร้าง MDD ที่เบาที่สุด ซึ่งอาจสะท้อน Market Learning Effect ที่นักลงทุนมีประสบการณ์จัดการวิกฤตด้านภูมิรัฐศาสตร์ดีขึ้น
 
-Key Findings:
+**Key Findings:**
 - GFC MDD > 60% ควรใช้เป็น Stress Test Scenario มาตรฐานสำหรับพอร์ตพลังงาน
 - หุ้นที่มี MDD < 30% ในทุกวิกฤต แสดง Balance Sheet Resilience ที่โดดเด่น → สมควรได้รับ Premium Weight
 - Position Sizing Rule: Max Acceptable Loss ÷ Historical MDD = Maximum Allocation Percentage
@@ -260,7 +260,7 @@ Key Findings:
 
 การเลือก Beta ไม่ใช่คำถามเรื่อง "ถูก-ผิด" แต่เป็นเรื่อง Risk Tolerance Alignment — ผู้ลงทุนที่มี Time Horizon ยาว สามารถรับ Drawdown มากกว่า 40% ได้ และมีมุมมองเชิงบวกต่อ Oil Supercycle ควรพิจารณา COP (Aggressive Allocation) ในทางตรงข้าม ผู้ลงทุนที่ต้องการ Stable Income, รับ Volatility ได้จำกัด หรือต้องการ Energy Exposure โดยไม่รับความเสี่ยงมากเกินไป ควรพิจารณา PTTEP (Defensive Allocation) ทั้งนี้ พอร์ตที่ผสม Beta หลายระดับ (Blended Beta Portfolio) มักให้ Risk-Adjusted Return ที่ดีกว่าการเลือกเพียงระดับเดียว
 
-Key Findings:
+**Key Findings:**
 - High Oil-Beta (COP) เหมาะสำหรับ Tactical/Thematic Allocation ที่มุ่งเน้น Oil Price Exposure
 - Low Oil-Beta (PTTEP) เหมาะเป็น Core Holding ที่ให้ทั้ง Capital Appreciation และ Dividend อย่างพอประมาณ
 - Blended Portfolio (เช่น 40% COP + 30% PTTEP + 30% PTG) ช่วย Optimize Risk-Adjusted Return
@@ -272,7 +272,7 @@ Split Panel Chart นี้แสดง Cumulative Wealth Index (ฐาน 100) 
 
 ผลลัพธ์แสดงว่ากลุ่ม US Energy สร้าง Wealth ได้มากกว่ากลุ่ม Thai อย่างมีนัยสำคัญในระยะยาว ปัจจัยที่อธิบายได้แก่ Capital Efficiency ที่สูงกว่า (วัดจาก ROIC), Shareholder Return Policy ที่เน้น Buyback + Dividend Growth, การเข้าถึงแหล่ง Reserves ระดับโลก, และ Valuation Re-rating จากนักลงทุนสถาบันทั่วโลก เส้น Group Average ยังแสดง "Diversification Benefit ภายในกลุ่ม" — แม้หุ้นบางตัวจะ Underperform แต่ค่าเฉลี่ยยังคงแสดง Upward Trend ที่สม่ำเสมอ ซึ่งสะท้อนพลังของ Portfolio Effect
 
-Key Findings:
+**Key Findings:**
 - US Energy สร้าง Wealth ได้มากกว่า Thai ในระยะยาว เนื่องจาก Capital Efficiency และ Market Premium ที่สูงกว่า
 - Compounding ทำงานได้ดีที่สุดเมื่อไม่ขายในจังหวะวิกฤต — การ Panic Sell ทำลาย Compounding Power อย่างถาวร
 - Equal-Weighted Portfolio + Annual Rebalancing เป็นกลยุทธ์ที่เรียบง่ายแต่ให้ผลลัพธ์ที่แข็งแกร่ง
@@ -284,7 +284,7 @@ Heatmap นี้แสดง Annualized Sharpe Ratio ของหุ้นพ�
 
 Pattern ที่ชัดเจนจาก Heatmap คือ Great Recession เป็น "Red Zone" ที่แทบทุกตัวมี Sharpe ติดลบ — สะท้อนว่าเมื่อเกิด Systemic Risk ไม่มีหุ้นพลังงานตัวใดให้ผลตอบแทนที่คุ้มค่ากับความเสี่ยง ในทางตรงข้าม Russia-Ukraine War Period เป็น "Green Zone" สำหรับ US Upstream (COP, XOM) ที่ให้ Sharpe > 1.0 เพราะราคาน้ำมันพุ่งขึ้นด้วย Realized Volatility ที่ต่ำกว่า GFC ข้อสรุปคือ Supply Shock สร้างสภาพแวดล้อมที่ให้ Risk-Adjusted Return ดี ขณะที่ Systemic Crisis ทำลายทุกตัว
 
-Key Findings:
+**Key Findings:**
 - Sharpe > 1.0 ควรเป็นเป้าหมายในการคัดเลือกหุ้น → ใช้ Heatmap นี้เป็นข้อมูลอ้างอิงในการจัดสรร
 - Systemic Risk (GFC) ไม่มีที่หลบในกลุ่มพลังงาน → ต้องใช้ Cross-Asset Hedging (เช่น Gold, Treasuries)
 - US Upstream มี Sharpe ดีกว่า Thai ในเกือบทุกยุค → ยืนยัน Alpha ของตลาดสหรัฐฯ ในเชิง Risk-Adjusted
@@ -296,7 +296,7 @@ Bubble Chart นี้จัดวาง Annualized Volatility (แกน X) ก
 
 มุมซ้ายบน (Sweet Spot) คือพื้นที่ที่สินทรัพย์ให้ Return สูงกว่าค่าเฉลี่ยด้วย Volatility ต่ำกว่าค่าเฉลี่ย — ตำแหน่งที่มีประสิทธิภาพสูงสุดตามกรอบ Modern Portfolio Theory มุมขวาล่าง (Danger Zone) คือพื้นที่ที่ต้องหลีกเลี่ยง เพราะให้ Return ต่ำกว่าค่าเฉลี่ยด้วย Volatility สูงกว่าค่าเฉลี่ย สินทรัพย์ที่มี Bubble ใหญ่ที่ Sweet Spot คือ Optimal Choice สำหรับการจัดสรรในภาวะสงคราม
 
-Key Findings:
+**Key Findings:**
 - สินทรัพย์ที่อยู่มุมซ้ายบน (Sweet Spot) ควรได้รับ Overweight ในพอร์ต
 - Bubble Size (Sharpe) ช่วยจำแนกระหว่างสินทรัพย์ที่ Return สูงเพราะ Skill กับที่ Return สูงเพราะ Risk
 - แผนที่นี้ไม่คงที่ — ต้อง Re-evaluate อย่างน้อย Quarterly เพื่อปรับ Allocation ตามการเปลี่ยนแปลงของ Regime
