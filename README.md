@@ -244,7 +244,8 @@ Maximum Drawdown (MDD) คือการวัดความเสียหา
 Great Recession (สีแดงเข้ม) สร้าง MDD รุนแรงที่สุด — หุ้นหลายตัวมี Drawdown เกิน 60% สะท้อนความเสียหายที่รุนแรงเมื่อเกิด Systemic Risk ที่ลุกลามจากภาคการเงินสู่ภาคเศรษฐกิจจริง COVID-19 สร้าง Drawdown ที่รุนแรงสำหรับหุ้น US มากกว่า Thai เนื่องจาก Valuation ของหุ้น US สูงกว่าจึงมี "ระยะทางร่วง" มากกว่า ในทางตรงข้าม วิกฤตอิหร่าน (สีเทา) สร้าง MDD ที่เบาที่สุด ซึ่งอาจสะท้อน Market Learning Effect ที่นักลงทุนมีประสบการณ์จัดการวิกฤตด้านภูมิรัฐศาสตร์ดีขึ้น
 
 **Key Findings:**
-- GFC MDD > 60% ควรใช้เป็น Stress Test Scenario มาตรฐานสำหรับพอร์ตพลังงาน
+- หุ้นกลุ่มพลังงานจะร่วงรุนแรงหากเกิดวิกฤตเศรษฐกิจที่เกิดจากภาคเศรษฐกิจที่หดตัวรุนแรง แต่จะร่วงเบากว่าหากเกิดจากการ Shock หรือ Panic Sell ที่เกิดจากภาวะสงคราม
+- Great Recession MDD > 60% ควรใช้เป็น Stress Test Scenario มาตรฐานสำหรับพอร์ตพลังงาน
 - หุ้นที่มี MDD < 30% ในทุกวิกฤต แสดง Balance Sheet Resilience ที่โดดเด่น → สมควรได้รับ Premium Weight
 - Position Sizing Rule: Max Acceptable Loss ÷ Historical MDD = Maximum Allocation Percentage
 ---
