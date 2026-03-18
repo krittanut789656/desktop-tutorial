@@ -66,7 +66,7 @@ Upstream vs Downstream คืออะไร?
 ### Fig 1. Correlation Matrix — โครงสร้างความสัมพันธ์ระหว่างสินทรัพย์พลังงาน
 <img width="1066" height="826" alt="01_correlation_matrix" src="https://github.com/user-attachments/assets/d830647c-9efa-4504-a1b0-6d6457993625" />
 
-<b>การวิเคราะห์ Fig 1: Correlation Structure ของสินทรัพย์พลังงาน</b>
+<b>การวิเคราะห์ **Fig 1**: Correlation Structure ของสินทรัพย์พลังงาน</b>
 Correlation Matrix ที่คำนวณจาก Weekly Returns ตลอด 26 ปี เผยให้เห็นโครงสร้างความสัมพันธ์ที่สำคัญ 3 ประการ ประการแรก หุ้นพลังงานสหรัฐฯ (XOM, CVX, COP) มี Intra-group Correlation สูงมาก (r > 0.7) แสดงว่าหุ้นกลุ่มนี้เคลื่อนไหวเป็นกลุ่มก้อน (Cluster) การถือหุ้น US Energy หลายตัวพร้อมกันจึงไม่ได้ให้ Diversification Benefit ที่แท้จริง ประการที่สอง Correlation ระหว่างกลุ่ม US กับกลุ่ม Thai อยู่ที่ระดับปานกลาง (~0.45) ซึ่งเกิดจากความแตกต่างด้านโครงสร้างตลาดทุน อัตราแลกเปลี่ยน นโยบายการควบคุมราคาภายในประเทศ และสัดส่วนธุรกิจ Upstream-Downstream ที่ต่างกัน ความแตกต่างนี้ชี้ให้เห็นว่าการจัดสรรข้ามประเทศ (Cross-country Allocation) ให้ประโยชน์ด้านการกระจายความเสี่ยงได้ดีกว่าการจัดสรรภายในประเทศเดียว ประการที่สาม Brent Crude ทำหน้าที่เป็น Central Node ที่มี Correlation บวกกับทุกสินทรัพย์ในระบบ แสดงว่าราคาน้ำมันคือตัวแปรหลัก (Dominant Factor) ที่ขับเคลื่อนทั้งระบบ อย่างไรก็ตาม ค่า Correlation ไม่คงที่ตลอดเวลา — งานวิจัยด้าน Dynamic Conditional Correlation (DCC) ชี้ว่า Correlation มักพุ่งสูงขึ้นในช่วงวิกฤต ซึ่งเป็นช่วงที่ Diversification Benefit ลดลงพอดี
 
 Key Findings:
