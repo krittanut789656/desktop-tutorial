@@ -147,7 +147,7 @@ COVID-19 เป็นกรณีศึกษาที่หายากใน�
 ตลอดช่วงเวลาที่ศึกษา (2000–2026) ตลาดพลังงานผ่านวิกฤตสำคัญ 6 ครั้ง ได้แก่ Dot-com/Oil Spike, Great Financial Crisis, Shale Revolution, COVID-19 Pandemic, สงครามรัสเซีย-ยูเครน และวิกฤตอิหร่าน ส่วนนี้จะวิเคราะห์ผลกระทบของแต่ละวิกฤตผ่าน 3 มิติ คือ Long-term Price Evolution, ความสัมพันธ์ระหว่าง VIX กับ Energy Volatility และการกระจายตัวทางสถิติของความผันผวนในแต่ละยุค
 
 ### Fig 7. Long-term Price Evolution — พัฒนาการราคาหุ้นพลังงาน 26 ปี
-<img width="2070" height="1125" alt="07_26yr_price_evolution" src="https://github.com/user-attachments/assets/1c07b5d4-8cb4-48b8-b6fc-6e5f4188ce21" />
+<img width="2070" height="1125" alt="07_26yr_price_evolution" src="https://github.com/user-attachments/assets/bb5508a2-5456-464f-97d7-1d4913e04098" />
 <b>การวิเคราะห์ Fig 7: Indexed Price Evolution ในระยะยาว (Log Scale):</b>
 กราฟนี้แสดง Indexed Price (ฐาน 100 = ม.ค. 2000) ของหุ้นพลังงาน 10 ตัว บน Log Scale เพื่อให้สามารถเปรียบเทียบอัตราการเติบโตสะสม (Cumulative Growth Rate) ได้อย่างเที่ยงตรง โดยไม่ถูกบิดเบือนจากค่าสัมบูรณ์ที่ต่างกัน เส้น Highlight 2 เส้น — Exxon Mobil Corp:XOM (ตัวแทน US) และ PTTEP (ตัวแทน Thai) — แสดงให้เห็นว่าหุ้นทั้งสองตัวสามารถฟื้นกลับมาทำจุดสูงสุดใหม่ได้หลังทุกวิกฤต ขณะที่หุ้นบางตัว (เส้นสีจาง) ไม่สามารถกลับมาถึงระดับเดิม
 
