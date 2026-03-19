@@ -315,7 +315,7 @@ Bubble Chart นี้จัดวาง Annualized Volatility (แกน X) ก
 ### กรอบการตัดสินใจ (Decision Framework)
 | สภาพแวดล้อม | สัญญาณจากข้อมูล | กลยุทธ์ที่เหมาะสม | สินทรัพย์เป้าหมาย |
 |---|---|---|---|
-| **Supply Shock (สงคราม, คว่ำบาตร)** | VIX ↑, Spread กว้าง, INDPRO คงที่ | Aggressive: Overweight High-Beta Upstream | COP, PTTEP |
+| **Supply Shock (สงคราม, คว่ำบาตร)** | VIX ↑, Spread กว้าง, INDPRO คงที่ | Aggressive: Overweight High-Beta Upstream | COP, PTTEP (Upsteam) |
 | **Goldilocks (เศรษฐกิจดี, เงินเฟ้อต่ำ)** | VIX < 20, USD อ่อน, CPI ต่ำ | Balanced: Equal-Weight US + TH | XOM, CVX, PTT |
 | **Macro Headwind (USD แข็ง, เศรษฐกิจชะลอ)** | DXY ↑, INDPRO ↓, Spread แคบ | Defensive: Low-Beta + Cash | PTG, BCP, ลด Position |
 | **Systemic Crisis (GFC-type)** | VIX > 30, MDD > 30% | Contrarian: รอจุดต่ำสุดแล้ว Accumulate | INDPRO ฟื้น + VIX ลง → COP, XOM |
