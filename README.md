@@ -159,7 +159,7 @@ COVID-19 เป็นกรณีศึกษาที่หายากใน�
 - การคัดเลือกหุ้น (Stock Selection) มีความสำคัญไม่น้อยกว่าการเลือกจังหวะ (Market Timing)
 
 ### Fig 8. VIX vs Energy Volatility — ดัชนีความกลัวในฐานะ Leading Indicator
-<img width="2235" height="982" alt="08_vix_vs_energy_vol" src="https://github.com/user-attachments/assets/06adc3aa-2d25-4f7b-a48f-de8fac2d7080" />
+<img width="2235" height="982" alt="08_vix_vs_energy_vol" src="https://github.com/user-attachments/assets/ae046bb1-1bd3-4fec-a38b-cb554553328e" />
 <b>การวิเคราะห์ Fig 8: ความสัมพันธ์ระหว่าง VIX กับ Energy Sector Volatility:</b>
 VIX Index (CBOE Volatility Index) วัดความคาดหวังของตลาดเกี่ยวกับ Implied Volatility ของ S&P 500 ใน 30 วันข้างหน้า กราฟ Dual-Axis นี้แสดง VIX เทียบกับ 20-Week Rolling Volatility เฉลี่ยของหุ้นพลังงาน 10 ตัว พร้อม Panic Zone (VIX > 30) ที่แรเงาสีแดง ค่า Correlation ระหว่างทั้งสองตัวแปรอยู่ที่ระดับสูง (> 0.8) แสดงว่า Systematic Market Risk เป็นตัวขับเคลื่อนหลักของ Energy Sector Volatility
 
