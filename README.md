@@ -318,7 +318,7 @@ Bubble Chart นี้จัดวาง Annualized Volatility (แกน X) ก
 | **Supply Shock (สงคราม, คว่ำบาตร)** | VIX ↑, Spread กว้าง, INDPRO คงที่ | Aggressive: Overweight High-Beta Upstream | COP, PTTEP (Upsteam) |
 | **Goldilocks (เศรษฐกิจดี, เงินเฟ้อต่ำ)** | VIX < 20, USD อ่อน, CPI ต่ำ | Balanced: Equal-Weight US + TH | XOM, CVX, PTT (Downstream) |
 | **Macro Headwind (USD แข็ง, เศรษฐกิจชะลอ)** | DXY ↑, INDPRO ↓, Spread แคบ | Defensive: Low-Beta + Cash | PTG, BCP, ลด Position |
-| **Systemic Crisis (GFC-type)** | VIX > 30, MDD > 30% | Contrarian: รอจุดต่ำสุดแล้ว Accumulate | INDPRO ฟื้น + VIX ลง → COP, XOM |
+| **Systemic Crisis (Great Crisis)** | VIX > 30, MDD > 30% | Contrarian: รอจุดต่ำสุดแล้ว Accumulate | INDPRO ฟื้น + VIX ลง → COP, XOM (Big on US) |
 
 ### หลักการ 5 ประการที่ได้จากหลักฐานเชิงประจักษ์:
 **1. Oil Price เป็น Dominant Factor** (Fig 1-3) — ทุกสินทรัพย์พลังงานมี Positive Loading ต่อราคาน้ำมัน การติดตาม Brent Crude เป็นสิ่งจำเป็นลำดับแรก<br>
