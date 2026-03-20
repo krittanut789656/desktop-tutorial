@@ -266,7 +266,7 @@ Great Recession (สีแดงเข้ม) สร้าง MDD รุนแ�
 - Blended Portfolio (เช่น 40% COP + 30% PTTEP + 30% PTG) ช่วย Optimize Risk-Adjusted Return
 
 ### Fig 16. Cumulative Wealth Creation — การเปรียบเทียบพลังทบต้นระยะยาว
-<img width="2385" height="1035" alt="16_wealth_creation" src="https://github.com/user-attachments/assets/abe69cba-c105-4373-b654-e6220a411a58" />
+<img width="2385" height="1035" alt="16_wealth_creation" src="https://github.com/user-attachments/assets/5b250bd6-2b91-4360-9771-9d1fa13e17f3" />
 <b>การวิเคราะห์ Fig 16: Long-term Wealth Accumulation Comparison:</b>
 Split Panel Chart นี้แสดง Cumulative Wealth Index (ฐาน 100) ของหุ้นพลังงานแต่ละตัว โดยแบ่งเป็น US Energy (แผงซ้าย) และ Thai Energy (แผงขวา) เส้นหนา (Group Average) แสดงผลตอบแทนของ Equal-Weighted Portfolio ที่ถือหุ้นทุกตัวในกลุ่มด้วยน้ำหนักเท่ากัน
 
