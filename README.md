@@ -282,7 +282,7 @@ Split Panel Chart นี้แสดง Cumulative Wealth Index (ฐาน 100) 
 - นัยเชิงกลยุทธ์: ผู้ลงทุนควรพิจารณา Regime ปัจจุบัน ไม่ใช่แค่ผลตอบแทนในอดีตทั้งช่วง — ในช่วงที่ Oil Geopolitics เป็นธีมหลัก US Energy อาจมี Momentum ที่ดีกว่า ขณะที่ Thai Energy อาจกลับมาโดดเด่นในช่วง Emerging Market Recovery
 
 ### Fig 17. Sharpe Ratio Heatmap — ประสิทธิภาพการลงทุนต่อหน่วยความเสี่ยงในแต่ละยุค
-<img width="1288" height="795" alt="17_sharpe_heatmap" src="https://github.com/user-attachments/assets/0a239ac1-6f2a-45f9-9df7-375b135a9286" />
+<img width="1711" height="885" alt="17_sharpe_heatmap" src="https://github.com/user-attachments/assets/b354fc80-87ff-4a8f-bcd9-a3a77514c148" />
 <b>การวิเคราะห์ Fig 17: Risk-Adjusted Efficiency ผ่าน Sharpe Ratio:</b>
 Heatmap นี้แสดง Annualized Sharpe Ratio ของหุ้นพลังงานทุกตัวใน 6 ยุคสำคัญ โดย Sharpe Ratio คำนวณจากสูตร (Annualized Return - Risk-Free Rate) / Annualized Volatility ซึ่งเป็นมาตรวัด Risk-Adjusted Return ที่ใช้กันแพร่หลายในทางวิชาการและอุตสาหกรรมการลงทุน เกณฑ์ตัดสิน: Sharpe > 1.0 = ยอดเยี่ยม, 0.5-1.0 = ดี, < 0 = ผลตอบแทนต่ำกว่าอัตราปลอดความเสี่ยง
 
