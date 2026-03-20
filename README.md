@@ -175,7 +175,7 @@ VIX Index (CBOE Volatility Index) วัดความคาดหวังข�
 <b>การวิเคราะห์ Fig 9: Statistical Distribution ของ Volatility ข้ามช่วงวิกฤต:</b>
 Box Plot นี้แสดงการกระจายตัวทางสถิติของ 20-Week Rolling Volatility ใน 6 ยุคสำคัญ เครื่องมือนี้ให้ข้อมูลที่สมบูรณ์กว่ากราฟเส้น — โดย Box Width สะท้อน Interquartile Range (IQR) หรือ "ระยะเวลาที่ความไม่แน่นอนดำรงอยู่" ขณะที่ Outlier Points แสดง "ค่า Extreme" ที่เกิดขึ้นชั่วคราว
 
-ผลการวิเคราะห์แสดงว่า COVID-19 สร้าง Volatility Spike สูงสุด (Outlier สูงที่สุด) แต่เป็นวิกฤตที่ "รุนแรงแต่สั้น" (Sharp but Short) เห็นได้จาก Box ที่ไม่กว้างมาก ในทางตรงข้าม Great Recession มี Box กว้างที่สุด สะท้อนว่าความไม่แน่นอนกินเวลาหลายเดือนถึงหลายปี (Sustained Uncertainty) ส่วน Shale Revolution (สีเขียว) มี Box แคบที่สุดและ Median ต่ำที่สุด แสดงว่าเป็นยุคที่เสถียรที่สุดในรอบ 26 ปี
+ผลการวิเคราะห์แสดงว่า COVID-19 สร้าง Volatility Spike สูงสุด มีค่าความผันผวนเฉลี่ย (Median) สูงที่สุด และ Box กว้างที่สุด สะท้อนถึงสภาวะตลาดที่ปั่นป่วนรุนแรงและมีความไม่แน่นอนสูงกว่าทุกวิกฤต, Great Recession มีความผันผวนกระจายตัวกว้างใกล้เคียงกับโควิด แสดงถึงสภาวะ Sustained Uncertainty หรือความไม่แน่นอนที่ลากยาว, Russia-Ukraine และ Dot-com ทั้งสองช่วงนี้ Box แคบที่สุด และค่ากลางต่ำกว่า 4.2% สะท้อนว่าตลาดมีการแกว่งตัวน้อยและมีความเสถียรมากกว่ายุคอื่น
 
 **Key Findings:**
 - การจำแนก Volatility Regime (Sharp vs Sustained) ช่วยกำหนดกลยุทธ์ที่เหมาะสม: Sharp Crisis → Contrarian Buy ได้เร็ว | Sustained Crisis → ต้องรอนานกว่า
