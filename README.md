@@ -236,8 +236,7 @@ Event Study ครั้งที่สองนี้ใช้วิธีก�
 - สัญญาณที่ควรจับตาคือ VIX Index ที่เริ่มลดลงจากจุดสูงสุด และดัชนีผลผลิตอุตสาหกรรม (INDPRO) ที่เริ่มส่งสัญญาณฟื้นตัว ซึ่งเป็น Indicator ที่แม่นยำในการหาจุดกลับตัว
 
 ### Fig 14. Maximum Drawdown — การวัดความเสียหายสูงสุดในแต่ละวิกฤต
-<img width="959" height="734" alt="14_max_drawdown" src="https://github.com/user-attachments/assets/c7084e68-d540-4cb3-a787-1c76d0c2d784" />
-
+<img width="959" height="734" alt="14_max_drawdown" src="https://github.com/user-attachments/assets/c7084e68-d540-4cb3-a787-1c76d0c2d784" /></b>
 <b>การวิเคราะห์ Fig 14: Maximum Drawdown Comparison ข้ามวิกฤต:</b>
 Maximum Drawdown (MDD) คือการวัดความเสียหายจาก Peak สู่ Trough ที่มากที่สุดในช่วงเวลาหนึ่ง ซึ่งเป็นตัวชี้วัดความเสี่ยงขาลง (Downside Risk Metric) ที่นักลงทุนสถาบันให้ความสำคัญ เนื่องจากสะท้อน "Worst Case ที่เคยเกิดขึ้นจริง" Grouped Horizontal Bar Chart นี้เปรียบเทียบ MDD ของหุ้นพลังงานแต่ละตัวใน 4 วิกฤตสำคัญ
 
