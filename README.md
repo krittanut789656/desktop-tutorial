@@ -286,7 +286,7 @@ Split Panel Chart นี้แสดง Cumulative Wealth Index (ฐาน 100) 
 - หลัง COVID-19 เกิดจุดเปลี่ยน: US Energy เร่งตัวขึ้นอย่างชัดเจนจาก Capital Discipline + Geopolitical Tailwind + Global Capital Inflow
 - นัยเชิงกลยุทธ์: ผู้ลงทุนควรพิจารณา Regime ปัจจุบัน ไม่ใช่แค่ผลตอบแทนในอดีตทั้งช่วง — ในช่วงที่ Oil Geopolitics เป็นธีมหลัก US Energy อาจมี Momentum ที่ดีกว่า ขณะที่ Thai Energy อาจกลับมาโดดเด่นในช่วง Emerging Market Recovery
 
-### Fig 17. Sharpe Ratio Heatmap — ผลตอบแทนเมื่อเทียบกับความเสี่ยง' ของหุ้นพลังงานโลกและหุ้นไทย ใน 6 ช่วงวิกฤต 
+### Fig 17. Sharpe Ratio Heatmap — ผลตอบแทนเทียบกับความเสี่ยง' ของหุ้นพลังงานโลกและหุ้นไทย ใน 6 ช่วงวิกฤต 
 <img width="1844" height="1035" alt="17_sharpe_heatmap_with_periods" src="https://github.com/user-attachments/assets/7a8a64ba-b7af-4765-9aaa-234d091893cf" />
 <b>การวิเคราะห์ Fig 17: Risk-Adjusted Efficiency ผ่าน Sharpe Ratio:</b>
 Heatmap นี้แสดง Annualized Sharpe Ratio ของหุ้นพลังงานทุกตัวใน 6 ยุคสำคัญ โดย Sharpe Ratio คำนวณจากสูตร (Annualized Return - Risk-Free Rate) / Annualized Volatility ซึ่งเป็นมาตรวัด Risk-Adjusted Return ที่ใช้กันแพร่หลายในทางวิชาการและอุตสาหกรรมการลงทุน เกณฑ์ตัดสิน: Sharpe > 1.0 = ยอดเยี่ยม, 0.5-1.0 = ดี, < 0 = ผลตอบแทนต่ำกว่าอัตราปลอดความเสี่ยง
