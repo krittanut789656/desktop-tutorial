@@ -50,7 +50,7 @@ Upstream vs Downstream คืออะไร?
 2.1.3 **หุ้นพลังงานไทย — Thai Energy Equities**
 <img width="1352" height="320" alt="image" src="https://github.com/user-attachments/assets/fe68a006-21f6-487f-a388-8fa591e75bb7" />
 
-### 2.2 ตัวแปรมหภาค (Macroeconomic Variables)
+### 2.2 ตัวแปรเศรษฐกิจมหภาค (Macroeconomic Variables)
 <img width="1355" height="294" alt="image" src="https://github.com/user-attachments/assets/7cbc71ce-05e5-4346-aae1-ce1a6ff110fd" />
 
 ### 2.3 ตัวชี้วัดทางสถิติที่ใช้ในการวิเคราะห์ (Statistical Metrics)
