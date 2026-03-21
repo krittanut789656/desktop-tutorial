@@ -236,7 +236,7 @@ Event Study ครั้งที่สองนี้ใช้วิธีก�
 - สัญญาณที่ควรจับตาคือ VIX Index ที่เริ่มลดลงจากจุดสูงสุด และดัชนีผลผลิตอุตสาหกรรม (INDPRO) ที่เริ่มส่งสัญญาณฟื้นตัว ซึ่งเป็น Indicator ที่แม่นยำในการหาจุดกลับตัว
 
 ### Fig 14. Maximum Drawdown — การวัดความเสียหายสูงสุดในแต่ละวิกฤต
-<img width="959" height="734" alt="14_max_drawdown" src="https://github.com/user-attachments/assets/c7084e68-d540-4cb3-a787-1c76d0c2d784" />
+<img width="1109" height="734" alt="14_max_drawdown" src="https://github.com/user-attachments/assets/eb8843a8-ea44-4706-8645-0c95fca72770" />ป
 
 
 <b>การวิเคราะห์ Fig 14: Maximum Drawdown Comparison ข้ามวิกฤต:</b>
