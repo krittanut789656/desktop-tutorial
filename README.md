@@ -170,7 +170,7 @@ VIX Index (CBOE Volatility Index) วัดความคาดหวังข�
 - VIX ที่พุ่งสูงแล้วเริ่มลดลง มักตรงกับ Contrarian Entry Point — จุดที่ให้ Risk-Reward Ratio ดีที่สุด
 - ช่วงที่ VIX อยู่ต่ำกว่า 20 เป็นเวลานาน (Low Volatility Regime) มักเป็นช่วงก่อนเกิด Volatility Spike ครั้งถัดไป
 
-### Fig 9. Volatility Regime Analysis — การกระจายตัวของความเสี่ยงในแต่ละยุค
+### Fig 9. Volatility Regime Analysis — การกระจายตัวของความเสี่ยงในแต่ละวิกฤต
 <img width="2087" height="982" alt="09_volatility_anatomy" src="https://github.com/user-attachments/assets/0fadda5b-bb47-415e-9ea4-64cc5db937d7" />
 <b>การวิเคราะห์ Fig 9: Statistical Distribution ของ Volatility ข้ามช่วงวิกฤต:</b>
 Box Plot นี้แสดงการกระจายตัวทางสถิติของ 20-Week Rolling Volatility ใน 6 ยุคสำคัญ เครื่องมือนี้ให้ข้อมูลที่สมบูรณ์กว่ากราฟเส้น — โดย Box Width สะท้อน Interquartile Range (IQR) หรือ "ระยะเวลาที่ความไม่แน่นอนดำรงอยู่" ขณะที่ Outlier Points แสดง "ค่า Extreme" ที่เกิดขึ้นชั่วคราว
