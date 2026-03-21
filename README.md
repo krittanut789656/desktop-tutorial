@@ -300,7 +300,7 @@ COVID-19: เป็นช่วงที่หุ้นกลุ่มนี้ 
 - หากมีสัญญาณความขัดแย้งในภูมิภาคผลิตน้ำมัน หุ้นกลุ่ม Upstream (เช่น PTTEP, XOM) จะให้ผลตอบแทนที่คุ้มค่าความเสี่ยงสูงที่สุด สงครามคือโอกาสของกลุ่มขุดเจาะ
 
 ### Fig 18. Risk-Return Frontier — แผนที่ยุทธศาสตร์การจัดสรรในภาวะสงคราม
-<img width="1185" height="735" alt="18_strategic_frontier" src="https://github.com/user-attachments/assets/300a4255-a434-4efd-8a1a-a9943fc9462d" />
+<img width="1185" height="735" alt="18_strategic_frontier" src="https://github.com/user-attachments/assets/4300bfd4-f22e-4362-9841-00e40dffe1c2" />
 <b>การวิเคราะห์ Fig 18: War-Time Efficient Frontier:</b>
 Bubble Chart นี้จัดวาง Annualized Volatility (แกน X) กับ Annualized Return (แกน Y) ของสินทรัพย์พลังงานทุกตัว โดย Bubble Size แสดง Sharpe Ratio สีแบ่งกลุ่มสินทรัพย์ (US = ม่วง, Thai = ส้ม, Crude = เทา) และเส้นประ Quadrant Lines แบ่งพื้นที่เป็น 4 โซน ตามค่าเฉลี่ยของ Return และ Volatility ทั้งหมดคำนวณจากช่วงสงคราม (Russia-Ukraine + Iran Crisis)
 
