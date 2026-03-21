@@ -334,4 +334,7 @@ Bubble Chart นี้จัดวาง Annualized Volatility (แกน X) ก
 **Balanced Portfolio (ภาวะปกติ): 25% XOM + 25% CVX + 25% PTT + 25% PTTEP**<br>
 **Defensive Portfolio (ภาวะ Macro Headwind): 30% PTG + 30% BCP + 20% XOM + 20% Cash Equivalent**
 
-
+ผู้จัดทำ
+นายกฤตณัฐ        ทับทิมแก้ว   (6810422006)
+นางสาวนันทนา      ทองแท้     (6810422016)
+นางสาวสุจิวรรณ     กิจสุธรรม    (6810422019)
