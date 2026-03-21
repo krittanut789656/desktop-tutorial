@@ -93,8 +93,7 @@ Horizontal Bar Chart นี้จัดอันดับค่า Correlation �
 ### Fig 3. Brent-WTI Spread — พลวัตของตลาดน้ำมันระดับโลก
 <img width="2372" height="1035" alt="03_brent_wti_spread" src="https://github.com/user-attachments/assets/418ccbaa-1e68-4c6d-b437-abe5ab527aa4" />
 <b>การวิเคราะห์ Fig 3: Brent-WTI Spread ในฐานะ Supply Stress Indicator:</b>
-Brent Crude (ราคาอ้างอิงระดับโลก ซื้อขายที่ ICE London) และ WTI (ราคาอ้างอิงของสหรัฐฯ ส่งมอบที่ Cushing, Oklahoma) มีราคาที่เคลื่อนไหวในทิศทางเดียวกันโดยพื้นฐาน แต่ส่วนต่าง (Spread) ระหว่างทั้งสองสะท้อนดุลอุปสงค์-อุปทานระดับภูมิภาค (Regional Supply-Demand Balance) กราฟนี้แสดง Time Series ของทั้งสองราคาพร้อมกับ Spread Area ซึ่ง Overlay ด้วยช่วงเวลาวิกฤตด้านภูมิรัฐศาสตร์
-</br>
+Brent Crude (ราคาอ้างอิงระดับโลก ซื้อขายที่ ICE London) และ WTI (ราคาอ้างอิงของสหรัฐฯ ส่งมอบที่ Cushing, Oklahoma) มีราคาที่เคลื่อนไหวในทิศทางเดียวกันโดยพื้นฐาน แต่ส่วนต่าง (Spread) ระหว่างทั้งสองสะท้อนดุลอุปสงค์-อุปทานระดับภูมิภาค (Regional Supply-Demand Balance) กราฟนี้แสดง Time Series ของทั้งสองราคาพร้อมกับ Spread Area ซึ่ง Overlay ด้วยช่วงเวลาวิกฤตด้านภูมิรัฐศาสตร์<br>
 
 
 ข้อสังเกตหลักคือ Spread มักขยายตัวอย่างรวดเร็วเมื่อเกิด Supply Disruption ระดับโลก เช่น Arab Spring (2011), สงครามรัสเซีย-ยูเครน (2022) และความขัดแย้งตะวันออกกลาง เนื่องจาก Brent สะท้อนราคาน้ำมันที่ขนส่งทางทะเล (Seaborne Crude) ซึ่งได้รับผลกระทบจากปัญหาด้าน Supply มากกว่า WTI ที่มี Shale Oil เป็นแหล่งผลิตภายในประเทศ การขยายตัวของ Spread จึงเป็น Leading Indicator สำหรับ Supply Tightness ในตลาดโลก
